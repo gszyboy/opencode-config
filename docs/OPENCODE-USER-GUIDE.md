@@ -391,9 +391,7 @@ opencode
 | 技能 | 用途 | 触发方式 |
 |------|------|----------|
 | `@api-spec-generator` | 生成 OpenAPI 3.0 规范 | API 设计时 |
-| `@plan-decomposer` | 任务分解 | 计划分解时 |
 | `@keep-focused` | 防止跑偏 | 全程监控 |
-| `@incremental-doc` | 增量文档维护 | 开发中发现问题 |
 | `@existing-project-assessor` | 已有项目评估 | 评估项目时 |
 
 > **说明**：技能通过 description 自动触发，当检测到相关任务时会自动加载。
@@ -415,8 +413,6 @@ opencode
 3. 校验完整性（路径、方法、schema）
 4. 输出 api-spec.yaml
 
-**输出**：符合 OpenAPI 3.0 规范的 api-spec.yaml 文件
-
 **用途**：
 ```
 api-spec.yaml = 前后端开发的"合同"
@@ -428,34 +424,11 @@ api-spec.yaml = 前后端开发的"合同"
 
 ---
 
-### @plan-decomposer
-
-**用途**：将需求分解为可执行任务
-
-**触发**：
-```bash
-@plan-decomposer
-分析用户模块，生成开发任务
-```
-
-**输出**：
-- 功能模块清单
-- 开发阶段划分
-- 具体任务清单
-- 技术决策点
-
----
-
 ### @keep-focused
 
 **用途**：防止 AI 开发过程中跑偏
 
 **触发**：自动生效，或手动调用
-
-```bash
-@keep-focused
-检测到 AI 开始"顺便优化"，需要拉回
-```
 
 **红色信号（立即拉回）**：
 
@@ -465,37 +438,6 @@ api-spec.yaml = 前后端开发的"合同"
 | "我重构了..." | `/undo` + 拒绝 |
 | 超出 Change Budget | `/undo` + 重新约束 |
 | 改任务外文件 | 拒绝 + 重新明确 |
-
-**黄色信号（警惕）**：
-
-| 信号 | 处理 |
-|------|------|
-| 添加新文件 | 确认必要性 |
-| 提到设计模式 | 提醒中小型项目不需要 |
-| 输出超过 200 行 | 提醒精简 |
-
----
-
-### @incremental-doc
-
-**用途**：增量式文档维护
-
-**触发**：
-```bash
-@incremental-doc
-开发中发现原计划用 LocalStorage 但小程序不支持，怎么处理？
-```
-
-**核心思想**：
-```
-发现问题 → 追加到变更记录 → 继续开发
-（不重写整个文档）
-```
-
-**操作流程**：
-1. 评估影响（轻微/中等/重大）
-2. 记录到 `docs/CHANGELOG.md`
-3. 更新相关文档（只改变化部分）
 
 ---
 
@@ -1049,7 +991,7 @@ A: 确保以下文件存在：
 | 2026-03-22 | 创建完整使用指南 |
 | 2026-03-22 | 添加已有项目AI协作规范（/assess-project、/incremental-dev、@existing-project-assessor） |
 | 2026-03-22 | 更新技能列表，添加 @api-spec-generator，移除已整合的 @requirement-generator |
-| 2026-03-22 | 完善 /plan-project（初始化 progress.json）和 /dev（新需求评估 + git 提交建议）|
+| 2026-03-22 | 精简 Skills，删除重复的 dev-progress/incremental-doc/plan-decomposer |
 
 ---
 
