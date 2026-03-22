@@ -151,7 +151,8 @@ opencode.json instructions      ← 额外加载规范文件
 | `/requirement` | 从需求生成文档 | Plan | 全局/项目 |
 | `/plan-project` | 分解项目为开发计划 | Plan | 全局/项目 |
 | `/plan-feature` | 规划单个功能 | Plan | 全局/项目 |
-| `/dev` | 开始开发任务 | Build | 全局/项目 |
+| `/dev` | 开始开发任务（自动进度管理） | Build | 全局/项目 |
+| `/progress` | 查看开发进度 | Build | 全局/项目 |
 | `/assess-project` | 评估已有项目 | Plan | 全局 |
 | `/incremental-dev` | 已有项目增量开发 | Build | 全局 |
 
@@ -319,6 +320,66 @@ opencode
 - 在已有项目上添加小功能
 - 重构已有项目的局部代码
 - 修改已有项目的配置
+
+### /dev
+
+**用途**：开始实际开发任务，自动管理进度
+
+**进度管理**：
+- 使用 `docs/progress.json` 记录任务状态
+- 支持会话中断/压缩后恢复
+- 任务完成后自动更新进度
+
+**用法**：
+```bash
+opencode
+/dev 添加用户注册功能
+```
+
+**进度恢复流程**：
+```
+会话中断/压缩
+    ↓
+重新执行 /dev
+    ↓
+读取 docs/progress.json
+    ↓
+找到 in_progress 任务
+    ↓
+继续执行
+```
+
+---
+
+### /progress
+
+**用途**：以人类友好的格式查看开发进度
+
+**用法**：
+```bash
+opencode
+/progress
+```
+
+**输出示例**：
+```
+📊 项目开发进度
+
+项目：我的博客
+最后更新：2026-03-22 15:30
+
+### 阶段 1：MVP
+进度：2/5 ✅
+
+[✅] 1. 项目初始化 - 已完成
+[✅] 2. 用户注册功能 - 已完成
+[🔄] 3. 用户登录功能 - 进行中 ← 当前
+[⏳] 4. 文章发布功能 - 待开始
+[⏳] 5. 评论功能 - 待开始
+
+总进度：40% (2/5)
+建议：继续执行 /dev 完成登录功能
+```
 
 ---
 
@@ -985,7 +1046,7 @@ A: 确保以下文件存在：
 | 2026-03-22 | 创建完整使用指南 |
 | 2026-03-22 | 添加已有项目AI协作规范（/assess-project、/incremental-dev、@existing-project-assessor） |
 | 2026-03-22 | 更新技能列表，添加 @api-spec-generator，移除已整合的 @requirement-generator |
-| 2026-03-22 | 增强 /plan-project 命令，整合 plan-decomposer 内容 |
+| 2026-03-22 | 添加会话恢复机制：progress.json + 改进 /dev 命令 + 新增 /progress 命令 |
 
 ---
 

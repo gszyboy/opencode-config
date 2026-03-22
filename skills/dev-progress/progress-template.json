@@ -1,0 +1,59 @@
+{
+  "project": "项目名称",
+  "version": "1.0",
+  "lastUpdated": "2026-03-22T10:00:00Z",
+  "currentPhase": 1,
+  "phases": {
+    "1": {
+      "name": "MVP（最小可行产品）",
+      "description": "实现核心功能，保证项目可运行",
+      "status": "active",
+      "tasks": [
+        {
+          "id": 1,
+          "title": "任务名称",
+          "description": "任务描述",
+          "status": "completed",
+          "createdAt": "2026-03-22T10:00:00Z",
+          "startedAt": "2026-03-22T10:05:00Z",
+          "completedAt": "2026-03-22T11:30:00Z",
+          "files": ["file1.ts", "file2.ts"]
+        },
+        {
+          "id": 2,
+          "title": "当前任务",
+          "description": "正在进行的任务",
+          "status": "in_progress",
+          "createdAt": "2026-03-22T10:00:00Z",
+          "startedAt": "2026-03-22T14:00:00Z",
+          "notes": "进行中的备注"
+        },
+        {
+          "id": 3,
+          "title": "待开始的任务",
+          "description": "尚未开始的任务",
+          "status": "pending",
+          "createdAt": "2026-03-22T10:00:00Z"
+        }
+      ]
+    },
+    "2": {
+      "name": "完善功能",
+      "description": "完善用户体验",
+      "status": "pending",
+      "tasks": []
+    },
+    "3": {
+      "name": "优化与增强",
+      "description": "性能优化、边界情况处理",
+      "status": "pending",
+      "tasks": []
+    }
+  },
+  "metadata": {
+    "totalTasks": 3,
+    "completedTasks": 1,
+    "inProgressTasks": 1,
+    "pendingTasks": 1
+  }
+}
