@@ -1,0 +1,21 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "playwright": {
+      "type": "local",
+      "command": ["npx", "-y", "@executeautomation/playwright-mcp-server"]
+    },
+    "context7": {
+      "type": "local",
+      "command": ["npx", "-y", "@upstash/context7-mcp", "--api-key", "{env:CONTEXT7_API_KEY}"]
+    }
+  },
+  "instructions": [
+    "~/.config/opencode/docs/general-rules.md",
+    "~/.config/opencode/docs/backend-rules.md",
+    "~/.config/opencode/docs/frontend-rules.md",
+    "~/.config/opencode/docs/typescript-rules.md",
+    "~/.config/opencode/docs/existing-project-rules.md",
+    "~/.config/opencode/test/testing-guide.md"
+  ]
+}
