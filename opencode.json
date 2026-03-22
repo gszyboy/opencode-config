@@ -14,6 +14,15 @@
       "command": ["npx", "-y", "@modelcontextprotocol/server-sequential-thinking"]
     }
   },
+  "plugins": [
+    "~/.config/opencode/plugins/env-protection.js",
+    "~/.config/opencode/plugins/sensitive-files-logger.js",
+    "~/.config/opencode/plugins/auto-backup-reminder.js"
+  ],
+  "permission": {
+    "edit": "ask",
+    "bash": "ask"
+  },
   "instructions": [
     "~/.config/opencode/docs/general-rules.md",
     "~/.config/opencode/docs/backend-rules.md",
