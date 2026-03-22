@@ -96,10 +96,12 @@ Change Budget：
 │   ├── plan-project.md
 │   └── plan-feature.md
 ├── skills/                # 全局技能
+│   ├── api-spec-generator/  # API 规范生成
 │   ├── keep-focused/
-│   ├── requirement-generator/
 │   ├── plan-decomposer/
-│   └── incremental-doc/
+│   ├── incremental-doc/
+│   ├── existing-project-assessor/
+│   └── ...
 ├── docs/                  # 全局规范文件
 │   ├── general-rules.md
 │   ├── backend-rules.md
@@ -324,40 +326,40 @@ opencode
 
 | 技能 | 用途 | 触发方式 |
 |------|------|----------|
-| `@requirement-generator` | 需求分析 | 需求生成时 |
+| `@api-spec-generator` | 生成 OpenAPI 3.0 规范 | API 设计时 |
 | `@plan-decomposer` | 任务分解 | 计划分解时 |
 | `@keep-focused` | 防止跑偏 | 全程监控 |
 | `@incremental-doc` | 增量文档维护 | 开发中发现问题 |
 | `@existing-project-assessor` | 已有项目评估 | 评估项目时 |
 
+> **说明**：技能通过 description 自动触发，当检测到相关任务时会自动加载。
+
 ---
 
-### @requirement-generator
+### @api-spec-generator
 
-**用途**：从用户一句话生成结构化需求文档
+**用途**：生成符合 OpenAPI 3.0 规范的 api-spec.yaml 文件，用于解耦前后端开发
 
-**触发**：
-```bash
-@requirement-generator
-我想做一个电商系统
-```
+**触发场景**：
+- 用户说"帮我生成 API 规范"
+- 设计前后端接口
+- 需要定义数据模型
 
 **工作流程**：
-1. 理解用户需求
-2. 提问澄清关键信息
-3. 生成五层结构文档
+1. 收集需求（项目类型、接口列表、数据模型）
+2. 生成 OpenAPI 3.0 规范的 YAML 文件
+3. 校验完整性（路径、方法、schema）
+4. 输出 api-spec.yaml
 
-**输出文档结构**：
+**输出**：符合 OpenAPI 3.0 规范的 api-spec.yaml 文件
+
+**用途**：
 ```
-1. 模块划分
-   ↓
-2. 功能项
-   ↓
-3. 具体需求描述（用户故事、验收标准）
-   ↓
-4. 技术原理（API、数据模型）
-   ↓
-5. 模块关联（依赖关系）
+api-spec.yaml = 前后端开发的"合同"
+    ↓
+前端和后端基于同一份规范独立开发
+    ↓
+最终对接时不再扯皮
 ```
 
 ---
@@ -543,10 +545,10 @@ uniapp/
 └─────────────────────────────────────────────────────────────┘
 
 第 1 步：需求分析
-─────────────────────────────────────────────────────────────
+─────────────────────────────────────────────────────────────────────
 用户描述需求
     ↓
-/requirement 或 @requirement-generator
+/requirement
     ↓
 提问澄清关键信息
     ↓
@@ -982,6 +984,8 @@ A: 确保以下文件存在：
 |------|----------|
 | 2026-03-22 | 创建完整使用指南 |
 | 2026-03-22 | 添加已有项目AI协作规范（/assess-project、/incremental-dev、@existing-project-assessor） |
+| 2026-03-22 | 更新技能列表，添加 @api-spec-generator，移除已整合的 @requirement-generator |
+| 2026-03-22 | 增强 /plan-project 命令，整合 plan-decomposer 内容 |
 
 ---
 
