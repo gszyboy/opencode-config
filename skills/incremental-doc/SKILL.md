@@ -240,6 +240,126 @@ docs/
 
 ---
 
+## 变更处理指南
+
+### 文档更新原则
+
+| 原则 | 说明 |
+|------|------|
+| **追加不删除** | development-plan.md 只追加新任务，不删除旧任务 |
+| **CHANGELOG.md 必更新** | 所有变更都记录，作为"变更索引" |
+| **松耦合** | progress.json 与 development-plan.md 独立更新 |
+| **引用追踪** | CHANGELOG.md 引用相关的 requirements.md 段落 |
+
+### 场景 1：新需求
+
+```
+发现新需求
+    ↓
+1. 更新 requirements.md（追加新需求描述）
+    ↓
+2. 更新 development-plan.md（追加新任务）
+    ↓
+3. 更新 progress.json（添加新任务，状态 pending）
+    ↓
+4. 更新 CHANGELOG.md（记录变更）
+```
+
+**示例**：
+
+```markdown
+### CHANGELOG.md
+
+### 2026-03-22 变更 #3
+
+**类型**：新增需求
+**影响程度**：中等
+
+**发现**：需要增加"导出功能"
+**调整**：
+- requirements.md：新增导出需求描述
+- development-plan.md：新增"导出功能开发"任务
+- progress.json：添加任务 #8
+**影响**：新增 1 个任务，约 2 小时
+```
+
+### 场景 2：功能模块调整
+
+```
+发现模块需要拆分/合并
+    ↓
+1. 更新 development-plan.md（调整任务描述）
+    ↓
+2. 更新 progress.json（如需调整任务状态）
+    ↓
+3. 更新 CHANGELOG.md（记录原因）
+```
+
+**示例**：
+
+```markdown
+### CHANGELOG.md
+
+### 2026-03-22 变更 #4
+
+**类型**：模块调整
+**影响程度**：重大
+
+**发现**：用户管理模块包含功能过多
+**调整**：
+- development-plan.md：拆分为"用户注册"和"用户登录"两个任务
+- progress.json：调整任务顺序
+**影响**：任务拆分，不影响工期
+```
+
+### 场景 3：技术变更
+
+```
+发现技术方案需要调整
+    ↓
+1. 更新 decisions.md（记录新决策）
+    ↓
+2. 更新 CHANGELOG.md（引用决策）
+    ↓
+3. 如影响任务，更新 progress.json
+```
+
+**示例**：
+
+```markdown
+### CHANGELOG.md
+
+### 2026-03-22 变更 #5
+
+**类型**：技术变更
+**影响程度**：中等
+
+**发现**：LocalStorage 小程序不支持
+**调整**：
+- decisions.md：记录决策改用 uni.setStorageSync
+- progress.json：任务 #2 notes 添加说明
+**影响**：utils/auth.js
+```
+
+### 影响程度与文档更新
+
+| 影响程度 | requirements.md | development-plan.md | progress.json | CHANGELOG.md |
+|----------|-----------------|-------------------|---------------|--------------|
+| **轻微** | ❌ | ❌ | ❌ | ✅ |
+| **中等** | ✅（如涉及需求） | ✅ | ✅ | ✅ |
+| **重大** | ✅ | ✅ | ✅ | ✅ |
+
+---
+
+## 保持文档同步的习惯
+
+1. **每天结束时**：检查 progress.json 进度
+2. **每次发现问题**：立即记录到 CHANGELOG
+3. **每周回顾**：检查 CHANGELOG，同步 development-plan.md
+4. **每月整理**：归档已完成的变更，简化文档
+
+---
+
 ## 保持文档同步的习惯
 
 1. **每天结束时**：检查 progress.json 进度
