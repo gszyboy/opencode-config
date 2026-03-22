@@ -1,0 +1,370 @@
+# OpenAPI 3.0 完整模板
+
+此文件是完整的 OpenAPI 3.0 规范模板，复制后根据项目需求修改。
+
+## 模板结构
+
+```yaml
+openapi: 3.0.0
+info:
+  title: 项目名称
+  description: 项目描述
+  version: 1.0.0
+
+servers:
+  - url: http://localhost:8000/api/v1
+    description: 开发环境
+
+paths:
+  # 接口定义区域
+
+components:
+  schemas:
+    # 数据模型区域
+  responses:
+    # 通用响应区域
+```
+
+## 通用响应模板
+
+```yaml
+components:
+  responses:
+    BadRequest:
+      description: 请求参数错误
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+          example:
+            code: 400
+            message: 请求参数错误
+
+    NotFound:
+      description: 资源不存在
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+          example:
+            code: 404
+            message: 资源不存在
+
+    Unauthorized:
+      description: 未授权
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+          example:
+            code: 401
+            message: 请先登录
+
+    ServerError:
+      description: 服务器内部错误
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+          example:
+            code: 500
+            message: 服务器内部错误
+```
+
+## 通用 Schema 模板
+
+```yaml
+components:
+  schemas:
+    # 错误响应（所有接口通用）
+    ErrorResponse:
+      type: object
+      properties:
+        code:
+          type: integer
+          description: 错误码
+        message:
+          type: string
+          description: 错误信息
+
+    # 分页响应模板
+    PaginatedList:
+      type: object
+      properties:
+        total:
+          type: integer
+          description: 总记录数
+        page:
+          type: integer
+          description: 当前页码
+        page_size:
+          type: integer
+          description: 每页记录数
+```
+
+## CRUD 接口模板
+
+```yaml
+paths:
+  /{resource}:
+    # 获取列表
+    get:
+      summary: 获取列表
+      tags: [资源管理]
+      parameters:
+        - name: page
+          in: query
+          schema:
+            type: integer
+            default: 1
+          description: 页码
+        - name: page_size
+          in: query
+          schema:
+            type: integer
+            default: 20
+          description: 每页数量
+      responses:
+        '200':
+          description: 成功
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  total: { type: integer }
+                  page: { type: integer }
+                  items:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Resource'
+
+    # 创建资源
+    post:
+      summary: 创建资源
+      tags: [资源管理]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateResourceRequest'
+      responses:
+        '201':
+          description: 创建成功
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+
+  /{resource}/{id}:
+    # 获取详情
+    get:
+      summary: 获取详情
+      tags: [资源管理]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: 成功
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+    # 更新资源
+    put:
+      summary: 更新资源
+      tags: [资源管理]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateResourceRequest'
+      responses:
+        '200':
+          description: 更新成功
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+    # 删除资源
+    delete:
+      summary: 删除资源
+      tags: [资源管理]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '204':
+          description: 删除成功
+        '404':
+          $ref: '#/components/responses/NotFound'
+```
+
+## Schema 模板
+
+```yaml
+components:
+  schemas:
+    # 资源模型
+    Resource:
+      type: object
+      required:
+        - id
+        - created_at
+      properties:
+        id:
+          type: integer
+          description: 资源ID
+        name:
+          type: string
+          description: 名称
+        description:
+          type: string
+          description: 描述
+          nullable: true
+        created_at:
+          type: string
+          format: date-time
+          description: 创建时间
+        updated_at:
+          type: string
+          format: date-time
+          description: 更新时间
+          nullable: true
+
+    # 创建请求
+    CreateResourceRequest:
+      type: object
+      required:
+        - name
+      properties:
+        name:
+          type: string
+          description: 名称
+          minLength: 1
+          maxLength: 100
+        description:
+          type: string
+          description: 描述
+          nullable: true
+
+    # 更新请求
+    UpdateResourceRequest:
+      type: object
+      properties:
+        name:
+          type: string
+          description: 名称
+          minLength: 1
+          maxLength: 100
+        description:
+          type: string
+          description: 描述
+          nullable: true
+```
+
+## 字段类型参考
+
+| 类型 | YAML 示例 | 说明 |
+|------|-----------|------|
+| 字符串 | `type: string` | 文本 |
+| 整数 | `type: integer` | 数字（无小数） |
+| 数字 | `type: number` | 数字（可有小数） |
+| 布尔 | `type: boolean` | true/false |
+| 数组 | `type: array` | 列表 |
+| 对象 | `type: object` | 对象 |
+
+## 格式参考
+
+| 格式 | YAML 示例 | 说明 |
+|------|-----------|------|
+| 邮箱 | `format: email` | 邮箱地址 |
+| 日期 | `format: date` | YYYY-MM-DD |
+| 时间 | `format: date-time` | ISO 8601 |
+| UUID | `format: uuid` | UUID 格式 |
+| URI | `format: uri` | URL 地址 |
+
+## 枚举模板
+
+```yaml
+priority:
+  type: integer
+  description: 优先级
+  enum:
+    - 1  # 低
+    - 2  # 中
+    - 3  # 高
+  default: 1
+
+status:
+  type: string
+  description: 状态
+  enum:
+    - pending    # 待处理
+    - active     # 激活
+    - inactive   # 停用
+  default: pending
+```
+
+## 关联资源模板
+
+```yaml
+paths:
+  /orders/{id}/items:
+    get:
+      summary: 获取订单的所有条目
+      tags: [订单管理]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: 成功
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/OrderItem'
+```
+
+## 认证模板（可选）
+
+```yaml
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+# 在需要认证的接口添加：
+security:
+  - BearerAuth: []
+```
