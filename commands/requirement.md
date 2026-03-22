@@ -198,12 +198,11 @@ agent: plan
 
 ### 第三步：生成开发计划
 
-基于需求文档，调用 `@plan-decomposer` 生成 `docs/development-plan.md`
+需求文档生成完成后，建议继续执行 `/plan-project` 命令生成开发计划。
 
 ## 输出文件
 
 - `docs/requirements.md` - 五层结构需求文档
-- `docs/development-plan.md` - 开发计划
 
 ## 约束
 
