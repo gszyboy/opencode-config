@@ -30,7 +30,18 @@ opencode
 ### 2. 新项目初始化
 
 ```
-/init
+/requirement
+描述你的需求
+```
+
+或使用完整流程：
+
+```
+/requirement [需求描述]
+    ↓
+/plan-project
+    ↓
+/dev
 ```
 
 ### 3. 开始需求分析
@@ -95,13 +106,19 @@ Change Budget：
 │   ├── requirement.md
 │   ├── plan-project.md
 │   └── plan-feature.md
-├── skills/                # 全局技能
+├── skills/                # 全局技能（自动触发）
 │   ├── api-spec-generator/  # API 规范生成
-│   ├── keep-focused/
-│   ├── plan-decomposer/
-│   ├── incremental-doc/
-│   ├── existing-project-assessor/
-│   └── ...
+│   ├── keep-focused/        # 防跑偏监控
+│   ├── existing-project-assessor/  # 项目评估
+│   ├── playwright-mcp/       # 浏览器自动化
+│   ├── sequential-thinking/  # 结构化思考
+│   ├── skill-creator/       # 技能创建
+│   ├── canvas-design/       # 画布设计
+│   ├── doc-coauthoring/      # 文档协作
+│   ├── docx/               # Word 文档
+│   ├── frontend-design/      # 前端设计
+│   ├── pdf/               # PDF 处理
+│   └── xlsx/               # Excel 处理
 ├── docs/                  # 全局规范文件
 │   ├── general-rules.md
 │   ├── backend-rules.md
@@ -228,12 +245,12 @@ opencode
 
 ### /dev
 
-**用途**：开始实际开发任务
+**用途**：开始实际开发任务，自动管理进度
 
 **用法**：
 ```bash
 opencode
-/dev 添加用户注册功能
+/dev 添加用户登录功能
 
 # 指定更详细的约束
 /dev 添加用户登录功能
@@ -242,13 +259,29 @@ Change Budget：
 - 修改行数：≤ 60
 ```
 
-**输出**：实际代码修改
-
 **约束**：
 - 修改文件数 ≤ 3
 - 修改行数 ≤ 80
 - 不引入新依赖
 - 不修改任务范围之外的文件
+
+**进度管理**：
+- 使用 `docs/progress.json` 记录任务状态
+- 支持会话中断/压缩后恢复
+- 任务完成后自动更新进度
+
+**进度恢复流程**：
+```
+会话中断/压缩
+    ↓
+重新执行 /dev
+    ↓
+读取 docs/progress.json
+    ↓
+找到 in_progress 任务
+    ↓
+继续执行
+```
 
 ---
 
@@ -324,36 +357,6 @@ opencode
 - 重构已有项目的局部代码
 - 修改已有项目的配置
 
-### /dev
-
-**用途**：开始实际开发任务，自动管理进度
-
-**进度管理**：
-- 使用 `docs/progress.json` 记录任务状态
-- 支持会话中断/压缩后恢复
-- 任务完成后自动更新进度
-
-**用法**：
-```bash
-opencode
-/dev 添加用户注册功能
-```
-
-**进度恢复流程**：
-```
-会话中断/压缩
-    ↓
-重新执行 /dev
-    ↓
-读取 docs/progress.json
-    ↓
-找到 in_progress 任务
-    ↓
-继续执行
-```
-
----
-
 ### /progress
 
 **用途**：以人类友好的格式查看开发进度
@@ -388,17 +391,26 @@ opencode
 
 ## 技能列表
 
-| 技能 | 用途 | 触发方式 |
-|------|------|----------|
-| `@api-spec-generator` | 生成 OpenAPI 3.0 规范 | API 设计时 |
-| `@keep-focused` | 防止跑偏 | 全程监控 |
-| `@existing-project-assessor` | 已有项目评估 | 评估项目时 |
+> **说明**：技能通过 `description` 字段自动触发，当检测到相关任务时会自动加载。无需手动调用。
 
-> **说明**：技能通过 description 自动触发，当检测到相关任务时会自动加载。
+| 技能 | 用途 | 触发场景 |
+|------|------|----------|
+| `api-spec-generator` | 生成 OpenAPI 3.0 规范 | API 设计、接口定义 |
+| `keep-focused` | 防止跑偏 | 开发过程全程监控 |
+| `existing-project-assessor` | 已有项目评估 | 评估项目、风险分析 |
+| `playwright-mcp` | 浏览器自动化测试 | 前端测试、页面爬取 |
+| `sequential-thinking` | 结构化思考 | 复杂问题分解、算法设计 |
+| `skill-creator` | 创建/优化技能 | 技能开发 |
+| `canvas-design` | 画布设计 | 海报、艺术设计 |
+| `doc-coauthoring` | 文档协作 | 文档编写、提案 |
+| `docx` | Word 文档 | .docx 文件处理 |
+| `frontend-design` | 前端界面设计 | Web UI 开发 |
+| `pdf` | PDF 处理 | PDF 读取/创建/编辑 |
+| `xlsx` | Excel 处理 | 表格文件处理 |
 
 ---
 
-### @api-spec-generator
+### api-spec-generator
 
 **用途**：生成符合 OpenAPI 3.0 规范的 api-spec.yaml 文件，用于解耦前后端开发
 
@@ -424,11 +436,11 @@ api-spec.yaml = 前后端开发的"合同"
 
 ---
 
-### @keep-focused
+### keep-focused
 
 **用途**：防止 AI 开发过程中跑偏
 
-**触发**：自动生效，或手动调用
+**触发**：开发过程自动生效
 
 **红色信号（立即拉回）**：
 
@@ -570,7 +582,7 @@ uniapp/
 
 第 2 步：计划分解
 ─────────────────────────────────────────────────────────────
-/plan-project 或 @plan-decomposer
+/plan-project
     ↓
 生成 docs/development-plan.md
     │
@@ -648,7 +660,7 @@ git commit -m "[类型]: [简短描述]"
 └─────────────────────────────────────────────────────────┘
                         ↓
 ┌─────────────────────────────────────────────────────────┐
-│ 第 2 层：@keep-focused Skill 动态监控                    │
+│ 第 2 层：keep-focused Skill 动态监控                     │
 ├─────────────────────────────────────────────────────────┤
 │ - 检测跑偏信号                                          │
 │ - 触发拉回机制                                          │
@@ -668,12 +680,12 @@ git commit -m "[类型]: [简短描述]"
 
 | 场景 | 处理 |
 |------|------|
-| AI 说"顺便优化了..." | `/undo` + 拒绝 |
-| AI 说"为了扩展性..." | `/undo` + 提醒 YAGNI |
-| AI 超出 Change Budget | `/undo` + 重新约束 |
+| AI 说"顺便优化了..." | 拒绝 + 拉回 |
+| AI 说"为了扩展性..." | 提醒 YAGNI 原则 |
+| AI 超出 Change Budget | 重新约束范围 |
 | AI 创建新目录结构 | 确认是否必要 |
 | AI 添加新依赖 | 确认是否必要 |
-| AI 重构了无关代码 | `/undo` + 拒绝 |
+| AI 重构了无关代码 | 拒绝 + 拉回 |
 
 ### 开发者口诀
 
@@ -685,6 +697,7 @@ AI 想多你要喊停
 对话太长就新建
 复杂功能先计划
 简单优先不抽象
+YAGNI 记心中
 ```
 
 ---
@@ -922,10 +935,13 @@ git checkout backup/before-XXX
 
 ### 已配置的 MCP 服务器
 
-| MCP | 用途 | 命令 |
-|-----|------|------|
-| playwright | 浏览器自动化测试 | npx @executeautomation/playwright-mcp-server |
-| context7 | 最新文档检索 | npx @upstash/context7-mcp |
+| MCP | 用途 | 环境变量 |
+|-----|------|----------|
+| playwright | 浏览器自动化测试 | - |
+| context7 | 最新文档检索 | `CONTEXT7_API_KEY` |
+| sequentialthinking | 结构化思考 | - |
+
+> **注意**：MCP 在 `opencode.json` 中配置，无需手动启动。
 
 ---
 
@@ -942,38 +958,19 @@ git checkout backup/before-XXX
 
 ### Q: AI 开始跑偏了怎么办？
 
-A:
-```bash
-@keep-focused
-检测到 AI [具体行为]，需要拉回
-```
-
-或手动执行：
-```bash
-/undo
-```
+A: 使用 keep-focused skill 拉回，或直接告诉 AI 重新聚焦到任务范围。
 
 ### Q: 对话太长了怎么办？
 
-A:
-```bash
-/new  # 新建会话
-```
+A: 使用 `/new` 新建会话。
 
 ### Q: 发现计划有遗漏怎么办？
 
-A:
-```bash
-@incremental-doc
-开发中发现 [问题]，怎么处理？
-```
+A: 使用 `/dev` 继续开发时，AI 会自动检测并处理计划外的问题。
 
 ### Q: 复杂功能不确定怎么做怎么办？
 
-A:
-```bash
-/plan-feature [功能描述]
-```
+A: 使用 `/plan-feature [功能描述]` 先规划再实施。
 
 ### Q: 如何确保 AI 遵守规范？
 
@@ -989,9 +986,10 @@ A: 确保以下文件存在：
 | 日期 | 更新内容 |
 |------|----------|
 | 2026-03-22 | 创建完整使用指南 |
-| 2026-03-22 | 添加已有项目AI协作规范（/assess-project、/incremental-dev、@existing-project-assessor） |
-| 2026-03-22 | 更新技能列表，添加 @api-spec-generator，移除已整合的 @requirement-generator |
+| 2026-03-22 | 添加已有项目AI协作规范（/assess-project、/incremental-dev） |
+| 2026-03-22 | 更新技能列表，完善 MCP 配置说明 |
 | 2026-03-22 | 精简 Skills，删除重复的 dev-progress/incremental-doc/plan-decomposer |
+| 2026-03-22 | 更新用户指南：修正 Skills 列表、移除 `@` 前缀、修复重复命令 |
 
 ---
 
