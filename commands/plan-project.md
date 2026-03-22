@@ -158,4 +158,80 @@ agent: plan
 
 ## 完成后
 
+### 1. 保存开发计划
+
 将开发计划保存到 `docs/development-plan.md`
+
+### 2. 初始化 progress.json
+
+根据开发计划生成 `docs/progress.json`，用于跟踪开发进度：
+
+```json
+{
+  "project": "[项目名称]",
+  "version": "1.0",
+  "lastUpdated": "[当前时间 ISO 8601 格式]",
+  "currentPhase": 1,
+  "phases": {
+    "1": {
+      "name": "MVP",
+      "status": "active",
+      "tasks": [
+        {
+          "id": 1,
+          "title": "任务1",
+          "description": "任务描述",
+          "status": "pending",
+          "createdAt": "[当前时间]"
+        }
+      ]
+    },
+    "2": {
+      "name": "完善功能",
+      "status": "pending",
+      "tasks": []
+    },
+    "3": {
+      "name": "优化与增强",
+      "status": "pending",
+      "tasks": []
+    }
+  },
+  "metadata": {
+    "totalTasks": [总任务数],
+    "completedTasks": 0,
+    "inProgressTasks": 0,
+    "pendingTasks": [总任务数]
+  }
+}
+```
+
+### 3. 初始化 CHANGELOG.md
+
+创建 `docs/CHANGELOG.md`：
+
+```markdown
+# 开发进度与变更日志
+
+## 📋 开发进度
+
+| 模块 | 状态 | 完成日期 |
+|------|------|----------|
+| - | - | - |
+
+## 🔧 变更记录
+
+（暂无变更）
+
+## 使用说明
+
+- `/dev` - 开始开发任务，自动管理进度
+- `/progress` - 查看当前进度
+```
+
+### 4. 输出总结
+
+完成后输出：
+- 已创建的文件列表
+- 总任务数
+- 建议下一步：`/dev [任务]` 开始开发

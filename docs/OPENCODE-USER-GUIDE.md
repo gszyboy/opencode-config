@@ -193,7 +193,10 @@ opencode
 
 **前置条件**：已有 `docs/requirements.md`
 
-**输出**：`docs/development-plan.md`
+**输出**：
+- `docs/development-plan.md` - 开发计划
+- `docs/progress.json` - 进度状态（自动创建）
+- `docs/CHANGELOG.md` - 变更记录（自动创建）
 
 **内容**：
 - 开发阶段划分（MVP → 完善 → 优化）
@@ -1046,7 +1049,7 @@ A: 确保以下文件存在：
 | 2026-03-22 | 创建完整使用指南 |
 | 2026-03-22 | 添加已有项目AI协作规范（/assess-project、/incremental-dev、@existing-project-assessor） |
 | 2026-03-22 | 更新技能列表，添加 @api-spec-generator，移除已整合的 @requirement-generator |
-| 2026-03-22 | 添加会话恢复机制：progress.json + 改进 /dev 命令 + 新增 /progress 命令 |
+| 2026-03-22 | 完善 /plan-project（初始化 progress.json）和 /dev（新需求评估 + git 提交建议）|
 
 ---
 
