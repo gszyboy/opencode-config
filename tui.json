@@ -2,6 +2,6 @@
   "$schema": "https://opencode.ai/tui.json",
   "keybinds": {
 "leader": "ctrl+\\,ctrl+x",
-    "app_exit": "ctrl+c,<leader>q"
+    "app_exit": "<leader>q"
   }
 }
