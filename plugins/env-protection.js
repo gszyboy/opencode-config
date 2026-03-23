@@ -29,30 +29,35 @@ function isSensitivePath(filePath) {
   })
 }
 
-export default async (ctx) => ({
+export const EnvProtection = async ({ client }) => ({
   'tool.execute.before': async (input) => {
     const tool = input.tool
     
-    // 检查读操作
     if (tool === 'read') {
       const filePath = input.args?.filePath || ''
       if (isSensitivePath(filePath)) {
-        throw new Error(
-          `⛔ 敏感文件访问被阻止: ${filePath}\n` +
-          `如需访问敏感文件，请确保用户明确授权。\n` +
-          `提示：手动复制文件内容给 AI。`
-        )
+        await client.tui.showToast({
+          body: {
+            title: '敏感文件访问被阻止',
+            message: filePath,
+            variant: 'error',
+          }
+        })
+        throw new Error(`⛔ 敏感文件访问被阻止: ${filePath}\n如需访问敏感文件，请确保用户明确授权。\n提示：手动复制文件内容给 AI。`)
       }
     }
     
-    // 检查写操作
     if (tool === 'write' || tool === 'edit') {
       const filePath = input.args?.filePath || ''
       if (isSensitivePath(filePath) && !filePath.includes('.env.example')) {
-        throw new Error(
-          `⛔ 禁止写入敏感文件: ${filePath}\n` +
-          `请使用 .env.example 作为模板文件。`
-        )
+        await client.tui.showToast({
+          body: {
+            title: '禁止写入敏感文件',
+            message: filePath,
+            variant: 'error',
+          }
+        })
+        throw new Error(`⛔ 禁止写入敏感文件: ${filePath}\n请使用 .env.example 作为模板文件。`)
       }
     }
   },
