@@ -1,6 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "gpt-agent/MiniMax-M2.7-highspeed",
+  "model": "minimax.com/MiniMax-M2.7",
   "provider": {
     "gpt-agent": {
       "npm": "@ai-sdk/openai-compatible",
