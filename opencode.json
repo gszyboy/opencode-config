@@ -131,7 +131,8 @@
   "mcp": {
     "playwright": {
       "type": "local",
-      "command": ["npx", "-y", "@executeautomation/playwright-mcp-server"]
+      "command": ["npx", "-y", "@executeautomation/playwright-mcp-server"],
+      "enabled": false
     },
     "context7": {
       "type": "local",
