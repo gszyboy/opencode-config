@@ -1,6 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "gpt-agent/claude-sonnet-4-6",
+  "model": "gpt-agent/MiniMax-M2.7-highspeed",
   "provider": {
     "gpt-agent": {
       "npm": "@ai-sdk/openai-compatible",
