@@ -152,11 +152,11 @@
         "MINIMAX_API_KEY": "{env:MINIMAX_API_KEY}",
         "MINIMAX_API_HOST": "https://api.minimaxi.com"
       },
-      "enabled": false
+      "enabled": true
     }
   },
   "tools": {
-    "MiniMax": false
+    "MiniMax": true
   },
   "instructions": [
     "~/.config/opencode/docs/general-rules.md",
