@@ -1,26 +1,26 @@
 {
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
   "agents": {
-    "sisyphus": { "model": "minimax.com/MiniMax-M2.7" },
-    "prometheus": { "model": "minimax.com/MiniMax-M2.7" },
-    "metis": { "model": "minimax.com/MiniMax-M2.7" },
-    "hephaestus": { "model": "minimax.com/MiniMax-M2.7" },
-    "oracle": { "model": "minimax.com/MiniMax-M2.7" },
-    "momus": { "model": "minimax.com/MiniMax-M2.7" },
-    "atlas": { "model": "minimax.com/MiniMax-M2.7" },
-    "sisyphus-junior": { "model": "minimax.com/MiniMax-M2.5-highspeed" },
-    "explore": { "model": "minimax.com/MiniMax-M2.5-highspeed" },
-    "librarian": { "model": "minimax.com/MiniMax-M2.5-highspeed" },
-    "multimodal-looker": { "model": "minimax.com/MiniMax-M2.7" }
+    "sisyphus": { "model": "minimax/MiniMax-M2.7" },
+    "prometheus": { "model": "minimax/MiniMax-M2.7" },
+    "metis": { "model": "minimax/MiniMax-M2.7" },
+    "hephaestus": { "model": "minimax/MiniMax-M2.7" },
+    "oracle": { "model": "minimax/MiniMax-M2.7" },
+    "momus": { "model": "minimax/MiniMax-M2.7" },
+    "atlas": { "model": "minimax/MiniMax-M2.7" },
+    "sisyphus-junior": { "model": "minimax/MiniMax-M2.5-highspeed" },
+    "explore": { "model": "minimax/MiniMax-M2.5-highspeed" },
+    "librarian": { "model": "minimax/MiniMax-M2.5-highspeed" },
+    "multimodal-looker": { "model": "minimax/MiniMax-M2.7" }
   },
   "categories": {
-    "quick": { "model": "minimax.com/MiniMax-M2.5-highspeed" },
-    "unspecified-low": { "model": "minimax.com/MiniMax-M2.5-highspeed" },
-    "writing": { "model": "minimax.com/MiniMax-M2.5-highspeed" },
-    "visual-engineering": { "model": "minimax.com/MiniMax-M2.7" },
-    "ultrabrain": { "model": "minimax.com/MiniMax-M2.7" },
-    "deep": { "model": "minimax.com/MiniMax-M2.7" },
-    "artistry": { "model": "minimax.com/MiniMax-M2.7" },
-    "unspecified-high": { "model": "minimax.com/MiniMax-M2.7" }
+    "quick": { "model": "minimax/MiniMax-M2.5-highspeed" },
+    "unspecified-low": { "model": "minimax/MiniMax-M2.5-highspeed" },
+    "writing": { "model": "minimax/MiniMax-M2.5-highspeed" },
+    "visual-engineering": { "model": "minimax/MiniMax-M2.7" },
+    "ultrabrain": { "model": "minimax/MiniMax-M2.7" },
+    "deep": { "model": "minimax/MiniMax-M2.7" },
+    "artistry": { "model": "minimax/MiniMax-M2.7" },
+    "unspecified-high": { "model": "minimax/MiniMax-M2.7" }
   }
 }
