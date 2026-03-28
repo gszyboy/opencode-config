@@ -1,0 +1,64 @@
+{
+  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
+  "agents": {
+    "sisyphus": {
+      "model": "gpt-agent/claude-opus-4-6"
+    },
+    "hephaestus": {
+      "model": "gpt-agent/gpt-5.4"
+    },
+    "oracle": {
+      "model": "gpt-agent/gpt-5.4"
+    },
+    "librarian": {
+      "model": "minimax.com/MiniMax-M2.7"
+    },
+    "explore": {
+      "model": "gpt-agent/claude-sonnet-4-6"
+    },
+    "multimodal-looker": {
+      "model": "gpt-agent/gpt-5.4"
+    },
+    "prometheus": {
+      "model": "gpt-agent/claude-opus-4-6"
+    },
+    "metis": {
+      "model": "gpt-agent/claude-opus-4-6"
+    },
+    "momus": {
+      "model": "gpt-agent/gpt-5.4"
+    },
+    "atlas": {
+      "model": "gpt-agent/claude-sonnet-4-6"
+    },
+    "sisyphus-junior": {
+      "model": "gpt-agent/claude-sonnet-4-6"
+    }
+  },
+  "categories": {
+    "visual-engineering": {
+      "model": "gpt-agent/gemini-3.1-pro"
+    },
+    "ultrabrain": {
+      "model": "gpt-agent/gpt-5.4"
+    },
+    "deep": {
+      "model": "gpt-agent/gpt-5.3-codex"
+    },
+    "artistry": {
+      "model": "gpt-agent/gemini-3.1-pro"
+    },
+    "quick": {
+      "model": "gpt-agent/gpt-5.4-mini"
+    },
+    "unspecified-low": {
+      "model": "gpt-agent/claude-sonnet-4-6"
+    },
+    "unspecified-high": {
+      "model": "gpt-agent/claude-opus-4-6"
+    },
+    "writing": {
+      "model": "gpt-agent/gemini-3.1-flash"
+    }
+  }
+}
