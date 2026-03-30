@@ -2,15 +2,15 @@
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
   "agents": {
     "sisyphus": {
-      "model": "gpt-agent/claude-opus-4-6",
+      "model": "gpt-agent/kimi-for-coding",
       "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。You must always respond in Simplified Chinese. All thinking, reasoning, todos, and output must be in Chinese."
     },
     "prometheus": {
-      "model": "gpt-agent/claude-opus-4-6",
+      "model": "gpt-agent/kimi-for-coding",
       "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。You must always respond in Simplified Chinese. All thinking, reasoning, todos, and output must be in Chinese."
     },
     "metis": {
-      "model": "gpt-agent/claude-opus-4-6",
+      "model": "gpt-agent/kimi-for-coding",
       "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。You must always respond in Simplified Chinese. All thinking, reasoning, todos, and output must be in Chinese."
     },
     "hephaestus": {
@@ -52,8 +52,8 @@
     "writing": { "model": "gpt-agent/gpt-5.4" },
     "visual-engineering": { "model": "gpt-agent/gemini-3.1-pro" },
     "ultrabrain": { "model": "gpt-agent/gpt-5.4" },
-    "deep": { "model": "gpt-agent/claude-opus-4-6" },
+    "deep": { "model": "gpt-agent/kimi-for-coding" },
     "artistry": { "model": "gpt-agent/gemini-3.1-pro" },
-    "unspecified-high": { "model": "gpt-agent/claude-opus-4-6" }
+    "unspecified-high": { "model": "gpt-agent/kimi-for-coding" }
   }
 }
