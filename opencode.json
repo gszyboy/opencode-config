@@ -1,7 +1,25 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "minimax.com/MiniMax-M2.7",
+  "model": "minimax/MiniMax-M2.7",
   "provider": {
+    "minimax": {
+      "npm": "@ai-sdk/anthropic",
+      "options": {
+        "baseURL": "https://api.minimaxi.com/anthropic/v1",
+        "apiKey": "{env:MINIMAX_API_KEY}"
+      },
+      "models": {
+        "MiniMax-M2.7": {
+          "name": "MiniMax-M2.7"
+        },
+        "MiniMax-M2.5": {
+          "name": "MiniMax-M2.5"
+        },
+        "MiniMax-M2.5-highspeed": {
+          "name": "MiniMax-M2.5 Highspeed"
+        }
+      }
+    },
     "gpt-agent": {
       "npm": "@ai-sdk/openai-compatible",
       "name": "GPT Agent Relay",
@@ -105,14 +123,7 @@
             "context": 128000,
             "output": 32768
           }
-        },
-        "MiniMax-M2.7": {
-          "name": "MiniMax M2.7",
-          "limit": {
-            "context": 1000000,
-            "output": 32768
-          }
-        },
+        },       
         "MiniMax-M2.7-highspeed": {
           "name": "MiniMax M2.7 Highspeed",
           "limit": {

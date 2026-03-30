@@ -1,26 +1,59 @@
 {
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
   "agents": {
-    "sisyphus": { "model": "minimax/MiniMax-M2.7" },
-    "prometheus": { "model": "minimax/MiniMax-M2.7" },
-    "metis": { "model": "minimax/MiniMax-M2.7" },
-    "hephaestus": { "model": "minimax/MiniMax-M2.7" },
-    "oracle": { "model": "minimax/MiniMax-M2.7" },
-    "momus": { "model": "minimax/MiniMax-M2.7" },
-    "atlas": { "model": "minimax/MiniMax-M2.7" },
-    "sisyphus-junior": { "model": "minimax/MiniMax-M2.5-highspeed" },
-    "explore": { "model": "minimax/MiniMax-M2.5-highspeed" },
-    "librarian": { "model": "minimax/MiniMax-M2.5-highspeed" },
-    "multimodal-looker": { "model": "minimax/MiniMax-M2.7" }
+    "sisyphus": {
+      "model": "gpt-agent/claude-opus-4-6",
+      "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。You must always respond in Simplified Chinese. All thinking, reasoning, todos, and output must be in Chinese."
+    },
+    "prometheus": {
+      "model": "gpt-agent/claude-opus-4-6",
+      "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。You must always respond in Simplified Chinese. All thinking, reasoning, todos, and output must be in Chinese."
+    },
+    "metis": {
+      "model": "gpt-agent/claude-opus-4-6",
+      "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。You must always respond in Simplified Chinese. All thinking, reasoning, todos, and output must be in Chinese."
+    },
+    "hephaestus": {
+      "model": "gpt-agent/gpt-5.4",
+      "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。You must always respond in Simplified Chinese. All thinking, reasoning, todos, and output must be in Chinese."
+    },
+    "oracle": {
+      "model": "gpt-agent/gpt-5.4",
+      "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。You must always respond in Simplified Chinese. All thinking, reasoning, todos, and output must be in Chinese."
+    },
+    "momus": {
+      "model": "gpt-agent/gpt-5.4",
+      "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。You must always respond in Simplified Chinese. All thinking, reasoning, todos, and output must be in Chinese."
+    },
+    "atlas": {
+      "model": "gpt-agent/claude-sonnet-4-6",
+      "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。You must always respond in Simplified Chinese. All thinking, reasoning, todos, and output must be in Chinese."
+    },
+    "sisyphus-junior": {
+      "model": "gpt-agent/claude-sonnet-4-6",
+      "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。You must always respond in Simplified Chinese. All thinking, reasoning, todos, and output must be in Chinese."
+    },
+    "explore": {
+      "model": "gpt-agent/kimi-for-coding",
+      "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。You must always respond in Simplified Chinese. All thinking, reasoning, todos, and output must be in Chinese."
+    },
+    "librarian": {
+      "model": "minimax/MiniMax-M2.7",
+      "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。You must always respond in Simplified Chinese. All thinking, reasoning, todos, and output must be in Chinese."
+    },
+    "multimodal-looker": {
+      "model": "gpt-agent/gpt-5.4",
+      "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。You must always respond in Simplified Chinese. All thinking, reasoning, todos, and output must be in Chinese."
+    }
   },
   "categories": {
-    "quick": { "model": "minimax/MiniMax-M2.5-highspeed" },
-    "unspecified-low": { "model": "minimax/MiniMax-M2.5-highspeed" },
-    "writing": { "model": "minimax/MiniMax-M2.5-highspeed" },
-    "visual-engineering": { "model": "minimax/MiniMax-M2.7" },
-    "ultrabrain": { "model": "minimax/MiniMax-M2.7" },
-    "deep": { "model": "minimax/MiniMax-M2.7" },
-    "artistry": { "model": "minimax/MiniMax-M2.7" },
-    "unspecified-high": { "model": "minimax/MiniMax-M2.7" }
+    "quick": { "model": "gpt-agent/claude-sonnet-4-6" },
+    "unspecified-low": { "model": "gpt-agent/claude-sonnet-4-6" },
+    "writing": { "model": "gpt-agent/gpt-5.4" },
+    "visual-engineering": { "model": "gpt-agent/gemini-3.1-pro" },
+    "ultrabrain": { "model": "gpt-agent/gpt-5.4" },
+    "deep": { "model": "gpt-agent/claude-opus-4-6" },
+    "artistry": { "model": "gpt-agent/gemini-3.1-pro" },
+    "unspecified-high": { "model": "gpt-agent/claude-opus-4-6" }
   }
 }
