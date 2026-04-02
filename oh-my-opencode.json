@@ -18,15 +18,15 @@
       "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。You must always respond in Simplified Chinese. All thinking, reasoning, todos, and output must be in Chinese."
     },
     "multimodal-looker": {
-      "model": "gpt-agent/kimi-for-coding",
+      "model": "minimax/MiniMax-M2.7",
       "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。You must always respond in Simplified Chinese. All thinking, reasoning, todos, and output must be in Chinese."
     },
     "prometheus": {
-      "model": "gpt-agent/kimi-for-coding",
+      "model": "minimax/MiniMax-M2.7",
       "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。You must always respond in Simplified Chinese. All thinking, reasoning, todos, and output must be in Chinese."
     },
     "metis": {
-      "model": "gpt-agent/kimi-for-coding",
+      "model": "minimax/MiniMax-M2.7",
       "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。You must always respond in Simplified Chinese. All thinking, reasoning, todos, and output must be in Chinese."
     },
     "momus": {
@@ -34,7 +34,7 @@
       "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。You must always respond in Simplified Chinese. All thinking, reasoning, todos, and output must be in Chinese."
     },
     "atlas": {
-      "model": "gpt-agent/kimi-for-coding",
+      "model": "minimax/MiniMax-M2.7",
       "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。You must always respond in Simplified Chinese. All thinking, reasoning, todos, and output must be in Chinese."
     },
     "sisyphus-junior": {
@@ -42,7 +42,7 @@
       "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。You must always respond in Simplified Chinese. All thinking, reasoning, todos, and output must be in Chinese."
     },
     "sisyphus": {
-      "model": "gpt-agent/kimi-for-coding",
+      "model": "minimax/MiniMax-M2.7",
       "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。You must always respond in Simplified Chinese. All thinking, reasoning, todos, and output must be in Chinese."
     }
   },
@@ -54,7 +54,7 @@
       "model": "gpt-agent/gpt-5.4"
     },
     "deep": {
-      "model": "gpt-agent/kimi-for-coding"
+      "model": "minimax/MiniMax-M2.7"
     },
     "artistry": {
       "model": "gpt-agent/gemini-3.1-pro"
@@ -66,7 +66,7 @@
       "model": "gpt-agent/claude-sonnet-4-6"
     },
     "unspecified-high": {
-      "model": "gpt-agent/kimi-for-coding"
+      "model": "minimax/MiniMax-M2.7"
     },
     "writing": {
       "model": "gpt-agent/gpt-5.4"
