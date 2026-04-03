@@ -149,7 +149,7 @@
       }
     },
     "kimi-for-coding": {
-      "name": "Kimi For Coding",
+      "name": "Kimi Code",
       "npm": "@ai-sdk/anthropic",
       "options": {
         "baseURL": "https://api.kimi.com/coding/v1",
