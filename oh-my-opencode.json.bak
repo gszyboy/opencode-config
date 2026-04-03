@@ -1,0 +1,59 @@
+{
+  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
+  "agents": {
+    "sisyphus": {
+      "model": "minimax/MiniMax-M2.7",
+      "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。You must always respond in Simplified Chinese. All thinking, reasoning, todos, and output must be in Chinese."
+    },
+    "prometheus": {
+      "model": "minimax/MiniMax-M2.7",
+      "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。You must always respond in Simplified Chinese. All thinking, reasoning, todos, and output must be in Chinese."
+    },
+    "metis": {
+      "model": "minimax/MiniMax-M2.7",
+      "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。You must always respond in Simplified Chinese. All thinking, reasoning, todos, and output must be in Chinese."
+    },
+    "hephaestus": {
+      "model": "minimax/MiniMax-M2.7",
+      "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。You must always respond in Simplified Chinese. All thinking, reasoning, todos, and output must be in Chinese."
+    },
+    "oracle": {
+      "model": "minimax/MiniMax-M2.7",
+      "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。You must always respond in Simplified Chinese. All thinking, reasoning, todos, and output must be in Chinese."
+    },
+    "momus": {
+      "model": "minimax/MiniMax-M2.7",
+      "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。You must always respond in Simplified Chinese. All thinking, reasoning, todos, and output must be in Chinese."
+    },
+    "atlas": {
+      "model": "minimax/MiniMax-M2.7",
+      "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。You must always respond in Simplified Chinese. All thinking, reasoning, todos, and output must be in Chinese."
+    },
+    "sisyphus-junior": {
+      "model": "minimax/MiniMax-M2.5-highspeed",
+      "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。You must always respond in Simplified Chinese. All thinking, reasoning, todos, and output must be in Chinese."
+    },
+    "explore": {
+      "model": "minimax/MiniMax-M2.5-highspeed",
+      "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。You must always respond in Simplified Chinese. All thinking, reasoning, todos, and output must be in Chinese."
+    },
+    "librarian": {
+      "model": "minimax/MiniMax-M2.5-highspeed",
+      "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。You must always respond in Simplified Chinese. All thinking, reasoning, todos, and output must be in Chinese."
+    },
+    "multimodal-looker": {
+      "model": "minimax/MiniMax-M2.7",
+      "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。You must always respond in Simplified Chinese. All thinking, reasoning, todos, and output must be in Chinese."
+    }
+  },
+  "categories": {
+    "quick": { "model": "minimax/MiniMax-M2.5-highspeed" },
+    "unspecified-low": { "model": "minimax/MiniMax-M2.5-highspeed" },
+    "writing": { "model": "minimax/MiniMax-M2.5-highspeed" },
+    "visual-engineering": { "model": "minimax/MiniMax-M2.7" },
+    "ultrabrain": { "model": "minimax/MiniMax-M2.7" },
+    "deep": { "model": "minimax/MiniMax-M2.7" },
+    "artistry": { "model": "minimax/MiniMax-M2.7" },
+    "unspecified-high": { "model": "minimax/MiniMax-M2.7" }
+  }
+}
