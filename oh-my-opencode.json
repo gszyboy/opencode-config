@@ -30,7 +30,7 @@
       "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。"
     },
     "momus": {
-      "model": "gpt-agent/claude-sonnet-4-6",
+      "model": "minimax/MiniMax-M2.7",
       "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。"
     },
     "atlas": {
@@ -38,7 +38,7 @@
       "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。"
     },
     "sisyphus-junior": {
-      "model": "gpt-agent/claude-sonnet-4-6",
+      "model": "minimax/MiniMax-M2.7",
       "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。"
     },
     "sisyphus": {

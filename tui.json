@@ -5,5 +5,10 @@
     "app_exit": "<leader>q",
     "model_cycle_recent": "f2",
     "model_cycle_recent_reverse": "shift+f2"
-  }
+  },
+  "scroll_speed": 3,
+  "scroll_acceleration": {
+    "enabled": true
+  },
+  "diff_style": "auto"
 }
