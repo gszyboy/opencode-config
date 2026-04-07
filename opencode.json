@@ -200,7 +200,8 @@
       "npm": "@ai-sdk/anthropic",
       "options": {
         "baseURL": "https://api.kimi.com/coding/v1",
-        "apiKey": "{env:KIMI_API_KEY}"
+        "apiKey": "{env:KIMI_API_KEY}",
+		"compatibility": "compatible"
       },
       "models": {
         "k2p5": {
@@ -216,7 +217,8 @@
           },
           "options": {
             "interleaved": {
-              "field": "reasoning_content"
+              "field": "reasoning_content",
+			  "includeInHistory": false
             }
           }
         }

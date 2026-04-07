@@ -11,10 +11,18 @@
     },
     "librarian": {
       "model": "kimi-for-coding/k2p5",
+      "fallback_models": [
+        "gpt-agent/claude-opus-4-6",
+        "minimax/MiniMax-M2.7"
+      ],
       "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。"
     },
     "explore": {
       "model": "kimi-for-coding/k2p5",
+      "fallback_models": [
+        "gpt-agent/claude-opus-4-6",
+        "minimax/MiniMax-M2.7"
+      ],
       "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。"
     },
     "multimodal-looker": {
@@ -43,6 +51,10 @@
     },
     "sisyphus": {
       "model": "kimi-for-coding/k2p5",
+      "fallback_models": [
+        "gpt-agent/claude-opus-4-6",
+        "minimax/MiniMax-M2.7"
+      ],
       "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。"
     }
   },
@@ -63,7 +75,11 @@
       "model": "minimax/MiniMax-M2.5-highspeed"
     },
     "unspecified-low": {
-      "model": "kimi-for-coding/k2p5"
+      "model": "kimi-for-coding/k2p5",
+      "fallback_models": [
+        "gpt-agent/claude-opus-4-6",
+        "minimax/MiniMax-M2.5-highspeed"
+      ]
     },
     "unspecified-high": {
       "model": "minimax/MiniMax-M2.7"
