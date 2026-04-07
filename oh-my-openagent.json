@@ -10,18 +10,18 @@
       "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。"
     },
     "librarian": {
-      "model": "kimi-for-coding/k2p5",
+      "model": "minimax/MiniMax-M2.7",
       "fallback_models": [
-        "gpt-agent/claude-opus-4-6",
-        "minimax/MiniMax-M2.7"
+        "kimi-for-coding/k2p5",
+        "gpt-agent/claude-opus-4-6"
       ],
       "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。"
     },
     "explore": {
-      "model": "kimi-for-coding/k2p5",
+      "model": "minimax/MiniMax-M2.7",
       "fallback_models": [
-        "gpt-agent/claude-opus-4-6",
-        "minimax/MiniMax-M2.7"
+        "kimi-for-coding/k2p5",
+        "gpt-agent/claude-opus-4-6"
       ],
       "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。"
     },
@@ -50,10 +50,10 @@
       "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。"
     },
     "sisyphus": {
-      "model": "kimi-for-coding/k2p5",
+      "model": "minimax/MiniMax-M2.7",
       "fallback_models": [
-        "gpt-agent/claude-opus-4-6",
-        "minimax/MiniMax-M2.7"
+        "kimi-for-coding/k2p5",
+        "gpt-agent/claude-opus-4-6"
       ],
       "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。"
     }
@@ -75,10 +75,10 @@
       "model": "minimax/MiniMax-M2.5-highspeed"
     },
     "unspecified-low": {
-      "model": "kimi-for-coding/k2p5",
+      "model": "minimax/MiniMax-M2.7",
       "fallback_models": [
-        "gpt-agent/claude-opus-4-6",
-        "minimax/MiniMax-M2.5-highspeed"
+        "kimi-for-coding/k2p5",
+        "gpt-agent/claude-opus-4-6"
       ]
     },
     "unspecified-high": {
