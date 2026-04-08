@@ -3,89 +3,149 @@
   "agents": {
     "hephaestus": {
       "model": "minimax/MiniMax-M2.7",
+      "fallback_models": [
+        "gpt-agent/claude-opus-4-6",
+        "kimi-for-coding/k2p5"
+      ],
       "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。"
     },
     "oracle": {
       "model": "gpt-agent/gpt-5.4",
+      "fallback_models": [
+        "minimax/MiniMax-M2.7",
+        "kimi-for-coding/k2p5"
+      ],
       "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。"
     },
     "librarian": {
       "model": "minimax/MiniMax-M2.7",
       "fallback_models": [
-        "kimi-for-coding/k2p5",
-        "gpt-agent/claude-opus-4-6"
+        "gpt-agent/claude-opus-4-6",
+        "kimi-for-coding/k2p5"
       ],
       "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。"
     },
     "explore": {
       "model": "minimax/MiniMax-M2.7",
       "fallback_models": [
-        "kimi-for-coding/k2p5",
-        "gpt-agent/claude-opus-4-6"
+        "gpt-agent/claude-opus-4-6",
+        "kimi-for-coding/k2p5"
       ],
       "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。"
     },
     "multimodal-looker": {
       "model": "gpt-agent/gemini-3.1-pro",
+      "fallback_models": [
+        "minimax/MiniMax-M2.7",
+        "kimi-for-coding/k2p5"
+      ],
       "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。"
     },
     "prometheus": {
       "model": "minimax/MiniMax-M2.7",
+      "fallback_models": [
+        "gpt-agent/claude-opus-4-6",
+        "kimi-for-coding/k2p5"
+      ],
       "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。"
     },
     "metis": {
       "model": "minimax/MiniMax-M2.7",
+      "fallback_models": [
+        "gpt-agent/claude-opus-4-6",
+        "kimi-for-coding/k2p5"
+      ],
       "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。"
     },
     "momus": {
       "model": "minimax/MiniMax-M2.7",
+      "fallback_models": [
+        "gpt-agent/claude-opus-4-6",
+        "kimi-for-coding/k2p5"
+      ],
       "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。"
     },
     "atlas": {
       "model": "minimax/MiniMax-M2.7",
+      "fallback_models": [
+        "gpt-agent/claude-opus-4-6",
+        "kimi-for-coding/k2p5"
+      ],
       "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。"
     },
     "sisyphus-junior": {
       "model": "minimax/MiniMax-M2.7",
+      "fallback_models": [
+        "gpt-agent/claude-opus-4-6",
+        "kimi-for-coding/k2p5"
+      ],
       "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。"
     },
     "sisyphus": {
       "model": "minimax/MiniMax-M2.7",
       "fallback_models": [
-        "kimi-for-coding/k2p5",
-        "gpt-agent/claude-opus-4-6"
+        "gpt-agent/claude-opus-4-6",
+        "kimi-for-coding/k2p5"
       ],
       "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。"
     }
   },
   "categories": {
     "visual-engineering": {
-      "model": "gpt-agent/gemini-3.1-pro"
+      "model": "gpt-agent/gemini-3.1-pro",
+      "fallback_models": [
+        "minimax/MiniMax-M2.7",
+        "kimi-for-coding/k2p5"
+      ]
     },
     "ultrabrain": {
-      "model": "gpt-agent/gpt-5.4"
+      "model": "gpt-agent/gpt-5.4",
+      "fallback_models": [
+        "minimax/MiniMax-M2.7",
+        "kimi-for-coding/k2p5"
+      ]
     },
     "deep": {
-      "model": "minimax/MiniMax-M2.7"
+      "model": "minimax/MiniMax-M2.7",
+      "fallback_models": [
+        "gpt-agent/claude-opus-4-6",
+        "kimi-for-coding/k2p5"
+      ]
     },
     "artistry": {
-      "model": "gpt-agent/gemini-3.1-pro"
+      "model": "gpt-agent/gemini-3.1-pro",
+      "fallback_models": [
+        "minimax/MiniMax-M2.7",
+        "kimi-for-coding/k2p5"
+      ]
     },
     "quick": {
-      "model": "minimax/MiniMax-M2.5-highspeed"
+      "model": "minimax/MiniMax-M2.5-highspeed",
+      "fallback_models": [
+        "gpt-agent/MiniMax-M2.7-highspeed",
+        "minimax/MiniMax-M2.7"
+      ]
     },
     "unspecified-low": {
       "model": "minimax/MiniMax-M2.7",
       "fallback_models": [
-        "kimi-for-coding/k2p5",
-        "gpt-agent/claude-opus-4-6"
+        "gpt-agent/claude-opus-4-6",
+        "kimi-for-coding/k2p5"
       ]
     },
     "unspecified-high": {
-      "model": "minimax/MiniMax-M2.7"
+      "model": "minimax/MiniMax-M2.7",
+      "fallback_models": [
+        "gpt-agent/claude-opus-4-6",
+        "kimi-for-coding/k2p5"
+      ]
     },
     "writing": {
-      "model": "minimax/MiniMax-M2.7"
+      "model": "minimax/MiniMax-M2.7",
+      "fallback_models": [
+        "gpt-agent/claude-opus-4-6",
+        "kimi-for-coding/k2p5"
+      ]
     }
   }
 }
