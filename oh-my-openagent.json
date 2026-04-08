@@ -1,5 +1,13 @@
 {
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
+  "runtime_fallback": {
+    "enabled": true,
+    "retry_on_errors": [429, 503, 500, 502, 504],
+    "max_fallback_attempts": 3,
+    "cooldown_seconds": 60,
+    "timeout_seconds": 30,
+    "notify_on_fallback": true
+  },
   "agents": {
     "hephaestus": {
       "model": "minimax/MiniMax-M2.7",
