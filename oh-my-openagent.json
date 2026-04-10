@@ -123,9 +123,9 @@
       ],
     },
     "artistry": {
-      "model": "gpt-agent/mimo-v2-omni",
+      "model": "gpt-agent/gemini-3.1-pro",
       "fallback_models": [
-        "gpt-agent/gemini-3.1-pro",
+        "gpt-agent/mimo-v2-omni",
         "minimax-cn-coding-plan/MiniMax-M2.7",
         "kimi-for-coding/k2p5"
       ]
