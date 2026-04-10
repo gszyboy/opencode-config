@@ -42,8 +42,9 @@
       "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。"
     },
     "multimodal-looker": {
-      "model": "gpt-agent/gemini-3.1-pro",
+      "model": "gpt-agent/mimo-v2-omni",
       "fallback_models": [
+        "gpt-agent/gemini-3.1-pro",
         "minimax-cn-coding-plan/MiniMax-M2.7",
         "kimi-for-coding/k2p5"
       ],
@@ -100,8 +101,9 @@
   },
   "categories": {
     "visual-engineering": {
-      "model": "gpt-agent/gemini-3.1-pro",
+      "model": "gpt-agent/mimo-v2-omni",
       "fallback_models": [
+        "gpt-agent/gemini-3.1-pro",
         "minimax-cn-coding-plan/MiniMax-M2.7",
         "kimi-for-coding/k2p5"
       ]
@@ -121,8 +123,9 @@
       ],
     },
     "artistry": {
-      "model": "gpt-agent/gemini-3.1-pro",
+      "model": "gpt-agent/mimo-v2-omni",
       "fallback_models": [
+        "gpt-agent/gemini-3.1-pro",
         "minimax-cn-coding-plan/MiniMax-M2.7",
         "kimi-for-coding/k2p5"
       ]
