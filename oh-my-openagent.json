@@ -8,6 +8,10 @@
     "timeout_seconds": 30,
     "notify_on_fallback": true
   },
+  "sisyphus_agent": {
+    "default_builder_enabled": true,
+    "replace_plan": false
+  },
   "agents": {
     "hephaestus": {
       "model": "gpt-agent/gpt-5.3-codex","variant": "medium",
@@ -27,8 +31,7 @@
     },
     "librarian": {
       "model": "minimax-cn-coding-plan/MiniMax-M2.7",
-      "fallback_models": [
-        "gpt-agent/claude-opus-4-6",
+      "fallback_models": [        
         "kimi-for-coding/k2p5"
       ],
       "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。"
@@ -36,7 +39,6 @@
     "explore": {
       "model": "minimax-cn-coding-plan/MiniMax-M2.7",
       "fallback_models": [
-        "gpt-agent/claude-opus-4-6",
         "kimi-for-coding/k2p5"
       ],
       "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。"
@@ -45,18 +47,12 @@
       "model": "gpt-agent/mimo-v2-omni",
       "fallback_models": [
         "gpt-agent/gemini-3.1-pro",
-        "minimax-cn-coding-plan/MiniMax-M2.7",
         "kimi-for-coding/k2p5"
       ],
       "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。"
     },
-    "prometheus": {
-      "model": "minimax-cn-coding-plan/MiniMax-M2.7",
-      "fallback_models": [
-        "gpt-agent/claude-opus-4-6",
-        "kimi-for-coding/k2p5"
-      ],
-      "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。"
+    "prometheus": {      
+      "prompt_append": "Leverage deep & quick agents heavily, always in parallel.你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。"
     },
     "metis": {
       "model": "minimax-cn-coding-plan/MiniMax-M2.7",
@@ -91,7 +87,8 @@
       "prompt_append": "你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。"
     },
     "sisyphus": {
-      "model": "minimax-cn-coding-plan/MiniMax-M2.7",
+      "model": "kimi-for-coding/k2p5",
+      "ultrawork": { "model": "minimax-cn-coding-plan/MiniMax-M2.7", "variant": "max" },
       "fallback_models": [
         "gpt-agent/claude-opus-4-6",
         "kimi-for-coding/k2p5"
@@ -102,6 +99,7 @@
   "categories": {
     "visual-engineering": {
       "model": "gpt-agent/gemini-3.1-pro",
+       "variant": "high",
       "fallback_models": [
         "minimax-cn-coding-plan/MiniMax-M2.7",
         "kimi-for-coding/k2p5"
