@@ -72,7 +72,7 @@
     "momus": {
       "model": "gpt-agent/gpt-5.4",
       "fallback_models": [
-        "gpt-agent/gpt-5.4",
+        "gpt-agent/gpt-5.3-codex",
         "minimax-cn-coding-plan/MiniMax-M2.7"
       ]
     },
