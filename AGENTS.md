@@ -61,7 +61,6 @@
 - 后端规范：@~/.config/opencode/docs/backend-rules.md
 - 前端规范：@~/.config/opencode/docs/frontend-rules.md
 - TypeScript 规范：@~/.config/opencode/docs/typescript-rules.md
-- 测试规范：@~/.config/opencode/test/testing-guide.md
 
 ## 已有项目规范
 
