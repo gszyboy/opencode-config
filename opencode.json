@@ -204,6 +204,21 @@
             "context": 200000,
             "output": 32768
           }
+        },
+        "glm-5.1": {
+          "name": "GLM-5.1",
+          "modalities": {
+            "input": [
+              "text"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "limit": {
+            "context": 204800,
+            "output": 131072
+          }
         }
       }
     },
