@@ -50,8 +50,7 @@
     "multimodal-looker": {
       "model": "gpt-agent/mimo-v2-omni",
       "fallback_models": [
-        "gpt-agent/gemini-3.1-pro",
-        "kimi-for-coding/k2p5"
+        "minimax-cn-coding-plan/MiniMax-M2.7"
       ]
     },
     "prometheus": {
@@ -104,11 +103,10 @@
   },
   "categories": {
     "visual-engineering": {
-      "model": "gpt-agent/gemini-3.1-pro",
+      "model": "kimi-for-coding/k2p5",
       "variant": "high",
       "fallback_models": [
-        "minimax-cn-coding-plan/MiniMax-M2.7",
-        "kimi-for-coding/k2p5"
+        "minimax-cn-coding-plan/MiniMax-M2.7"
       ]
     },
     "ultrabrain": {
@@ -127,10 +125,9 @@
       ]
     },
     "artistry": {
-      "model": "gpt-agent/gemini-3.1-pro",
+      "model": "kimi-for-coding/k2p5",
       "fallback_models": [
-        "minimax-cn-coding-plan/MiniMax-M2.7",
-        "kimi-for-coding/k2p5"
+        "minimax-cn-coding-plan/MiniMax-M2.7"
       ]
     },
     "quick": {
