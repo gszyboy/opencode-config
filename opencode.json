@@ -303,8 +303,7 @@
     "~/.config/opencode/docs/backend-rules.md",
     "~/.config/opencode/docs/frontend-rules.md",
     "~/.config/opencode/docs/typescript-rules.md",
-    "~/.config/opencode/docs/existing-project-rules.md",
-    "~/.config/opencode/test/testing-guide.md"
+    "~/.config/opencode/docs/existing-project-rules.md"
   ],
   "plugin": [
     "oh-my-openagent@latest"
