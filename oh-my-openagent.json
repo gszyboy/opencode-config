@@ -104,7 +104,7 @@
   },
   "categories": {
     "visual-engineering": {
-      "model": "kimi-for-coding/k2p5",
+      "model": "gpt-agent/glm-5.1",
       "variant": "high",
       "fallback_models": [
         "gpt-agent/gemini-3.1-pro",
@@ -127,7 +127,7 @@
       ]
     },
     "artistry": {
-      "model": "kimi-for-coding/k2p5",
+      "model": "gpt-agent/glm-5.1",
       "fallback_models": [
         "gpt-agent/gemini-3.1-pro",
         "minimax-cn-coding-plan/MiniMax-M2.7"
