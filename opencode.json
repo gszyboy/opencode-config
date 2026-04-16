@@ -231,7 +231,7 @@
 		"compatibility": "compatible"
       },
       "models": {
-"k2p5": {
+        "k2p5": {
           "name": "Kimi K2.5",
           "reasoning": true,
           "limit": {
@@ -241,12 +241,6 @@
           "modalities": {
             "input": ["text", "image", "video"],
             "output": ["text"]
-          },
-          "options": {
-            "interleaved": {
-              "field": "reasoning_content",
-              "includeInHistory": false
-            }
           }
         },
         "k2p6": {
@@ -259,12 +253,6 @@
           "modalities": {
             "input": ["text", "image", "video"],
             "output": ["text"]
-          },
-          "options": {
-            "interleaved": {
-              "field": "reasoning_content",
-              "includeInHistory": false
-            }
           }
         }
       }
