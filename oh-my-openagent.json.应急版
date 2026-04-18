@@ -1,0 +1,165 @@
+{
+  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
+  "runtime_fallback": {
+    "enabled": true,
+    "retry_on_errors": [
+      429,
+      503,
+      500,
+      502,
+      504
+    ],
+    "max_fallback_attempts": 3,
+    "cooldown_seconds": 60,
+    "timeout_seconds": 30,
+    "notify_on_fallback": true
+  },
+  "sisyphus_agent": {
+    "default_builder_enabled": true
+  },
+  "agents": {
+    "hephaestus": {
+      "model": "minimax-cn-coding-plan/MiniMax-M2.7",
+      "variant": "medium",
+      "fallback_models": [
+        "gpt-agent/gpt-5.4",
+        "gpt-agent/gpt-5.3-codex-spark"
+      ]
+    },
+    "oracle": {
+      "model": "gpt-agent/gpt-5.4",
+      "variant": "high",
+      "fallback_models": [
+        "minimax-cn-coding-plan/MiniMax-M2.7",
+        "kimi-for-coding/k2p5"
+      ]
+    },
+    "librarian": {
+      "model": "minimax-cn-coding-plan/MiniMax-M2.7",
+      "fallback_models": [
+        "kimi-for-coding/k2p5"
+      ]
+    },
+    "explore": {
+      "model": "minimax-cn-coding-plan/MiniMax-M2.5-highspeed",
+      "fallback_models": [
+        "minimax-cn-coding-plan/MiniMax-M2.7",
+        "kimi-for-coding/k2p5"
+      ]
+    },
+    "multimodal-looker": {
+      "model": "gpt-agent/mimo-v2-omni",
+      "fallback_models": [
+        "gpt-agent/gemini-3.1-pro",
+        "kimi-for-coding/k2p5"
+      ]
+    },
+    "prometheus": {
+      "model": "minimax-cn-coding-plan/MiniMax-M2.7",
+      "fallback_models": [
+        "minimax-cn-coding-plan/MiniMax-M2.7",
+        "gpt-agent/claude-opus-4-6"
+      ],
+      "prompt_append": "Leverage deep & quick agents heavily, always in parallel."
+    },
+    "metis": {
+      "model": "minimax-cn-coding-plan/MiniMax-M2.7",
+      "fallback_models": [
+        "gpt-agent/claude-opus-4-6",
+        "kimi-for-coding/k2p5"
+      ]
+    },
+    "momus": {
+      "model": "gpt-agent/gpt-5.4",
+      "fallback_models": [
+        "gpt-agent/gpt-5.3-codex",
+        "minimax-cn-coding-plan/MiniMax-M2.7"
+      ]
+    },
+    "atlas": {
+      "model": "minimax-cn-coding-plan/MiniMax-M2.7",
+      "fallback_models": [
+        "gpt-agent/claude-opus-4-6",
+        "kimi-for-coding/k2p5"
+      ]
+    },
+    "sisyphus-junior": {
+      "model": "minimax-cn-coding-plan/MiniMax-M2.7",
+      "fallback_models": [
+        "gpt-agent/claude-opus-4-6",
+        "kimi-for-coding/k2p5"
+      ]
+    },
+    "sisyphus": {
+      "model": "minimax-cn-coding-plan/MiniMax-M2.7",
+      "ultrawork": {
+        "model": "minimax-cn-coding-plan/MiniMax-M2.7",
+        "variant": "max"
+      },
+      "fallback_models": [
+        "gpt-agent/claude-opus-4-6",
+        "kimi-for-coding/k2p5"
+      ]
+    }
+  },
+  "categories": {
+    "visual-engineering": {
+      "model": "minimax-cn-coding-plan/MiniMax-M2.7",
+      "variant": "high",
+      "fallback_models": [
+        "gpt-agent/gemini-3.1-pro",
+        "gpt-agent/mimo-v2-omni"
+      ]
+    },
+    "ultrabrain": {
+      "model": "gpt-agent/gpt-5.4",
+      "reasoningEffort": "xhigh",
+      "fallback_models": [
+        "minimax-cn-coding-plan/MiniMax-M2.7",
+        "kimi-for-coding/k2p5"
+      ]
+    },
+    "deep": {
+      "model": "gpt-agent/gpt-5.4",
+      "fallback_models": [
+        "gpt-agent/gpt-5.3-codex-spark",
+        "minimax-cn-coding-plan/MiniMax-M2.7"
+      ]
+    },
+    "artistry": {
+      "model": "gpt-agent/mimo-v2-omni",
+      "fallback_models": [
+        "gpt-agent/gemini-3.1-pro",
+        "minimax-cn-coding-plan/MiniMax-M2.7"
+      ]
+    },
+    "quick": {
+      "model": "minimax/MiniMax-M2.5-highspeed",
+      "fallback_models": [
+        "gpt-agent/MiniMax-M2.7-highspeed",
+        "minimax-cn-coding-plan/MiniMax-M2.7"
+      ]
+    },
+    "unspecified-low": {
+      "model": "minimax-cn-coding-plan/MiniMax-M2.7",
+      "fallback_models": [
+        "gpt-agent/claude-opus-4-6",
+        "kimi-for-coding/k2p5"
+      ]
+    },
+    "unspecified-high": {
+      "model": "minimax-cn-coding-plan/MiniMax-M2.7",
+      "fallback_models": [
+        "gpt-agent/claude-opus-4-6",
+        "kimi-for-coding/k2p5"
+      ]
+    },
+    "writing": {
+      "model": "minimax-cn-coding-plan/MiniMax-M2.7",
+      "fallback_models": [
+        "gpt-agent/claude-opus-4-6",
+        "kimi-for-coding/k2p5"
+      ]
+    }
+  }
+}
