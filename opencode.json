@@ -313,6 +313,7 @@
     "~/.config/opencode/docs/existing-project-rules.md"
   ],
   "plugin": [
-    "oh-my-openagent@latest"
+    "oh-my-openagent@latest",
+    "@tarquinen/opencode-dcp@latest"
   ]
 }

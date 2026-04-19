@@ -62,6 +62,45 @@ onMounted(() => {
 </script>
 ```
 
+#### 组件大小规范
+
+**目标**：以 200 行为目标，300 行为警戒线。
+
+| 组件类型 | 推荐行数 | 说明 |
+|---------|---------|------|
+| 业务页面组件 (Page/View) | ≤ 300行 | 路由入口，可接受 |
+| 可复用组件 (Component) | ≤ 200行 | 最佳实践 |
+| 基础/原子组件 | ≤ 100行 | 如 BaseButton |
+
+**拆分信号**（超过以下任一条件时应拆分）：
+- 组件超过 200 行
+- 模板中出现复杂表达式（应抽取为 computed）
+- 多个不相关的功能混在一起
+- 方法名开始使用复合命名
+- 修改时需要滚动很久才能看完
+
+**拆分策略**：使用 Composition API + Composables 模式
+
+```vue
+<!-- 重构前：逻辑混乱的巨型组件 -->
+<script setup>
+// 大量混乱的逻辑混在一起
+const handleUserData = () => { ... }
+const handleValidation = () => { ... }
+</script>
+
+<!-- 重构后：使用 composables 拆分 -->
+<script setup>
+import { useUserData } from './composables/useUserData'
+import { useValidation } from './composables/useValidation'
+
+const { userData, updateUserData } = useUserData()
+const { errors, validate } = useValidation(userData)
+</script>
+```
+
+> **参考**：Vue 官方 Style Guide 无硬性行数限制，强调单一职责。业界共识为 200 行以内。
+
 #### 模板规范
 - 使用 `<script setup>` 语法
 - 优先使用 `v-if` + `v-else` 而非 `v-show`
@@ -228,10 +267,4 @@ export const login = (data) => request('/user/login', { method: 'POST', data })
 - ❌ 不在组件中直接修改 `props`
 - ❌ 不在 `onLoad` 中使用 `async/await`（用回调或 Promise）
 
----
 
-## 变更记录
-
-| 日期 | 更新内容 |
-|------|----------|
-| 2026-03-22 | 添加 Vue 3 详细规范和 UniApp 规范 |

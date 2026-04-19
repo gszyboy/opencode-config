@@ -979,17 +979,7 @@ A: 确保以下文件存在：
 2. `项目目录/AGENTS.md`
 3. `~/.config/opencode/opencode.json`
 
----
 
-## 变更记录
-
-| 日期 | 更新内容 |
-|------|----------|
-| 2026-03-22 | 创建完整使用指南 |
-| 2026-03-22 | 添加已有项目AI协作规范（/assess-project、/incremental-dev） |
-| 2026-03-22 | 更新技能列表，完善 MCP 配置说明 |
-| 2026-03-22 | 精简 Skills，删除重复的 dev-progress/incremental-doc/plan-decomposer |
-| 2026-03-22 | 更新用户指南：修正 Skills 列表、移除 `@` 前缀、修复重复命令 |
 
 ---
 

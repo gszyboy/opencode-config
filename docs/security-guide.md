@@ -110,10 +110,4 @@ App.vue, main.ts, index.tsx
    - 使用 .env.local 存储本地密钥
    - 生产环境使用 secrets manager
 
----
 
-## 变更记录
-
-| 日期 | 更新内容 |
-|------|----------|
-| 2026-03-22 | 添加安全增强规范和 Plugins |
