@@ -83,6 +83,14 @@
 
 ---
 
+## AGENTS.md
+
+| 日期 | 更新内容 |
+|------|----------|
+| 2026-04-21 | 合并 Karpathy 4 原则（Think Before Coding、Simplicity First、Surgical Changes、Goal-Driven Execution）|
+
+---
+
 ## 汇总统计
 
 | 文档 | 创建日期 | 最近更新 |
