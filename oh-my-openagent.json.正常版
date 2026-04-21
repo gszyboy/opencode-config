@@ -91,9 +91,9 @@
       ]
     },
     "sisyphus": {
-      "model": "kimi-for-coding/k2p5",
+      "model": "minimax-cn-coding-plan/MiniMax-M2.7",
       "ultrawork": {
-        "model": "minimax-cn-coding-plan/MiniMax-M2.7",
+        "model": "kimi-for-coding/k2p5",
         "variant": "max"
       },
       "fallback_models": [
