@@ -3,7 +3,7 @@
   "keybinds": {
     "leader": "ctrl+\\,ctrl+x",
     "app_exit": "<leader>q",
-    "terminal_suspend": "none",
+    "terminal_suspend": "ctrl+shift+z",
     "input_undo": "ctrl+z"
   },
   "scroll_speed": 3,
