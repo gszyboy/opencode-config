@@ -4,7 +4,8 @@
     "leader": "ctrl+\\,ctrl+x",
     "app_exit": "<leader>q",
     "terminal_suspend": "ctrl+shift+z",
-    "input_undo": "ctrl+z"
+    "input_undo": "ctrl+z",
+    "session_interrupt": "escape,ctrl+shift+x"
   },
   "scroll_speed": 3,
   "scroll_acceleration": {
