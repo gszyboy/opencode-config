@@ -66,8 +66,8 @@
     "metis": {
       "model": "minimax-cn-coding-plan/MiniMax-M2.7",
       "fallback_models": [
-        "gpt-agent/claude-opus-4-6",
-        "kimi-for-coding/k2p5"
+        "kimi-for-coding/k2p5",
+        "gpt-agent/claude-opus-4-6"
       ]
     },
     "momus": {
@@ -80,15 +80,15 @@
     "atlas": {
       "model": "minimax-cn-coding-plan/MiniMax-M2.7",
       "fallback_models": [
-        "gpt-agent/claude-opus-4-6",
-        "kimi-for-coding/k2p5"
+        "kimi-for-coding/k2p5",
+        "gpt-agent/claude-opus-4-6"
       ]
     },
     "sisyphus-junior": {
       "model": "minimax-cn-coding-plan/MiniMax-M2.7",
       "fallback_models": [
-        "gpt-agent/claude-opus-4-6",
-        "kimi-for-coding/k2p5"
+        "kimi-for-coding/k2p5",
+        "gpt-agent/claude-opus-4-6"
       ]
     },
     "sisyphus": {
@@ -144,22 +144,22 @@
     "unspecified-low": {
       "model": "minimax-cn-coding-plan/MiniMax-M2.7",
       "fallback_models": [
-        "gpt-agent/claude-opus-4-6",
-        "kimi-for-coding/k2p5"
+        "kimi-for-coding/k2p5",
+        "gpt-agent/claude-opus-4-6"
       ]
     },
     "unspecified-high": {
       "model": "minimax-cn-coding-plan/MiniMax-M2.7",
       "fallback_models": [
-        "gpt-agent/claude-opus-4-6",
-        "kimi-for-coding/k2p5"
+        "kimi-for-coding/k2p5",
+        "gpt-agent/claude-opus-4-6"
       ]
     },
     "writing": {
       "model": "minimax-cn-coding-plan/MiniMax-M2.7",
       "fallback_models": [
-        "gpt-agent/claude-opus-4-6",
-        "kimi-for-coding/k2p5"
+        "kimi-for-coding/k2p5",
+        "gpt-agent/claude-opus-4-6"
       ]
     }
   }
