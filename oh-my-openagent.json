@@ -4,6 +4,7 @@
     "enabled": true,
     "retry_on_errors": [
       429,
+      529,
       503,
       500,
       502,
@@ -97,8 +98,8 @@
         "variant": "max"
       },
       "fallback_models": [
-        "gpt-agent/claude-opus-4-6",
-        "kimi-for-coding/k2p5"
+        "kimi-for-coding/k2p5",
+        "gpt-agent/claude-opus-4-6"
       ]
     }
   },
