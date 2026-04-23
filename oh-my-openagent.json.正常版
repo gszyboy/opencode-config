@@ -4,7 +4,6 @@
     "enabled": true,
     "retry_on_errors": [
       429,
-      529,
       503,
       500,
       502,
