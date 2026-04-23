@@ -8,6 +8,10 @@
 
 该插件用于动态上下文剪枝，优化大语言模型的上下文管理。
 
+### 2026-04-23
+
+更新 `oh-my-openagent.json` 中的 kimi 模型：`k2p5` → `k2p6`，并备份为 `oh-my-openagent.json.正常版`。
+
 ## 项目结构
 
 - `AGENTS.md` - Agent 配置
