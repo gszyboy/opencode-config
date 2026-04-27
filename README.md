@@ -12,6 +12,15 @@
 
 更新 `oh-my-openagent.json` 中的 kimi 模型：`k2p5` → `k2p6`，并备份为 `oh-my-openagent.json.正常版`。
 
+### 2026-04-27
+
+新增 DeepSeek 版配置文件 `oh-my-openagent.json.DeepSeek版`：
+- 复制 `oh-my-openagent.json.正常版` 为基础
+- 将 10 个节点的主模型从 `minimax-cn-coding-plan/MiniMax-M2.7` 切换为 `deepseek_custom/deepseek-v4-pro`
+- 涉及的节点：hephaestus、librarian、metis、atlas、sisyphus-junior、sisyphus、visual-engineering、unspecified-low、unspecified-high、writing
+- 删除 sisyphus 节点中的 ultrawork 配置
+- 在 `switch-agent.sh` 中新增 `deepseek` 选项以快速切换到此版本
+
 ## 项目结构
 
 - `AGENTS.md` - Agent 配置
