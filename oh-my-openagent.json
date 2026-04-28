@@ -76,7 +76,7 @@
         "minimax-cn-coding-plan/MiniMax-M2.7"
       ]
     },
-    "sisyphus-junior": {
+    "atlas": {
       "model": "deepseek/deepseek-v4-pro",
       "fallback_models": [
         "kimi-for-coding/k2p6",
@@ -92,6 +92,7 @@
     },
     "sisyphus": {
       "model": "deepseek/deepseek-v4-pro",
+      "variant": "max",
       "fallback_models": [
         "kimi-for-coding/k2p6",
         "gpt-agent/claude-opus-4-6"
