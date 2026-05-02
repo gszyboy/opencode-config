@@ -24,7 +24,7 @@
 ### 2026-05-02（后续）
 
 - 4 个 `oh-my-openagent.json` 配置文件所有 `MiniMax-M2.5-highspeed` 替换为 `minimax-cn-coding-plan/MiniMax-M2.7`
-- `oh-my-openagent.json` 和 `oh-my-openagent.json.正常版` 的 `atlas` 节点主模型更换为 `gpt-agent/glm-5.1`
+- `oh-my-openagent.json` 和 `oh-my-openagent.json.正常版` 的 `atlas` 节点：主模型更换为 `kimi-for-coding/k2p6`，第一回退更换为 `gpt-agent/glm-5.1`
 
 ### 2026-04-27
 

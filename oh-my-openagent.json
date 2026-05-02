@@ -77,9 +77,9 @@
       ]
     },
     "atlas": {
-      "model": "gpt-agent/glm-5.1",
+      "model": "kimi-for-coding/k2p6",
       "fallback_models": [
-        "kimi-for-coding/k2p6",
+        "gpt-agent/glm-5.1",
         "gpt-agent/claude-opus-4-6"
       ]
     },
