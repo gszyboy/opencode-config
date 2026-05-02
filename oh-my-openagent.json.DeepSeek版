@@ -22,12 +22,12 @@
       "model": "deepseek/deepseek-v4-pro",
       "variant": "medium",
       "fallback_models": [
-        "gpt-agent/gpt-5.4",
+        "gpt-agent/gpt-5.5",
         "gpt-agent/gpt-5.3-codex-spark"
       ]
     },
     "oracle": {
-      "model": "gpt-agent/gpt-5.4",
+      "model": "gpt-agent/gpt-5.5",
       "variant": "high",
       "fallback_models": [
         "minimax-cn-coding-plan/MiniMax-M2.7",
@@ -70,7 +70,7 @@
       ]
     },
     "momus": {
-      "model": "gpt-agent/gpt-5.4",
+      "model": "gpt-agent/gpt-5.5",
       "fallback_models": [
         "gpt-agent/gpt-5.3-codex",
         "minimax-cn-coding-plan/MiniMax-M2.7"
@@ -101,7 +101,7 @@
       ]
     },
     "ultrabrain": {
-      "model": "gpt-agent/gpt-5.4",
+      "model": "gpt-agent/gpt-5.5",
       "reasoningEffort": "xhigh",
       "fallback_models": [
         "minimax-cn-coding-plan/MiniMax-M2.7",
@@ -109,7 +109,7 @@
       ]
     },
     "deep": {
-      "model": "gpt-agent/gpt-5.4",
+      "model": "gpt-agent/gpt-5.5",
       "fallback_models": [
         "gpt-agent/gpt-5.3-codex-spark",
         "minimax-cn-coding-plan/MiniMax-M2.7"
