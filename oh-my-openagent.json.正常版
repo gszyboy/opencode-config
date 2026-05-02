@@ -77,16 +77,16 @@
       ]
     },
     "atlas": {
-      "model": "kimi-for-coding/k2p6",
+      "model": "minimax-cn-coding-plan/MiniMax-M2.7",
       "fallback_models": [
         "gpt-agent/glm-5.1",
         "gpt-agent/claude-opus-4-6"
       ]
     },
     "sisyphus-junior": {
-      "model": "minimax-cn-coding-plan/MiniMax-M2.7",
+      "model": "kimi-for-coding/k2p6",
       "fallback_models": [
-        "kimi-for-coding/k2p6",
+        "minimax-cn-coding-plan/MiniMax-M2.7",
         "gpt-agent/claude-opus-4-6"
       ]
     },
