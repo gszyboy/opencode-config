@@ -41,7 +41,7 @@
       ]
     },
     "explore": {
-      "model": "minimax-cn-coding-plan/MiniMax-M2.5-highspeed",
+      "model": "minimax-cn-coding-plan/MiniMax-M2.7",
       "fallback_models": [
         "minimax-cn-coding-plan/MiniMax-M2.7",
         "kimi-for-coding/k2p6"
@@ -77,7 +77,7 @@
       ]
     },
     "atlas": {
-      "model": "minimax-cn-coding-plan/MiniMax-M2.7",
+      "model": "gpt-agent/glm-5.1",
       "fallback_models": [
         "kimi-for-coding/k2p6",
         "gpt-agent/claude-opus-4-6"
@@ -134,7 +134,7 @@
       ]
     },
     "quick": {
-      "model": "minimax/MiniMax-M2.5-highspeed",
+      "model": "minimax-cn-coding-plan/MiniMax-M2.7",
       "fallback_models": [
         "gpt-agent/MiniMax-M2.7-highspeed",
         "minimax-cn-coding-plan/MiniMax-M2.7"

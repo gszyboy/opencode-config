@@ -12,7 +12,7 @@
 
 更新 `oh-my-openagent.json` 中的 kimi 模型：`k2p5` → `k2p6`，并备份为 `oh-my-openagent.json.正常版`。
 
-### 2026-05-02
+### 2026-05-02（本次）
 
 新增模型配置并升级现有配置：
 - `opencode.json` 新增 `gpt-5.5` 和 `claude-opus-4-7` 模型定义
@@ -20,6 +20,11 @@
 - `opencode.json` 更新 `claude-opus-4-7`: context 1,000,000 / output 128,000（原 200K/32K）
 - 4 个 `oh-my-openagent.json` 配置文件（主版本/正常版/应急版/DeepSeek版）所有 `gpt-5.4` 替换为 `gpt-5.5`
 - 删除 AGENTS.md 中混入的 VoiceInput 项目特定规范
+
+### 2026-05-02（后续）
+
+- 4 个 `oh-my-openagent.json` 配置文件所有 `MiniMax-M2.5-highspeed` 替换为 `minimax-cn-coding-plan/MiniMax-M2.7`
+- `oh-my-openagent.json` 和 `oh-my-openagent.json.正常版` 的 `atlas` 节点主模型更换为 `gpt-agent/glm-5.1`
 
 ### 2026-04-27
 
