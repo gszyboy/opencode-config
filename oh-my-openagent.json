@@ -19,7 +19,7 @@
   },
   "agents": {
     "hephaestus": {
-      "model": "deepseek/deepseek-v4-pro",
+      "model": "minimax-cn-coding-plan/MiniMax-M2.7",
       "variant": "medium",
       "fallback_models": [
         "gpt-agent/gpt-5.4",
@@ -35,7 +35,7 @@
       ]
     },
     "librarian": {
-      "model": "deepseek/deepseek-v4-pro",
+      "model": "minimax-cn-coding-plan/MiniMax-M2.7",
       "fallback_models": [
         "kimi-for-coding/k2p6"
       ]
@@ -63,7 +63,7 @@
       "prompt_append": "Leverage deep & quick agents heavily, always in parallel."
     },
     "metis": {
-      "model": "deepseek/deepseek-v4-pro",
+      "model": "minimax-cn-coding-plan/MiniMax-M2.7",
       "fallback_models": [
         "kimi-for-coding/k2p6",
         "gpt-agent/claude-opus-4-6"
@@ -77,22 +77,25 @@
       ]
     },
     "atlas": {
-      "model": "deepseek/deepseek-v4-pro",
+      "model": "minimax-cn-coding-plan/MiniMax-M2.7",
       "fallback_models": [
         "kimi-for-coding/k2p6",
         "gpt-agent/claude-opus-4-6"
       ]
     },
     "sisyphus-junior": {
-      "model": "deepseek/deepseek-v4-pro",
+      "model": "minimax-cn-coding-plan/MiniMax-M2.7",
       "fallback_models": [
         "kimi-for-coding/k2p6",
         "gpt-agent/claude-opus-4-6"
       ]
     },
     "sisyphus": {
-      "model": "deepseek/deepseek-v4-pro",
-      "variant": "max",
+      "model": "minimax-cn-coding-plan/MiniMax-M2.7",
+      "ultrawork": {
+        "model": "kimi-for-coding/k2p6",
+        "variant": "max"
+      },
       "fallback_models": [
         "kimi-for-coding/k2p6",
         "gpt-agent/claude-opus-4-6"
@@ -101,7 +104,7 @@
   },
   "categories": {
     "visual-engineering": {
-      "model": "deepseek/deepseek-v4-pro",
+      "model": "minimax-cn-coding-plan/MiniMax-M2.7",
       "variant": "high",
       "fallback_models": [
         "gpt-agent/gemini-3.1-pro",
@@ -138,21 +141,21 @@
       ]
     },
     "unspecified-low": {
-      "model": "deepseek/deepseek-v4-pro",
+      "model": "minimax-cn-coding-plan/MiniMax-M2.7",
       "fallback_models": [
         "kimi-for-coding/k2p6",
         "gpt-agent/claude-opus-4-6"
       ]
     },
     "unspecified-high": {
-      "model": "deepseek/deepseek-v4-pro",
+      "model": "minimax-cn-coding-plan/MiniMax-M2.7",
       "fallback_models": [
         "kimi-for-coding/k2p6",
         "gpt-agent/claude-opus-4-6"
       ]
     },
     "writing": {
-      "model": "deepseek/deepseek-v4-pro",
+      "model": "minimax-cn-coding-plan/MiniMax-M2.7",
       "fallback_models": [
         "kimi-for-coding/k2p6",
         "gpt-agent/claude-opus-4-6"
