@@ -50,8 +50,8 @@
     "multimodal-looker": {
       "model": "gpt-agent/mimo-v2.5",
       "fallback_models": [
-        "gpt-agent/gemini-3.1-pro",
-        "kimi-for-coding/k2p6"
+        "gpt-agent/mimo-v2-omni",
+        "gpt-agent/gemini-3.1-pro"
       ]
     },
     "prometheus": {
@@ -129,8 +129,8 @@
     "artistry": {
       "model": "gpt-agent/mimo-v2.5",
       "fallback_models": [
-        "gpt-agent/gemini-3.1-pro",
-        "minimax-cn-coding-plan/MiniMax-M2.7"
+        "gpt-agent/mimo-v2-omni",
+        "gpt-agent/gemini-3.1-pro"
       ]
     },
     "quick": {
