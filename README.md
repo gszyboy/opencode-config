@@ -12,6 +12,12 @@
 
 更新 `oh-my-openagent.json` 中的 kimi 模型：`k2p5` → `k2p6`，并备份为 `oh-my-openagent.json.正常版`。
 
+### 2026-05-06
+
+`opencode.json` gpt-agent 节点模型更新：
+- `mimo-v2-pro` → `mimo-v2.5-pro`（context 128K → 1M，output 32K → 131.1K）
+- 新增 `mimo-v2.5` 多模态模型（text + image + audio + video，context 1M，output 131.1K）
+
 ### 2026-05-02（本次）
 
 新增模型配置并升级现有配置：

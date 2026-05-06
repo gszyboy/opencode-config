@@ -3,6 +3,20 @@
   "model": "minimax-cn-coding-plan/MiniMax-M2.7",
   "small_model": "minimax-cn-coding-plan/MiniMax-M2.5-highspeed",
   "provider": {
+	  "xydev": {
+            "npm": "@ai-sdk/openai-compatible",
+            "name": "xydev.xyz",
+            "options": {
+                "baseURL": "https://ai.xydev.xyz/v1",
+                "apiKey": "sk-MAQmDzBDKICtkl2uQyV3TTh1zPxo95p6eV7WRB3CmhNW9s3W",
+                "compatibility": "compatible"
+            },
+            "models": {
+                "MiniMax-M2.7": {
+                    "name": "MiniMax-M2.7"
+                }
+            }
+        },
     "gpt-agent": {
       "npm": "@ai-sdk/anthropic",
       "name": "GPT Agent Relay",
@@ -150,11 +164,29 @@
             "output": 32768
           }
         },
-        "mimo-v2-pro": {
-          "name": "Mimo V2 Pro",
+        "mimo-v2.5-pro": {
+          "name": "Mimo V2.5 Pro",
           "limit": {
-            "context": 128000,
-            "output": 32768
+            "context": 1000000,
+            "output": 131100
+          }
+        },
+        "mimo-v2.5": {
+          "name": "Mimo V2.5",
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "audio",
+              "video"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "limit": {
+            "context": 1000000,
+            "output": 131100
           }
         },
         "mimo-v2-omni": {
