@@ -18,6 +18,7 @@
 - `mimo-v2-pro` → `mimo-v2.5-pro`（context 128K → 1M，output 32K → 131.1K）
 - 新增 `mimo-v2.5` 多模态模型（text + image + audio + video，context 1M，output 131.1K）
 - 3 个 `oh-my-openagent.json` 配置文件（主版本/正常版/DeepSeek版）`mimo-v2-omni` → `mimo-v2.5`
+- `oh-my-openagent.json.应急版` `mimo-v2-omni` → `mimo-v2.5`
 
 ### 2026-05-02（本次）
 
