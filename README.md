@@ -22,6 +22,7 @@
 - 4 个配置文件 `multimodal-looker` 和 `artistry` 节点：第1回退 `mimo-v2-omni`，第2回退 `gemini-3.1-pro`
 
 新增 Skills：
+- `ai-ui-generator` - AI UI 生成器
 - `doc-to-ppt-pdf` - Markdown 转 PPT/PDF 提案
 - `fastadmin-dev` - FastAdmin PHP 框架开发助手
 - `mineadmin` - MineAdmin 全栈管理后台（Swoole/Hyperf）
