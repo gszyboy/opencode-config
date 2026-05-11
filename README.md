@@ -21,6 +21,14 @@
 - `oh-my-openagent.json.应急版` `mimo-v2-omni` → `mimo-v2.5`
 - 4 个配置文件 `multimodal-looker` 和 `artistry` 节点：第1回退 `mimo-v2-omni`，第2回退 `gemini-3.1-pro`
 
+新增 Skills：
+- `doc-to-ppt-pdf` - Markdown 转 PPT/PDF 提案
+- `fastadmin-dev` - FastAdmin PHP 框架开发助手
+- `mineadmin` - MineAdmin 全栈管理后台（Swoole/Hyperf）
+- `pure-admin-router` - Pure Admin Router
+- `python-vue-admin` - FastAPI + Vue3 全栈管理后台
+- `.gitignore` 添加 `__pycache__/` 和 `*.pyc`
+
 ### 2026-05-02（本次）
 
 新增模型配置并升级现有配置：

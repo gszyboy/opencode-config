@@ -1,0 +1,53 @@
+{
+  "skill_name": "fastadmin-dev",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "我需要在 FastAdmin 中为文章表生成 CRUD，表名是 fa_article，包含字段：title, content, category_id, author, status。请给我完整的命令和步骤。",
+      "expected_output": "提供 php think crud -t article -u 1 命令，并说明字段注释的重要性",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "FastAdmin 怎么安装？我需要最快速的方法，包括下载地址。",
+      "expected_output": "说明完整包下载安装方式，提供官网下载链接，列出环境要求",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "我在 FastAdmin 中创建了一个订单表，需要关联用户表和产品表，怎么生成带关联的 CRUD？",
+      "expected_output": "提供多关联模型的命令示例，使用 --relation 参数",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "FastAdmin 后台加载很慢，怎么压缩 JS 和 CSS 文件？",
+      "expected_output": "提供 php think min 命令，说明生产环境配置",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "我想创建一个 FastAdmin 插件用于短信通知，怎么开始？",
+      "expected_output": "提供 php think addon -a sms -c create 命令，说明插件目录结构",
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "FastAdmin 生成 API 文档的命令是什么？我有 User 和 Order 两个控制器。",
+      "expected_output": "提供 php think api 命令，说明注释规范",
+      "files": []
+    },
+    {
+      "id": 7,
+      "prompt": "我设计了一个商品表，有 name, price, stock, cover_image, description_editor 字段，FastAdmin 会自动生成什么组件？",
+      "expected_output": "说明字段后缀映射规则，指出 cover_image 生成图片上传，description_editor 生成富文本",
+      "files": []
+    },
+    {
+      "id": 8,
+      "prompt": "FastAdmin 安装后提示 404 错误，怎么解决？",
+      "expected_output": "说明伪静态配置，检查运行目录是否为 /public",
+      "files": []
+    }
+  ]
+}
