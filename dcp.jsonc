@@ -7,29 +7,11 @@
   "compress": {
     "mode": "range",
     "permission": "allow",
-    "maxContextLimit": 180000,
-    "minContextLimit": 120000,
+    "maxContextLimit": "80%",
+    "minContextLimit": "60%",
     "nudgeFrequency": 5,
     "nudgeForce": "soft",
-    "summaryBuffer": true,
-    "modelMaxLimits": {
-      "gpt-agent/gpt-5.4-mini": { "max": 100000, "min": 80000 },
-      "gpt-agent/qwen3-coder-plus": { "max": 100000, "min": 80000 },
-      "gpt-agent/gpt-5.3-codex": { "max": 100000, "min": 80000 },
-      "gpt-agent/gpt-5.3-codex-spark": { "max": 100000, "min": 80000 },
-      "gpt-agent/mimo-v2-omni": { "max": 100000, "min": 80000 },
-      "gpt-agent/claude-opus-4-6": { "max": 160000, "min": 100000 },
-      "gpt-agent/claude-opus-4-7": { "max": 180000, "min": 120000 },
-      "gpt-agent/glm-5.1": { "max": 180000, "min": 120000 },
-      "minimax-cn-coding-plan/MiniMax-M2.7": { "max": 800000, "min": 600000 },
-      "minimax-cn-coding-plan/MiniMax-M2.5-highspeed": { "max": 800000, "min": 600000 },
-      "gpt-agent/gemini-3.1-pro": { "max": 800000, "min": 600000 },
-      "gpt-agent/gpt-5.4": { "max": 850000, "min": 600000 },
-      "gpt-agent/gpt-5.5": { "max": 900000, "min": 700000 },
-      "gpt-agent/MiniMax-M2.7-highspeed": { "max": 800000, "min": 600000 },
-      "gpt-agent/mimo-v2.5-pro": { "max": 850000, "min": 600000 },
-      "gpt-agent/mimo-v2.5": { "max": 850000, "min": 600000 }
-    }
+    "summaryBuffer": true
   },
   "strategies": {
     "deduplication": { "enabled": true },
