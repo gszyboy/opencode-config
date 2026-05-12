@@ -1,41 +1,26 @@
 {
-  // ==================== DCP (Dynamic Context Pruning) 配置 ====================
-  // 文档: https://github.com/Opencode-DCP/opencode-dynamic-context-pruning
-
   "$schema": "https://raw.githubusercontent.com/Opencode-DCP/opencode-dynamic-context-pruning/master/dcp.schema.json",
-
-  "enabled": true,                    // 启用 DCP 插件
-  "debug": false,                     // 调试模式
-  "pruneNotification": "detailed",    // 修剪通知详细程度
-  "pruneNotificationType": "chat",    // 通知类型: chat / toast
-
-  // ==================== compress 压缩配置 ====================
-  // 当上下文接近 maxContextLimit 时触发压缩
+  "enabled": true,
+  "debug": false,
+  "pruneNotification": "detailed",
+  "pruneNotificationType": "chat",
   "compress": {
-    "mode": "range",                  // 压缩模式: range(默认) | message(实验)
-    "permission": "allow",            // 权限: allow | ask
-    "maxContextLimit": 180000,        // 默认最大上下文 (128K 以下模型)
-    "minContextLimit": 120000,        // 默认最小上下文
-    "nudgeFrequency": 5,              // 提示频率 (1=每次)
-    "nudgeForce": "soft",             // 提示强度: soft | hard
-    "summaryBuffer": true,            // 摘要缓冲
-
-    // ==================== 各模型独立阈值 ====================
-    // key 必须与 opencode.json 中的模型名完全匹配
-    // max: 触发强压缩的阈值
-    // min: 触发提醒的阈值
+    "mode": "range",
+    "permission": "allow",
+    "maxContextLimit": 180000,
+    "minContextLimit": 120000,
+    "nudgeFrequency": 5,
+    "nudgeForce": "soft",
+    "summaryBuffer": true,
     "modelMaxLimits": {
-      // 128K 上下文模型 (8%)
       "gpt-agent/gpt-5.4-mini": { "max": 100000, "min": 80000 },
       "gpt-agent/qwen3-coder-plus": { "max": 100000, "min": 80000 },
       "gpt-agent/gpt-5.3-codex": { "max": 100000, "min": 80000 },
       "gpt-agent/gpt-5.3-codex-spark": { "max": 100000, "min": 80000 },
       "gpt-agent/mimo-v2-omni": { "max": 100000, "min": 80000 },
-
-      // 200K 上下文模型 (8%)
       "gpt-agent/claude-opus-4-6": { "max": 160000, "min": 100000 },
-
-      // 1M 上下文模型 (80-90%) - 主要使用 MiniMax 等大上下文模型
+      "gpt-agent/claude-opus-4-7": { "max": 180000, "min": 120000 },
+      "gpt-agent/glm-5.1": { "max": 180000, "min": 120000 },
       "minimax-cn-coding-plan/MiniMax-M2.7": { "max": 800000, "min": 600000 },
       "minimax-cn-coding-plan/MiniMax-M2.5-highspeed": { "max": 800000, "min": 600000 },
       "gpt-agent/gemini-3.1-pro": { "max": 800000, "min": 600000 },
@@ -43,18 +28,11 @@
       "gpt-agent/gpt-5.5": { "max": 900000, "min": 700000 },
       "gpt-agent/MiniMax-M2.7-highspeed": { "max": 800000, "min": 600000 },
       "gpt-agent/mimo-v2.5-pro": { "max": 850000, "min": 600000 },
-      "gpt-agent/mimo-v2.5": { "max": 850000, "min": 600000 },
-
-      // 200K 级
-      "gpt-agent/claude-opus-4-7": { "max": 180000, "min": 120000 },
-      // 204K 级
-      "gpt-agent/glm-5.1": { "max": 180000, "min": 120000 }
+      "gpt-agent/mimo-v2.5": { "max": 850000, "min": 600000 }
     }
   },
-
-  // ==================== 策略配置 ====================
   "strategies": {
-    "deduplication": { "enabled": true },    // 去重策略
-    "purgeErrors": { "enabled": true, "turns": 4 }  // 清理错误消息
+    "deduplication": { "enabled": true },
+    "purgeErrors": { "enabled": true, "turns": 4 }
   }
 }
