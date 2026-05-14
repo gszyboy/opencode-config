@@ -12,6 +12,18 @@
 
 更新 `oh-my-openagent.json` 中的 kimi 模型：`k2p5` → `k2p6`，并备份为 `oh-my-openagent.json.正常版`。
 
+### 2026-05-14
+
+模型配置调整：
+- `opencode.json` 删除 `claude-opus-4-6` 模型
+- `oh-my-openagent.json` 多处节点模型更新：
+  - `multimodal-looker` 主模型 `mimo-v2.5` → `mimo-v2-omni`，第一回退 `mimo-v2-omni` → `gpt-agent/mimo-v2-omni`
+  - `atlas` 节点新增回退模型 `xiaomi-token-plan-cn/mimo-v2.5-pro`
+  - `sisyphus` 主模型 `k2p6` → `mimo-v2.5`
+  - `visual-engineering` 主模型 `MiniMax-M2.7` → `mimo-v2.5`
+  - `unspecified-high` 主模型 `MiniMax-M2.7` → `mimo-v2.5`
+- `AGENTS.md` Change Budget 新增：新项目或者在开发中的新项目不受此约束
+
 ### 2026-05-06
 
 `opencode.json` gpt-agent 节点模型更新：

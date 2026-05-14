@@ -207,22 +207,6 @@
             "output": 32768
           }
         },
-        "claude-opus-4-6": {
-          "name": "Claude Opus 4-6",
-          "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
-          },
-          "limit": {
-            "context": 200000,
-            "output": 32768
-          }
-        },
         "claude-opus-4-7": {
           "name": "Claude Opus 4-7",
           "modalities": {
