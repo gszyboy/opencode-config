@@ -20,6 +20,7 @@
 - 3 个 `oh-my-openagent.json` 配置文件（主版本/正常版/DeepSeek版）`mimo-v2-omni` → `mimo-v2.5`
 - `oh-my-openagent.json.应急版` `mimo-v2-omni` → `mimo-v2.5`
 - 4 个配置文件 `multimodal-looker` 和 `artistry` 节点：第1回退 `mimo-v2-omni`，第2回退 `gemini-3.1-pro`
+- 4 个配置文件 `gpt-agent/mimo-v2.5` → `xiaomi-token-plan-cn/mimo-v2.5`
 
 新增 Skills：
 - `ai-ui-generator` - AI UI 生成器

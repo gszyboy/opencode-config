@@ -48,7 +48,7 @@
       ]
     },
     "multimodal-looker": {
-      "model": "gpt-agent/mimo-v2.5",
+      "model": "xiaomi-token-plan-cn/mimo-v2.5",
       "fallback_models": [
         "gpt-agent/mimo-v2-omni",
         "gpt-agent/gemini-3.1-pro"
@@ -108,7 +108,7 @@
       "variant": "high",
       "fallback_models": [
         "gpt-agent/gemini-3.1-pro",
-        "gpt-agent/mimo-v2.5"
+        "xiaomi-token-plan-cn/mimo-v2.5"
       ]
     },
     "ultrabrain": {
@@ -127,7 +127,7 @@
       ]
     },
     "artistry": {
-      "model": "gpt-agent/mimo-v2.5",
+      "model": "xiaomi-token-plan-cn/mimo-v2.5",
       "fallback_models": [
         "gpt-agent/mimo-v2-omni",
         "gpt-agent/gemini-3.1-pro"
