@@ -77,7 +77,7 @@
       ]
     },
     "atlas": {
-      "model": "minimax-cn-coding-plan/MiniMax-M2.7",
+      "model": "xiaomi-token-plan-cn/mimo-v2.5-pro",
       "fallback_models": [
         "gpt-agent/glm-5.1",
         "gpt-agent/claude-opus-4-6"
@@ -91,13 +91,17 @@
       ]
     },
     "sisyphus": {
-      "model": "minimax-cn-coding-plan/MiniMax-M2.7",
+      "model": "kimi-for-coding/k2p6",
       "ultrawork": {
-        "model": "kimi-for-coding/k2p6",
-        "variant": "max"
-      },
+        "model": "xiaomi-token-plan-cn/mimo-v2.5-pro",
+        "variant": "high",
       "fallback_models": [
         "kimi-for-coding/k2p6",
+        "gpt-agent/claude-opus-4-6"
+      ]
+      },
+      "fallback_models": [
+        "minimax-cn-coding-plan/MiniMax-M2.7",
         "gpt-agent/claude-opus-4-6"
       ]
     }
