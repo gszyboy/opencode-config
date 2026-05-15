@@ -58,16 +58,16 @@
       "prompt_append": "Leverage deep & quick agents heavily, always in parallel."
     },
     "metis": {
-      "model": "kimi-for-coding/k2p6",
+      "model": "opencode-go/glm-5.1",
       "fallback_models": [
         "minimax-cn-coding-plan/MiniMax-M2.7",
-        "opencode-go/glm-5.1"
+        "kimi-for-coding/k2p6"
       ]
     },
     "momus": {
-      "model": "opencode-go/mimo-v2.5-pro",
+      "model": "gpt-agent/gpt-5.5",
       "fallback_models": [
-        "kimi-for-coding/k2p6",
+        "opencode-go/glm-5.1",
         "minimax-cn-coding-plan/MiniMax-M2.7"
       ]
     },
@@ -103,7 +103,7 @@
   },
   "categories": {
     "visual-engineering": {
-      "model": "opencode-go/mimo-v2.5-pro",
+      "model": "opencode-go/glm-5.1",
       "variant": "high",
       "fallback_models": [
         "kimi-for-coding/k2p6",
@@ -126,7 +126,7 @@
       ]
     },
     "artistry": {
-      "model": "opencode-go/mimo-v2.5-pro",
+      "model": "opencode-go/glm-5.1",
       "fallback_models": [
         "kimi-for-coding/k2p6",
         "minimax-cn-coding-plan/MiniMax-M2.7"
