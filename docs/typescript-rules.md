@@ -262,14 +262,17 @@ if (Array.isArray(list)) {
 
 ---
 
-## 禁止事项
+## TypeScript 类型安全原则
 
-- ❌ 禁止使用 `any`，使用 `unknown` + 类型守卫
-- ❌ 禁止类型断言滥用（双重断言）
-- ❌ 禁止 `var`，使用 `const` / `let`
-- ❌ 禁止 `ts-ignore`，使用 `ts-expect-error`（确有必要时）
-- ❌ 禁止裸类型：`Array` 用 `T[]` 或 `Array<T>`
-- ❌ 禁止隐式 any（函数参数必须有类型）
+**强制要求**：
+- 使用 `unknown` + 类型守卫，不使用 `any`
+- 使用 `const` / `let`，不使用 `var`
+- 函数参数必须有类型
+
+**推荐做法**：
+- 类型断言使用 `as`（避免双重断言）
+- 需要抑制错误时使用 `ts-expect-error` 而非 `ts-ignore`
+- 使用 `T[]` 或 `Array<T>` 而非裸 `Array`
 
 ---
 

@@ -241,30 +241,20 @@ export const login = (data) => request('/user/login', { method: 'POST', data })
 
 ---
 
-## 禁止事项（通用）
+## 前端设计原则
 
-- ❌ 不在模板中写复杂计算逻辑
-- ❌ 不在组件中写过多业务逻辑（抽取到 api/utils）
-- ❌ 不在 `v-for` 中使用对象遍历（性能差）
-- ❌ 不在样式中使用 `!important`
-- ❌ 不创建过多层级嵌套的组件
+**组件规范**（默认）：
+- 组件只做一件事
+- 不在模板中写复杂计算逻辑
+- 不在组件中写过多业务逻辑（抽取到 api/utils）
+- 不创建过多层级嵌套的组件
 
----
+**技术栈原则**：
+- Vue 3：使用 Composition API，不混用 Options API
+- UniApp：使用平台 API 而非浏览器 API
 
-## 禁止事项（Vue 3）
-
-- ❌ 不混用 Options API 和 Composition API
-- ❌ 不在 `watch` 中修改被监听的值（死循环）
-- ❌ 不在 `computed` 中修改值（只读）
-- ❌ 不在模板中使用 `v-html`（XSS 风险）
-
----
-
-## 禁止事项（UniApp）
-
-- ❌ 不在小程序中使用 `window.document`
-- ❌ 不在小程序中使用 `axios`（用 uni.request）
-- ❌ 不在组件中直接修改 `props`
-- ❌ 不在 `onLoad` 中使用 `async/await`（用回调或 Promise）
+**可优化情况**（组件超过 200 行时）：
+- 抽取可复用逻辑到 composables
+- 拆分多个不相关的功能
 
 
