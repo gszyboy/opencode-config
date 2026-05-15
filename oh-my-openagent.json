@@ -92,7 +92,7 @@
       ]
     },
     "sisyphus": {
-      "model": "minimax-cn-coding-plan/MiniMax-M2.7",
+      "model": "kimi-for-coding/k2p6",
       "ultrawork": {
         "model": "kimi-for-coding/k2p6",
         "variant": "high",
@@ -102,8 +102,8 @@
         ]
       },
       "fallback_models": [
-        "kimi-for-coding/k2p6",
-		"opencode-go/mimo-v2.5-pro"
+        "minimax-cn-coding-plan/MiniMax-M2.7",
+        "opencode-go/mimo-v2.5-pro"
       ]
     }
   },
