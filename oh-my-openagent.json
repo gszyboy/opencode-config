@@ -13,11 +13,11 @@
   },
   "agents": {
     "hephaestus": {
-      "model": "gpt-agent/gpt-5.5",
+      "model": "claudeapi/gpt-5.5",
       "variant": "medium",
       "fallback_models": [
-        "kimi-for-coding/k2p6",
-        "minimax-cn-coding-plan/MiniMax-M2.7"
+        "gpt-agent/gpt-5.5",
+        "kimi-for-coding/k2p6"
       ]
     },
     "oracle": {
