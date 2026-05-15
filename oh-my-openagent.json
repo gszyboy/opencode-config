@@ -154,9 +154,9 @@
       ]
     },
     "writing": {
-      "model": "opencode-go/mimo-v2.5-pro",
+      "model": "kimi-for-coding/k2p6",
       "fallback_models": [
-        "kimi-for-coding/k2p6",
+        "minimax-cn-coding-plan/MiniMax-M2.7",
         "opencode-go/glm-5.1"
       ]
     }
