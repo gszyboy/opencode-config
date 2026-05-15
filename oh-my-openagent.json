@@ -65,10 +65,10 @@
       ]
     },
     "momus": {
-      "model": "gpt-agent/gpt-5.5",
+      "model": "claudeapi/gpt-5.5",
       "fallback_models": [
-        "opencode-go/glm-5.1",
-        "minimax-cn-coding-plan/MiniMax-M2.7"
+        "gpt-agent/gpt-5.5",
+        "opencode-go/glm-5.1"
       ]
     },
     "atlas": {
