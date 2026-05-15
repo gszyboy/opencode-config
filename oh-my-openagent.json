@@ -2,7 +2,13 @@
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
   "runtime_fallback": {
     "enabled": true,
-    "retry_on_errors": [429, 503, 500, 502, 504],
+    "retry_on_errors": [
+      429,
+      503,
+      500,
+      502,
+      504
+    ],
     "max_fallback_attempts": 3,
     "cooldown_seconds": 60,
     "timeout_seconds": 30,
@@ -13,11 +19,11 @@
   },
   "agents": {
     "hephaestus": {
-      "model": "claudeapi/gpt-5.5",
+      "model": "gpt-agent/gpt-5.5",
       "variant": "medium",
       "fallback_models": [
-        "gpt-agent/gpt-5.5",
-        "kimi-for-coding/k2p6"
+        "kimi-for-coding/k2p6",
+        "opencode-go/glm-5.1"
       ]
     },
     "oracle": {
@@ -65,9 +71,9 @@
       ]
     },
     "momus": {
-      "model": "claudeapi/gpt-5.5",
+      "model": "gpt-agent/gpt-5.5",
       "fallback_models": [
-        "gpt-agent/gpt-5.5",
+        "kimi-for-coding/k2p6",
         "opencode-go/glm-5.1"
       ]
     },
@@ -86,7 +92,7 @@
       ]
     },
     "sisyphus": {
-      "model": "opencode-go/glm-5.1",
+      "model": "minimax-cn-coding-plan/MiniMax-M2.7",
       "ultrawork": {
         "model": "kimi-for-coding/k2p6",
         "variant": "high",
@@ -96,8 +102,8 @@
         ]
       },
       "fallback_models": [
-        "minimax-cn-coding-plan/MiniMax-M2.7",
-        "kimi-for-coding/k2p6"
+        "kimi-for-coding/k2p6",
+		"opencode-go/mimo-v2.5-pro"
       ]
     }
   },
@@ -119,10 +125,10 @@
       ]
     },
     "deep": {
-      "model": "claudeapi/gpt-5.5",
+      "model": "gpt-agent/gpt-5.5",
       "fallback_models": [
-        "gpt-agent/gpt-5.5",
-        "kimi-for-coding/k2p6"
+        "kimi-for-coding/k2p6",
+        "opencode-go/glm-5.1"
       ]
     },
     "artistry": {

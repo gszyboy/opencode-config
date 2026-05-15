@@ -3,12 +3,26 @@
   "model": "minimax-cn-coding-plan/MiniMax-M2.7",
   "small_model": "minimax-cn-coding-plan/MiniMax-M2.5-highspeed",
   "provider": {
+	  "kimi-custom": {
+            "npm": "@ai-sdk/openai-compatible",
+            "name": "kimi-custom",
+            "options": {
+                "baseURL": "https://api.kimi.com/coding/v1",
+                "apiKey": "{env:KIMI_API_KEY}",
+                "compatibility": "compatible"
+            },
+            "models": {
+                "kimi-for-coding": {
+                    "name": "kimi-for-coding"
+                }
+            }
+        },
 	  "xydev": {
             "npm": "@ai-sdk/openai-compatible",
             "name": "xydev.xyz",
             "options": {
                 "baseURL": "https://ai.xydev.xyz/v1",
-                "apiKey": "sk-MAQmDzBDKICtkl2uQyV3TTh1zPxo95p6eV7WRB3CmhNW9s3W",
+                "apiKey": "{env:XYDEV_API_KEY}",
                 "compatibility": "compatible"
             },
             "models": {
