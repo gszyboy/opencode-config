@@ -119,10 +119,10 @@
       ]
     },
     "deep": {
-      "model": "kimi-for-coding/k2p6",
+      "model": "claudeapi/gpt-5.5",
       "fallback_models": [
-        "minimax-cn-coding-plan/MiniMax-M2.7",
-        "opencode-go/mimo-v2.5-pro"
+        "gpt-agent/gpt-5.5",
+        "kimi-for-coding/k2p6"
       ]
     },
     "artistry": {
