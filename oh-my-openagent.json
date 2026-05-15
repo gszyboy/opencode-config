@@ -86,18 +86,18 @@
       ]
     },
     "sisyphus": {
-      "model": "kimi-for-coding/k2p6",
+      "model": "opencode-go/glm-5.1",
       "ultrawork": {
-        "model": "opencode-go/mimo-v2.5-pro",
+        "model": "kimi-for-coding/k2p6",
         "variant": "high",
         "fallback_models": [
-          "kimi-for-coding/k2p6",
+          "opencode-go/mimo-v2.5-pro",
           "minimax-cn-coding-plan/MiniMax-M2.7"
         ]
       },
       "fallback_models": [
         "minimax-cn-coding-plan/MiniMax-M2.7",
-        "opencode-go/glm-5.1"
+        "kimi-for-coding/k2p6"
       ]
     }
   },
