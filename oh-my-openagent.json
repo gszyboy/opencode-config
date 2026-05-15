@@ -13,18 +13,18 @@
   },
   "agents": {
     "hephaestus": {
-      "model": "kimi-for-coding/k2p6",
+      "model": "gpt-agent/gpt-5.5",
       "variant": "medium",
       "fallback_models": [
-        "minimax-cn-coding-plan/MiniMax-M2.7",
-        "gpt-agent/gpt-5.5"
+        "kimi-for-coding/k2p6",
+        "minimax-cn-coding-plan/MiniMax-M2.7"
       ]
     },
     "oracle": {
-      "model": "kimi-for-coding/k2p6",
+      "model": "opencode-go/mimo-v2.5-pro",
       "variant": "high",
       "fallback_models": [
-        "opencode-go/mimo-v2.5-pro",
+        "kimi-for-coding/k2p6",
         "opencode-go/glm-5.1"
       ]
     },
@@ -65,9 +65,9 @@
       ]
     },
     "momus": {
-      "model": "kimi-for-coding/k2p6",
+      "model": "opencode-go/mimo-v2.5-pro",
       "fallback_models": [
-        "opencode-go/mimo-v2.5-pro",
+        "kimi-for-coding/k2p6",
         "minimax-cn-coding-plan/MiniMax-M2.7"
       ]
     },
@@ -86,7 +86,7 @@
       ]
     },
     "sisyphus": {
-      "model": "opencode-go/mimo-v2.5-pro",
+      "model": "opencode-go/mimo-v2.5",
       "ultrawork": {
         "model": "opencode-go/mimo-v2.5-pro",
         "variant": "high",
@@ -126,9 +126,9 @@
       ]
     },
     "artistry": {
-      "model": "kimi-for-coding/k2p6",
+      "model": "opencode-go/mimo-v2.5-pro",
       "fallback_models": [
-        "opencode-go/mimo-v2.5-pro",
+        "kimi-for-coding/k2p6",
         "minimax-cn-coding-plan/MiniMax-M2.7"
       ]
     },
@@ -154,9 +154,9 @@
       ]
     },
     "writing": {
-      "model": "kimi-for-coding/k2p6",
+      "model": "opencode-go/mimo-v2.5-pro",
       "fallback_models": [
-        "minimax-cn-coding-plan/MiniMax-M2.7",
+        "kimi-for-coding/k2p6",
         "opencode-go/glm-5.1"
       ]
     }
