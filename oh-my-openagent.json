@@ -21,7 +21,7 @@
       ]
     },
     "oracle": {
-      "model": "opencode-go/mimo-v2.5-pro",
+      "model": "opencode-go/deepseek-v4-pro",
       "variant": "high",
       "fallback_models": [
         "kimi-for-coding/k2p6",
@@ -147,9 +147,9 @@
       ]
     },
     "unspecified-high": {
-      "model": "kimi-for-coding/k2p6",
+      "model": "opencode-go/deepseek-v4-pro",
       "fallback_models": [
-        "opencode-go/mimo-v2.5-pro",
+        "kimi-for-coding/k2p6",
         "minimax-cn-coding-plan/MiniMax-M2.7"
       ]
     },
