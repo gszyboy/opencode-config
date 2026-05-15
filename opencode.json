@@ -17,6 +17,20 @@
                 }
             }
         },
+		 "claudeapi": {
+            "npm": "@ai-sdk/openai-compatible",
+            "name": "claudeapi.win",
+            "options": {
+                "baseURL": "{env:CLAUDEAPI_API_URL}",
+                "apiKey": "{env:CLAUDEAPI_API_KEY}",
+                "compatibility": "compatible"
+            },
+            "models": {
+                "gpt-5.5": {
+                    "name": "gpt-5.5"
+                }
+            }
+        },
     "gpt-agent": {
       "npm": "@ai-sdk/anthropic",
       "name": "GPT Agent Relay",
