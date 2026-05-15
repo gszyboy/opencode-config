@@ -12,6 +12,17 @@
 
 更新 `oh-my-openagent.json` 中的 kimi 模型：`k2p5` → `k2p6`，并备份为 `oh-my-openagent.json.正常版`。
 
+### 2026-05-14（配置优化）
+
+`oh-my-openagent.json` 全面优化配置，基于订阅量和模型性价比重新分配：
+- **主力模型**: `kimi-for-coding/k2p6`（kimi订阅，量大）用于 7 个 agent
+- **经济型模型**: `minimax-cn-coding-plan/MiniMax-M2.7`（minimax订阅，量大管饱）用于 librarian/explore/quick/unspecified-low
+- **高端模型**: `opencode-go/mimo-v2.5-pro`（opencode-go订阅，量小）用于 sisyphus/visual-engineering/ultrabrain/deep
+- **回退补充**: `opencode-go/glm-5.1` 用于 5 处回退链
+- **多模态**: `opencode-go/mimo-v2.5` 用于 multimodal-looker
+- **gpt-agent**: 仅 hephaestus 最终回退保留 `gpt-agent/gpt-5.5`，其余全部移除
+- 修复 `explore` 和 `artistry` 回退链重复问题
+
 ### 2026-05-14
 
 模型配置调整：

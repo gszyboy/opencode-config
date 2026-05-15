@@ -2,13 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
   "runtime_fallback": {
     "enabled": true,
-    "retry_on_errors": [
-      429,
-      503,
-      500,
-      502,
-      504
-    ],
+    "retry_on_errors": [429, 503, 500, 502, 504],
     "max_fallback_attempts": 3,
     "cooldown_seconds": 60,
     "timeout_seconds": 30,
@@ -19,151 +13,151 @@
   },
   "agents": {
     "hephaestus": {
-      "model": "minimax-cn-coding-plan/MiniMax-M2.7",
+      "model": "kimi-for-coding/k2p6",
       "variant": "medium",
       "fallback_models": [
-        "gpt-agent/gpt-5.5",
-        "gpt-agent/gpt-5.3-codex-spark"
+        "minimax-cn-coding-plan/MiniMax-M2.7",
+        "gpt-agent/gpt-5.5"
       ]
     },
     "oracle": {
-      "model": "gpt-agent/gpt-5.5",
+      "model": "kimi-for-coding/k2p6",
       "variant": "high",
       "fallback_models": [
-        "minimax-cn-coding-plan/MiniMax-M2.7",
-        "kimi-for-coding/k2p6"
+        "opencode-go/mimo-v2.5-pro",
+        "opencode-go/glm-5.1"
       ]
     },
     "librarian": {
       "model": "minimax-cn-coding-plan/MiniMax-M2.7",
       "fallback_models": [
+        "opencode-go/glm-5.1",
         "kimi-for-coding/k2p6"
       ]
     },
     "explore": {
       "model": "minimax-cn-coding-plan/MiniMax-M2.7",
       "fallback_models": [
-        "minimax-cn-coding-plan/MiniMax-M2.7",
+        "opencode-go/glm-5.1",
         "kimi-for-coding/k2p6"
       ]
     },
     "multimodal-looker": {
-      "model": "xiaomi-token-plan-cn/mimo-v2-omni",
+      "model": "opencode-go/mimo-v2.5",
       "fallback_models": [
-        "gpt-agent/mimo-v2-omni",
-        "gpt-agent/gemini-3.1-pro"
+        "minimax-cn-coding-plan/MiniMax-M2.7",
+        "kimi-for-coding/k2p6"
       ]
     },
     "prometheus": {
       "model": "kimi-for-coding/k2p6",
       "fallback_models": [
         "minimax-cn-coding-plan/MiniMax-M2.7",
-        "gpt-agent/claude-opus-4-6"
+        "opencode-go/mimo-v2.5-pro"
       ],
       "prompt_append": "Leverage deep & quick agents heavily, always in parallel."
     },
     "metis": {
-      "model": "minimax-cn-coding-plan/MiniMax-M2.7",
+      "model": "kimi-for-coding/k2p6",
       "fallback_models": [
-        "kimi-for-coding/k2p6",
-        "gpt-agent/claude-opus-4-6"
+        "minimax-cn-coding-plan/MiniMax-M2.7",
+        "opencode-go/glm-5.1"
       ]
     },
     "momus": {
-      "model": "gpt-agent/gpt-5.5",
+      "model": "kimi-for-coding/k2p6",
       "fallback_models": [
-        "gpt-agent/gpt-5.3-codex",
+        "opencode-go/mimo-v2.5-pro",
         "minimax-cn-coding-plan/MiniMax-M2.7"
       ]
     },
     "atlas": {
-      "model": "xiaomi-token-plan-cn/mimo-v2.5-pro",
+      "model": "kimi-for-coding/k2p6",
       "fallback_models": [
-	  "xiaomi-token-plan-cn/mimo-v2.5-pro",
-        "gpt-agent/glm-5.1",
-        "gpt-agent/claude-opus-4-6"
+        "minimax-cn-coding-plan/MiniMax-M2.7",
+        "opencode-go/glm-5.1"
       ]
     },
     "sisyphus-junior": {
       "model": "kimi-for-coding/k2p6",
       "fallback_models": [
         "minimax-cn-coding-plan/MiniMax-M2.7",
-        "gpt-agent/claude-opus-4-6"
+        "opencode-go/glm-5.1"
       ]
     },
     "sisyphus": {
-      "model": "xiaomi-token-plan-cn/mimo-v2.5",
+      "model": "opencode-go/mimo-v2.5-pro",
       "ultrawork": {
-        "model": "xiaomi-token-plan-cn/mimo-v2.5-pro",
+        "model": "opencode-go/mimo-v2.5-pro",
         "variant": "high",
-      "fallback_models": [
-        "kimi-for-coding/k2p6",
-        "gpt-agent/claude-opus-4-6"
-      ]
+        "fallback_models": [
+          "kimi-for-coding/k2p6",
+          "minimax-cn-coding-plan/MiniMax-M2.7"
+        ]
       },
       "fallback_models": [
-        "minimax-cn-coding-plan/MiniMax-M2.7",
-        "gpt-agent/claude-opus-4-6"
+        "kimi-for-coding/k2p6",
+        "minimax-cn-coding-plan/MiniMax-M2.7"
       ]
     }
   },
   "categories": {
     "visual-engineering": {
-      "model": "xiaomi-token-plan-cn/mimo-v2.5",
+      "model": "opencode-go/mimo-v2.5-pro",
       "variant": "high",
       "fallback_models": [
-        "gpt-agent/gemini-3.1-pro",
-        "xiaomi-token-plan-cn/mimo-v2.5"
+        "kimi-for-coding/k2p6",
+        "minimax-cn-coding-plan/MiniMax-M2.7"
       ]
     },
     "ultrabrain": {
-      "model": "gpt-agent/gpt-5.5",
+      "model": "opencode-go/mimo-v2.5-pro",
       "reasoningEffort": "xhigh",
       "fallback_models": [
-        "minimax-cn-coding-plan/MiniMax-M2.7",
-        "kimi-for-coding/k2p6"
+        "kimi-for-coding/k2p6",
+        "minimax-cn-coding-plan/MiniMax-M2.7"
       ]
     },
     "deep": {
-      "model": "gpt-agent/gpt-5.5",
+      "model": "opencode-go/mimo-v2.5-pro",
       "fallback_models": [
-        "gpt-agent/gpt-5.3-codex-spark",
+        "kimi-for-coding/k2p6",
         "minimax-cn-coding-plan/MiniMax-M2.7"
       ]
     },
     "artistry": {
-      "model": "xiaomi-token-plan-cn/mimo-v2.5",
+      "model": "kimi-for-coding/k2p6",
       "fallback_models": [
-        "xiaomi-token-plan-cn/mimo-v2-omni",
-        "gpt-agent/gemini-3.1-pro"
+        "opencode-go/mimo-v2.5-pro",
+        "minimax-cn-coding-plan/MiniMax-M2.7"
       ]
     },
     "quick": {
       "model": "minimax-cn-coding-plan/MiniMax-M2.7",
       "fallback_models": [
-        "gpt-agent/MiniMax-M2.7-highspeed",
-        "minimax-cn-coding-plan/MiniMax-M2.7"
+        "opencode-go/glm-5.1",
+        "kimi-for-coding/k2p6"
       ]
     },
     "unspecified-low": {
       "model": "minimax-cn-coding-plan/MiniMax-M2.7",
       "fallback_models": [
-        "kimi-for-coding/k2p6",
-        "gpt-agent/claude-opus-4-6"
+        "opencode-go/glm-5.1",
+        "kimi-for-coding/k2p6"
       ]
     },
     "unspecified-high": {
-      "model": "xiaomi-token-plan-cn/mimo-v2.5",
+      "model": "kimi-for-coding/k2p6",
       "fallback_models": [
-        "kimi-for-coding/k2p6",
-        "gpt-agent/claude-opus-4-6"
+        "opencode-go/mimo-v2.5-pro",
+        "minimax-cn-coding-plan/MiniMax-M2.7"
       ]
     },
     "writing": {
-      "model": "minimax-cn-coding-plan/MiniMax-M2.7",
+      "model": "kimi-for-coding/k2p6",
       "fallback_models": [
-        "kimi-for-coding/k2p6",
-        "gpt-agent/claude-opus-4-6"
+        "minimax-cn-coding-plan/MiniMax-M2.7",
+        "opencode-go/glm-5.1"
       ]
     }
   }
