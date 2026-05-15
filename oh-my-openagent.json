@@ -45,8 +45,8 @@
     "multimodal-looker": {
       "model": "opencode-go/mimo-v2.5",
       "fallback_models": [
-        "minimax-cn-coding-plan/MiniMax-M2.7",
-        "kimi-for-coding/k2p6"
+        "gpt-agent/gemini-3.1-pro",
+        "gpt-agent/mimo-v2-omni"
       ]
     },
     "prometheus": {
