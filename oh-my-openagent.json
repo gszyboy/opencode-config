@@ -50,10 +50,10 @@
       ]
     },
     "prometheus": {
-      "model": "kimi-for-coding/k2p6",
+      "model": "opencode-go/mimo-v2.5-pro",
       "fallback_models": [
-        "minimax-cn-coding-plan/MiniMax-M2.7",
-        "opencode-go/mimo-v2.5-pro"
+        "opencode-go/glm-5.1",
+        "kimi-for-coding/k2p6"
       ],
       "prompt_append": "Leverage deep & quick agents heavily, always in parallel."
     },
