@@ -120,7 +120,6 @@
 - oh-my-openagent 内置工具
 - 使用 multimodal-looker agent（支持 mimo-v2.5 / gemini-3.1-pro 等 vision 模型）
 - 可直接分析图像内容并返回文字描述
-- 仅支持图片文件，需要 vision-capable 模型配置
 
 **第二优先：MiniMax_understand_image**
 - 直接调用 MiniMax 多模态模型
@@ -129,13 +128,7 @@
 
 **第三优先：filesystem_read_media_file**
 - MCP 文件系统工具，仅返回 base64 编码和 MIME 类型
-- **不执行 AI 分析**，仅读取文件内容
 - 当前两个工具都不可用时，可获取图像数据供其他方式处理
-
-**不可用时处理**：
-1. 先检查 vision 模型配置（opencode.json 中 modalities 是否包含 "image"）
-2. 检查 API Key 权限和配额
-3. 确认网络连接正常
 
 ## 安全规范
 - ❌ 禁止在代码中硬编码密钥、密码、token
