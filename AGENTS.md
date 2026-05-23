@@ -117,8 +117,8 @@
 当需要分析、解读图片时，按以下优先级选择工具：
 
 **第一优先：look_at**
-- oh-my-openagent 内置工具
-- 使用 multimodal-looker agent（支持 mimo-v2.5 / gemini-3.1-pro 等 vision 模型）
+- look_at 工具(它是oh-my-openagent内置工具)
+- 它使用 multimodal-looker agent（支持 mimo-v2.5 / gemini-3.1-pro 等 vision 模型）
 - 可直接分析图像内容并返回文字描述
 
 **第二优先：MiniMax_understand_image**
@@ -129,6 +129,19 @@
 **第三优先：filesystem_read_media_file**
 - MCP 文件系统工具，仅返回 base64 编码和 MIME 类型
 - 当前两个工具都不可用时，可获取图像数据供其他方式处理
+
+## Filesystem MCP 仅在以下情况使用
+
+- 需要批量并发读取多个文件（>3 个）
+- 需要读取媒体文件base64数据时
+- 项目根目录不在当前工作区，需要访问外部受限目录
+- 需要原子写入或 git-style diff 预览功能
+
+## 文档检索优先级 
+
+**首选 Context7**：涉及具体库/框架 API 时调用
+**次选 websearch**：需要了解社区最佳实践、GitHub issue 讨论、非官方方案时
+**备选 mmx**：minimax CLI 工具
 
 ## 安全规范
 - ❌ 禁止在代码中硬编码密钥、密码、token

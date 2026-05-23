@@ -19,139 +19,156 @@
   },
   "agents": {
     "hephaestus": {
-      "model": "deepseek/deepseek-v4-pro",
+      "model": "gpt-agent/gpt-5.5",
       "variant": "medium",
       "fallback_models": [
-        "gpt-agent/gpt-5.5",
-        "gpt-agent/gpt-5.3-codex-spark"
+        "deepseek/deepseek-v4-pro",
+        "opencode-go/glm-5.1"
       ]
     },
     "oracle": {
-      "model": "gpt-agent/gpt-5.5",
-      "variant": "high",
+      "model": "deepseek/deepseek-v4-pro",
+      "variant": "max",
       "fallback_models": [
-        "minimax-cn-coding-plan/MiniMax-M2.7",
-        "kimi-for-coding/k2p6"
+        "opencode-go/deepseek-v4-pro",
+        "opencode-go/glm-5.1"
       ]
     },
     "librarian": {
-      "model": "deepseek/deepseek-v4-pro",
+      "model": "minimax-cn-coding-plan/MiniMax-M2.7",
       "fallback_models": [
-        "kimi-for-coding/k2p6"
+        "opencode-go/glm-5.1",
+        "deepseek/deepseek-v4-pro"
       ]
     },
     "explore": {
       "model": "minimax-cn-coding-plan/MiniMax-M2.7",
       "fallback_models": [
-        "minimax-cn-coding-plan/MiniMax-M2.7",
-        "kimi-for-coding/k2p6"
+        "opencode-go/glm-5.1",
+        "deepseek/deepseek-v4-pro"
       ]
     },
     "multimodal-looker": {
-      "model": "xiaomi-token-plan-cn/mimo-v2.5",
+      "model": "opencode-go/mimo-v2.5",
       "fallback_models": [
-        "xiaomi-token-plan-cn/mimo-v2-omni",
-        "gpt-agent/gemini-3.1-pro"
+        "gpt-agent/gemini-3.1-pro",
+        "gpt-agent/mimo-v2-omni"
       ]
     },
     "prometheus": {
-      "model": "kimi-for-coding/k2p6",
+      "model": "deepseek/deepseek-v4-pro",
+      "variant": "max",
       "fallback_models": [
-        "minimax-cn-coding-plan/MiniMax-M2.7",
-        "gpt-agent/claude-opus-4-6"
+        "opencode-go/mimo-v2.5-pro",
+        "opencode-go/deepseek-v4-pro"
       ],
       "prompt_append": "Leverage deep & quick agents heavily, always in parallel."
     },
     "metis": {
-      "model": "deepseek/deepseek-v4-pro",
+      "model": "opencode-go/glm-5.1",
       "fallback_models": [
-        "kimi-for-coding/k2p6",
-        "gpt-agent/claude-opus-4-6"
+        "minimax-cn-coding-plan/MiniMax-M2.7",
+        "deepseek/deepseek-v4-pro"
       ]
     },
     "momus": {
       "model": "gpt-agent/gpt-5.5",
       "fallback_models": [
-        "gpt-agent/gpt-5.3-codex",
-        "minimax-cn-coding-plan/MiniMax-M2.7"
+        "deepseek/deepseek-v4-pro",
+        "opencode-go/glm-5.1"
+      ]
+    },
+    "atlas": {
+      "model": "deepseek/deepseek-v4-pro",
+      "variant": "max",
+      "fallback_models": [
+        "minimax-cn-coding-plan/MiniMax-M2.7",
+        "opencode-go/glm-5.1"
       ]
     },
     "sisyphus-junior": {
-      "model": "deepseek/deepseek-v4-pro",
+      "model": "opencode-go/glm-5.1",
       "fallback_models": [
-        "kimi-for-coding/k2p6",
-        "gpt-agent/claude-opus-4-6"
+        "opencode-go/qwen3.6-plus",
+        "deepseek/deepseek-v4-pro"
       ]
     },
     "sisyphus": {
-      "model": "deepseek/deepseek-v4-pro",
+      "model": "deepseek/deepseek-v4-flash",
+	  "variant": "max",
       "ultrawork": {
-        "model": "xiaomi-token-plan-cn/mimo-v2.5-pro",
-        "variant": "high"
+        "model": "deepseek/deepseek-v4-pro",
+        "variant": "max",
+        "fallback_models": [
+          "opencode-go/mimo-v2.5-pro",
+          "minimax-cn-coding-plan/MiniMax-M2.7"
+        ]
       },
       "fallback_models": [
-        "kimi-for-coding/k2p6",
-        "gpt-agent/claude-opus-4-6"
+        "minimax-cn-coding-plan/MiniMax-M2.7",
+        "opencode-go/mimo-v2.5-pro"
       ]
     }
   },
   "categories": {
     "visual-engineering": {
-      "model": "deepseek/deepseek-v4-pro",
+      "model": "opencode-go/glm-5.1",
       "variant": "high",
       "fallback_models": [
-        "gpt-agent/gemini-3.1-pro",
-        "xiaomi-token-plan-cn/mimo-v2.5"
+        "deepseek/deepseek-v4-pro",
+        "minimax-cn-coding-plan/MiniMax-M2.7"
       ]
     },
     "ultrabrain": {
-      "model": "gpt-agent/gpt-5.5",
+      "model": "opencode-go/mimo-v2.5-pro",
       "reasoningEffort": "xhigh",
       "fallback_models": [
-        "minimax-cn-coding-plan/MiniMax-M2.7",
-        "kimi-for-coding/k2p6"
+        "deepseek/deepseek-v4-pro",
+        "minimax-cn-coding-plan/MiniMax-M2.7"
       ]
     },
     "deep": {
       "model": "gpt-agent/gpt-5.5",
       "fallback_models": [
-        "gpt-agent/gpt-5.3-codex-spark",
-        "minimax-cn-coding-plan/MiniMax-M2.7"
+        "deepseek/deepseek-v4-pro",
+        "opencode-go/glm-5.1"
       ]
     },
     "artistry": {
-      "model": "xiaomi-token-plan-cn/mimo-v2.5",
+      "model": "opencode-go/glm-5.1",
       "fallback_models": [
-        "xiaomi-token-plan-cn/mimo-v2-omni",
-        "gpt-agent/gemini-3.1-pro"
+        "deepseek/deepseek-v4-pro",
+        "minimax-cn-coding-plan/MiniMax-M2.7"
       ]
     },
     "quick": {
       "model": "minimax-cn-coding-plan/MiniMax-M2.7",
       "fallback_models": [
-        "gpt-agent/MiniMax-M2.7-highspeed",
-        "minimax-cn-coding-plan/MiniMax-M2.7"
+        "opencode-go/glm-5.1",
+        "deepseek/deepseek-v4-pro"
       ]
     },
     "unspecified-low": {
-      "model": "deepseek/deepseek-v4-pro",
+      "model": "minimax-cn-coding-plan/MiniMax-M2.7",
       "fallback_models": [
-        "kimi-for-coding/k2p6",
-        "gpt-agent/claude-opus-4-6"
+        "opencode-go/glm-5.1",
+        "deepseek/deepseek-v4-pro"
       ]
     },
     "unspecified-high": {
       "model": "deepseek/deepseek-v4-pro",
+      "variant": "high",
       "fallback_models": [
-        "kimi-for-coding/k2p6",
-        "gpt-agent/claude-opus-4-6"
+        "opencode-go/deepseek-v4-pro",
+        "minimax-cn-coding-plan/MiniMax-M2.7"
       ]
     },
     "writing": {
-      "model": "deepseek/deepseek-v4-pro",
+      "model": "minimax-cn-coding-plan/MiniMax-M2.7",
+      "variant": "high",
       "fallback_models": [
-        "kimi-for-coding/k2p6",
-        "gpt-agent/claude-opus-4-6"
+        "deepseek/deepseek-v4-flash",
+        "opencode-go/glm-5.1"
       ]
     }
   }
