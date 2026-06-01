@@ -117,7 +117,7 @@
 当需要分析、解读图片时，按以下优先级选择工具：
 
 **第一优先：look_at**
-- look_at 工具(它是oh-my-openagent内置工具)
+- look_at 工具
 - 它使用 multimodal-looker agent（支持 mimo-v2.5 / gemini-3.1-pro 等 vision 模型）
 - 可直接分析图像内容并返回文字描述
 

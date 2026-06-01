@@ -14,6 +14,12 @@
     "timeout_seconds": 30,
     "notify_on_fallback": true
   },
+  "team_mode": {
+    "enabled": true,
+    "max_parallel_members": 4,
+    "max_members": 8,
+    "tmux_visualization": true
+  },
   "sisyphus_agent": {
     "default_builder_enabled": true
   },
@@ -28,9 +34,8 @@
     },
     "oracle": {
       "model": "deepseek/deepseek-v4-pro",
-      "variant": "max",
+      "variant": "high",
       "fallback_models": [
-        "opencode-go/deepseek-v4-pro",
         "opencode-go/glm-5.1"
       ]
     },
@@ -49,7 +54,7 @@
       ]
     },
     "multimodal-looker": {
-      "model": "opencode-go/mimo-v2.5",
+      "model": "xiaomi-token-plan-cn/mimo-v2.5",
       "fallback_models": [
         "gpt-agent/gemini-3.1-pro",
         "gpt-agent/mimo-v2-omni"
@@ -57,15 +62,14 @@
     },
     "prometheus": {
       "model": "deepseek/deepseek-v4-pro",
-      "variant": "max",
+      "variant": "high",
       "fallback_models": [
-        "opencode-go/mimo-v2.5-pro",
-        "opencode-go/deepseek-v4-pro"
+        "opencode-go/mimo-v2.5-pro"
       ],
       "prompt_append": "Leverage deep & quick agents heavily, always in parallel."
     },
     "metis": {
-      "model": "opencode-go/glm-5.1",
+      "model": "xiaomi-token-plan-cn/mimo-v2.5-pro",
       "fallback_models": [
         "minimax-cn-coding-plan/MiniMax-M2.7",
         "deepseek/deepseek-v4-pro"
@@ -79,28 +83,29 @@
       ]
     },
     "atlas": {
-      "model": "deepseek/deepseek-v4-pro",
-      "variant": "max",
+      "model": "xiaomi-token-plan-cn/mimo-v2.5-pro",
+      "variant": "high",
       "fallback_models": [
         "minimax-cn-coding-plan/MiniMax-M2.7",
         "opencode-go/glm-5.1"
       ]
     },
     "sisyphus-junior": {
-      "model": "opencode-go/glm-5.1",
+      "model": "xiaomi-token-plan-cn/mimo-v2.5",
+      "variant": "high",
       "fallback_models": [
         "opencode-go/qwen3.6-plus",
-        "deepseek/deepseek-v4-pro"
+        "opencode-go/glm-5.1"
       ]
     },
     "sisyphus": {
-      "model": "deepseek/deepseek-v4-flash",
-	  "variant": "max",
+      "model": "deepseek/deepseek-v4-pro",
+      "variant": "high",
       "ultrawork": {
         "model": "deepseek/deepseek-v4-pro",
-        "variant": "max",
+        "variant": "high",
         "fallback_models": [
-          "opencode-go/mimo-v2.5-pro",
+          "xiaomi-token-plan-cn/mimo-v2.5-pro",
           "minimax-cn-coding-plan/MiniMax-M2.7"
         ]
       },
@@ -112,7 +117,7 @@
   },
   "categories": {
     "visual-engineering": {
-      "model": "opencode-go/glm-5.1",
+      "model": "xiaomi-token-plan-cn/mimo-v2.5-pro",
       "variant": "high",
       "fallback_models": [
         "deepseek/deepseek-v4-pro",
@@ -120,7 +125,7 @@
       ]
     },
     "ultrabrain": {
-      "model": "opencode-go/mimo-v2.5-pro",
+      "model": "xiaomi-token-plan-cn/mimo-v2.5-pro",
       "reasoningEffort": "xhigh",
       "fallback_models": [
         "deepseek/deepseek-v4-pro",
@@ -135,7 +140,7 @@
       ]
     },
     "artistry": {
-      "model": "opencode-go/glm-5.1",
+      "model": "xiaomi-token-plan-cn/mimo-v2.5-pro",
       "fallback_models": [
         "deepseek/deepseek-v4-pro",
         "minimax-cn-coding-plan/MiniMax-M2.7"
@@ -149,17 +154,17 @@
       ]
     },
     "unspecified-low": {
-      "model": "minimax-cn-coding-plan/MiniMax-M2.7",
+      "model": "xiaomi-token-plan-cn/mimo-v2.5",
       "fallback_models": [
         "opencode-go/glm-5.1",
         "deepseek/deepseek-v4-pro"
       ]
     },
     "unspecified-high": {
-      "model": "deepseek/deepseek-v4-pro",
+      "model": "xiaomi-token-plan-cn/mimo-v2.5-pro",
       "variant": "high",
       "fallback_models": [
-        "opencode-go/deepseek-v4-pro",
+        "deepseek/deepseek-v4-pro",
         "minimax-cn-coding-plan/MiniMax-M2.7"
       ]
     },

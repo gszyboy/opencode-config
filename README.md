@@ -2,6 +2,26 @@
 
 ## 插件安装记录
 
+### 2026-06-01（Team Mode 启用）
+
+启用 oh-my-openagent 的 Team Mode（v4.0），支持并行多 Agent 协作：
+
+**配置改动**：
+- `oh-my-openagent.json` → `oh-my-openagent.jsonc`（JSON5 格式）
+- 配置中加入 `team_mode.enabled: true`，开启 12 个 `team_*` 工具
+- `tui.json` 新增 `"plugin": ["oh-my-openagent/tui"]`（修复 team mode 工具未注册问题）
+
+**验证结果**：
+- `bunx oh-my-openagent doctor --json` 全部 6 项检查 pass
+- `~/.omo/` 目录自动创建（teams/runtime/worktrees）
+- 12 个 `team_*` 工具全部可用
+- 内置 Skill：`/hyperplan`（5 人敌对规划审查）、`/security-research`（5 人安全审计）
+
+**已确认的能力**：
+- 3 个 team member 开箱即用：sisyphus、atlas、sisyphus-junior
+- hephaestus 需 `teammate: "allow"` 才能作为 team member（暂未开启）
+- `tmux_visualization` 可选，需在 tmux session 内运行
+
 ### 2026-04-19
 
 安装了 [opencode-dynamic-context-pruning](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning) 插件，并进行了配置。
@@ -91,7 +111,7 @@
 ## 配置
 
 - `opencode.json` - 主配置
-- `oh-my-openagent.json` - Agent 行为配置
+- `oh-my-openagent.jsonc` - Agent 行为配置（含 Team Mode）
 - `dcp.jsonc` - 动态上下文剪枝配置
 
 ---
