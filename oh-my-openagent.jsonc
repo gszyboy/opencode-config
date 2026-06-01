@@ -20,6 +20,9 @@
     "max_members": 8,
     "tmux_visualization": true
   },
+  "tmux": {
+    "enabled": true
+  },
   "sisyphus_agent": {
     "default_builder_enabled": true
   },
