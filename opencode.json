@@ -21,6 +21,24 @@
                 }
             }
         },
+	  "minimax-custom": {
+            "npm": "@ai-sdk/anthropic",
+            "name": "minimax-custom",
+            "options": {
+                "baseURL": "{env:MINIMAX_CUSTOM_URL}",
+                "apiKey": "{env:MINIMAX_CUSTOM_KEY}",
+                "compatibility": "compatible"
+            },
+            "models": {
+                "MiniMax-M3": {
+                    "name": "MiniMax-M3",
+                    "limit": {
+                        "context": 1000000,
+                        "output": 65536
+                    }
+                }
+            }
+        },
 	  "xydev": {
             "npm": "@ai-sdk/openai-compatible",
             "name": "xydev.xyz",
