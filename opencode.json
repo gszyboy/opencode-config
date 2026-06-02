@@ -25,8 +25,8 @@
             "npm": "@ai-sdk/anthropic",
             "name": "minimax-custom",
             "options": {
-                "baseURL": "{env:MINIMAX_CUSTOM_URL}",
-                "apiKey": "{env:MINIMAX_CUSTOM_KEY}",
+                "baseURL": "https://api.minimaxi.com/anthropic/v1",
+                "apiKey": "{env:MINIMAX_API_KEY}",
                 "compatibility": "compatible"
             },
             "models": {
