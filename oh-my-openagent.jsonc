@@ -18,10 +18,10 @@
     "enabled": true,
     "max_parallel_members": 4,
     "max_members": 8,
-    "tmux_visualization": true
+    "tmux_visualization": false
   },
   "tmux": {
-    "enabled": true
+    "enabled": false
   },
   "sisyphus_agent": {
     "default_builder_enabled": true

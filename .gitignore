@@ -4,3 +4,4 @@ package-lock.json
 bun.lock
 __pycache__/
 *.pyc
+.omo/
