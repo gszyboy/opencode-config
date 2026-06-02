@@ -67,7 +67,7 @@
           },
           "limit": {
             "context": 1000000,
-            "output": 32768
+            "output": 65536
           }
         },
         "gpt-5.4": {
@@ -83,7 +83,7 @@
           },
           "limit": {
             "context": 1000000,
-            "output": 32768
+            "output": 128000
           }
         },
         "gpt-5.5": {
@@ -114,15 +114,15 @@
             ]
           },
           "limit": {
-            "context": 128000,
-            "output": 32768
+            "context": 400000,
+            "output": 128000
           }
         },
         "MiniMax-M2.7-highspeed": {
           "name": "MiniMax M2.7 Highspeed",
           "limit": {
-            "context": 1000000,
-            "output": 32768
+            "context": 204800,
+            "output": 131072
           }
         },
         "qwen3.5-plus": {
@@ -138,15 +138,15 @@
             ]
           },
           "limit": {
-            "context": 131072,
-            "output": 32768
+            "context": 1000000,
+            "output": 64000
           }
         },
         "qwen3-coder-plus": {
           "name": "Qwen3 Coder Plus",
           "limit": {
-            "context": 131072,
-            "output": 32768
+            "context": 1000000,
+            "output": 66000
           }
         },
         "gpt-5.3-codex": {
@@ -161,8 +161,8 @@
             ]
           },
           "limit": {
-            "context": 128000,
-            "output": 32768
+            "context": 400000,
+            "output": 128000
           },
           "variants": {
             "medium": {
@@ -189,7 +189,7 @@
           },
           "limit": {
             "context": 128000,
-            "output": 32768
+            "output": 8192
           }
         },
 
