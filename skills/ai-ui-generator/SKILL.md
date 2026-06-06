@@ -1,6 +1,17 @@
+---
 name: ai-ui-generator
-description: AI Native UI 设计 Skills 系统。当用户需要生成高保真 UI 设计、将产品需求转化为 UI Prompt、创建可工程化的前端界面、或需要多平台（H5/小程序/App/PC Web/Admin）UI 设计时触发。包括：UI 结构分析、GPT Image Prompt 生成、多模态还原 Prompt、前端工程约束等。只要用户提到 UI 设计、界面生成、前端界面、产品原型、设计稿生成，立即使用此 skill。
-
+license: MIT
+version: 1.0.0
+description: |
+  AI Native UI 设计 Skill。当用户需要生成高保真 UI 设计、将产品需求转化为
+  UI Prompt、创建可工程化的前端界面、或需要多平台(H5/小程序/App/PC Web/Admin)
+  UI 设计时触发。包括:UI 结构分析、UI Prompt 生成、多模态还原 Prompt、
+  前端工程约束等。结构化 DSL 输出,可直接喂给 openai-image / gpt-image-2
+  类出图工具。
+triggers:
+  - "(?i)(UI|界面|前端|原型|设计稿)"
+  - "(?i)(H5|小程序|App|PC|Admin|后台|仪表盘|Dashboard)"
+  - "(?i)(生成|做|画|设计|出一份).*?(UI|界面|原型|稿)"
 ---
 
 # AI UI Prompt Skills Framework
@@ -177,3 +188,25 @@ PRD/需求 → Prompt DSL → GPT Image 2 → 人工筛选 → 多模态识图 �
 - 生成的 UI 必须看起来像真实互联网产品
 - 必须考虑前端实现的可行性
 - 必须保持组件化和模块化思维
+
+## 输出目录
+
+产物默认落到 `cwd` 下的 `./ui_prompts/`(相对当前工作目录)。
+换 OpenCode 项目时 prompt 自然归到对应项目,不会污染 skill 本体。
+目录不存在时自动 `mkdir`。
+
+| 类型 | 路径 |
+|------|------|
+| 草稿 | `./ui_prompts/draft/<name>-v<N>.md` |
+| 定稿 | `./ui_prompts/final/<name>.md` |
+| 历史版本 | `./ui_prompts/archive/<name>-v<N>.md` |
+
+## 配合 openai-image
+
+定稿后可一键喂给 openai-image 出图:
+
+```bash
+python3 ~/.config/opencode/skills/openai-image/scripts/generate.py \
+  -p "$(cat ui_prompts/final/<name>.md)" \
+  -f gpt_image_out/<name>.png
+```
