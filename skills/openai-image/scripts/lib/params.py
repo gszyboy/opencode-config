@@ -10,6 +10,7 @@ Above 2560x1440 is "experimental" per the OpenAI API reference.
 
 from __future__ import annotations
 
+import math
 import re
 from typing import Optional
 
@@ -80,7 +81,14 @@ def resolve_size(value: str) -> str:
         )
     w, h = int(m.group(1)), int(m.group(2))
     if w % 16 != 0 or h % 16 != 0:
-        raise ValueError(f"size {w}x{h}: both edges must be multiples of 16")
+        nearest_w = math.ceil(w / 16) * 16
+        nearest_h = math.ceil(h / 16) * 16
+        raise ValueError(
+            f"size {w}x{h}: both edges must be multiples of 16. "
+            f"Try {nearest_w}x{h} or {w}x{nearest_h}. "
+            f"Note: OpenAI gpt-image-2 silently downgrades non-16 sizes "
+            f"(e.g. 1080x1920 → 1024x1536)."
+        )
     long_edge = max(w, h)
     short_edge = min(w, h)
     if long_edge > _MAX_EDGE:

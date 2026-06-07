@@ -48,15 +48,24 @@ from lib.params import (  # noqa: E402
 
 
 def _build_kwargs(args: argparse.Namespace) -> dict:
-    return {
+    """Build the request kwargs for client.images.generate.
+
+    `moderation` is always sent (claudeapi.win upstream supports it; verified
+    with `moderation=low` returning 200). `background` is never sent —
+    claudeapi.win upstream rejects the field for ANY value (both
+    `transparent` and `opaque` return 422; verified). The OpenAI gpt-image-2
+    API does support `background` natively, but this skill's default proxy
+    does not forward it.
+    """
+    kwargs: dict = {
         "model": "gpt-image-2",
         "prompt": args.prompt,
         "size": args._size,
         "quality": args._quality,
         "n": args.n,
-        "background": args._background,
         "moderation": args._moderation,
     }
+    return kwargs
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
@@ -79,7 +88,8 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
             f"session's working directory)."
         ),
     )
-    p.add_argument("-n", type=int, default=1, help="number of images, 1-10 (default: 1)")
+    p.add_argument("-n", type=int, default=1, choices=[1],
+                   help="number of images; forced to 1 (cost + UI use case). OpenAI gpt-image-2 supports n>1, but this skill restricts to 1.")
     p.add_argument("--size", default="1024x1024", help="alias or WIDTHxHEIGHT (default: 1024x1024)")
     p.add_argument("--quality", default="high", help="low/medium/high/auto or alias (default: high)")
     p.add_argument("--format", dest="output_format", default="png", help="png/jpeg/webp (default: png)")

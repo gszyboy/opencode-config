@@ -1,16 +1,8 @@
 """OpenAI-compatible client factory + retry / verbose support.
 
-Reads credentials from environment in this priority:
-  1. CLAUDEAPI_API_KEY  (preferred for self-hosted proxies)
-  2. GPT_AGENT_KEY      (alternate proxy)
-
-Reads base URL from:
-  1. CLAUDEAPI_API_URL  (preferred; set to your proxy's /v1 root)
-  2. GPT_AGENT_URL      (alternate proxy)
-  3. None               (caller has not configured a proxy — the SDK will
-                         then default to api.openai.com, which this skill
-                         does NOT use; the make_client() call will fail
-                         with a clear error if neither env is set)
+Reads credentials from environment:
+  - GPT_AGENT_KEY  (required)
+  - GPT_AGENT_URL  (required; set to your proxy's /v1 root)
 
 The proxy only needs to be OpenAI-Images-API compatible (POST /v1/images/generations
 and POST /v1/images/edits). This module never hard-codes a host so the same scripts
@@ -29,8 +21,8 @@ from typing import Any, Callable, Optional
 from openai import OpenAI
 
 
-_API_KEY_VARS = ("CLAUDEAPI_API_KEY", "GPT_AGENT_KEY")
-_BASE_URL_VARS = ("CLAUDEAPI_API_URL", "GPT_AGENT_URL")
+_API_KEY_VARS = ("GPT_AGENT_KEY",)
+_BASE_URL_VARS = ("GPT_AGENT_URL",)
 
 # HTTP status codes worth retrying. 408 = request timeout, 409 = rare conflict,
 # 429 = rate limit, >=500 = server errors.
@@ -49,8 +41,8 @@ def get_api_key() -> str:
     key = _first_env(_API_KEY_VARS)
     if not key:
         print(
-            "ERROR: missing API key. Set CLAUDEAPI_API_KEY (preferred) "
-            "or GPT_AGENT_KEY in your environment (e.g. ~/.bashrc).",
+            "ERROR: missing API key. Set GPT_AGENT_KEY in your environment "
+            "(e.g. ~/.bashrc).",
             file=sys.stderr,
         )
         raise SystemExit(2)
@@ -103,7 +95,7 @@ def make_client(timeout: float = 300.0) -> OpenAI:
 
 
 def describe_endpoint() -> str:
-    base = get_base_url() or "(unconfigured — set CLAUDEAPI_API_URL or GPT_AGENT_URL)"
+    base = get_base_url() or "(unconfigured — set GPT_AGENT_URL)"
     return base
 
 

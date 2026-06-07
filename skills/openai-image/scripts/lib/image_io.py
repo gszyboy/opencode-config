@@ -287,7 +287,13 @@ def print_text_summary(saved: Iterable[Path], usage: dict) -> None:
 
 def to_json_result(saved: Iterable[Path], usage: dict, *, prompt: str,
                    endpoint: str, n: int) -> dict:
-    """Build the final dict emitted on `--json`."""
+    """Build the final dict emitted on `--json`.
+
+    `ok` is True iff at least one image was successfully written to disk.
+    Reaching this function implies the API call itself succeeded; `ok=False`
+    therefore means the proxy returned a response with neither b64_json nor
+    url fields (see "故障排查" in SKILL.md).
+    """
     items = []
     for p in saved:
         items.append({
@@ -295,7 +301,7 @@ def to_json_result(saved: Iterable[Path], usage: dict, *, prompt: str,
             "bytes": p.stat().st_size if p.exists() else 0,
         })
     return {
-        "ok": True,
+        "ok": len(items) > 0,
         "endpoint": endpoint,
         "model": "gpt-image-2",
         "prompt": prompt,

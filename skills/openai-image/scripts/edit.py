@@ -138,7 +138,8 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
             f"session's working directory)."
         ),
     )
-    p.add_argument("-n", type=int, default=1, help="number of images, 1-10 (default: 1)")
+    p.add_argument("-n", type=int, default=1, choices=[1],
+                   help="number of images; forced to 1 (cost + UI use case). OpenAI gpt-image-2 supports n>1, but this skill restricts to 1.")
     p.add_argument("--size", default="auto", help="alias or WIDTHxHEIGHT (default: auto)")
     p.add_argument("--quality", default="high", help="low/medium/high/auto or alias (default: high)")
     p.add_argument("--format", dest="output_format", default="png", help="png/jpeg/webp (default: png)")
