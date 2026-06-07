@@ -3,7 +3,7 @@
 "plugin":["oh-my-openagent/tui"],
   "leader_timeout": 2500,
   "scroll_acceleration": {
-    "enabled": false
+    "enabled": true
   },
   "diff_style": "auto",
   "mouse": true
