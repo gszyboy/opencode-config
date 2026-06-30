@@ -10,6 +10,6 @@
   "mouse": true,
   "plugin": [
     "@honcho-ai/opencode-honcho",
-    "oh-my-opencode-slim"
+    "oh-my-openagent@latest"
   ]
 }

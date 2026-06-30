@@ -392,13 +392,5 @@
     "@tarquinen/opencode-dcp@latest",
     "@honcho-ai/opencode-honcho",
     "oh-my-opencode-slim"
-  ],
-  "agent": {
-    "explore": {
-      "disable": true
-    },
-    "general": {
-      "disable": true
-    }
-  }
+  ]
 }

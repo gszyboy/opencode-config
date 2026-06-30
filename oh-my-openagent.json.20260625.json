@@ -1,0 +1,234 @@
+{
+    "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
+    "agents": {
+        "sisyphus": {
+            "model": "deepseek/deepseek-v4-pro",
+            "fallback_models": [
+                {
+                    "model": "minimax-cn-coding-plan/MiniMax-M2.7",
+                    "variant": "high"
+                },
+                {
+                    "model": "gpt-agent/gpt-5.5",
+                    "variant": "medium"
+                },
+                {
+                    "model": "kimi-for-coding/k2p6"
+                }
+            ]
+        },
+        "oracle": {
+            "model": "gpt-agent/gpt-5.5",
+            "variant": "high",
+            "fallback_models": [
+                {
+                    "model": "gpt-agent/glm-5.2"
+                }
+            ]
+        },
+        "librarian": {
+            "model": "minimax-cn-coding-plan/MiniMax-M2.7",
+            "fallback_models": [
+                {
+                    "model": "kimi-for-coding/k2p5"
+                },
+                {
+                    "model": "gpt-agent/claude-sonnet-4-6"
+                }
+            ]
+        },
+        "explore": {
+            "model": "minimax-cn-coding-plan/MiniMax-M2.7",
+            "fallback_models": [
+                {
+                    "model": "kimi-for-coding/k2p5"
+                },
+                {
+                    "model": "gpt-agent/claude-sonnet-4-6"
+                }
+            ]
+        },
+        "multimodal-looker": {
+            "model": "xiaomi-token-plan-cn/mimo-v2.5",
+            "variant": "high",
+            "fallback_models": [
+                {
+                    "model": "gpt-agent/gemini-3.1-pro"
+                },
+                {
+                    "model": "gpt-agent/gemini-3.5-flash"
+                }
+            ]
+        },
+        "prometheus": {
+            "model": "kimi-for-coding/k2p7",
+            "variant": "high",
+            "fallback_models": [
+                {
+                    "model": "gpt-agent/gpt-5.5"
+                }
+            ]
+        },
+        "metis": {
+            "model": "kimi-for-coding/k2p6",
+            "variant": "high",
+            "fallback_models": [
+                {
+                    "model": "gpt-agent/gpt-5.4"
+                },
+                {
+                    "model": "gpt-agent/glm-5.2"
+                }
+            ]
+        },
+        "momus": {
+            "model": "gpt-agent/gpt-5.5",
+            "variant": "xhigh",
+            "fallback_models": [
+                {
+                    "model": "kimi-for-coding/k2p7"
+                },
+                {
+                    "model": "gpt-agent/glm-5.2"
+                }
+            ]
+        },
+        "atlas": {
+            "model": "kimi-for-coding/k2p6",
+            "fallback_models": [
+                {
+                    "model": "gpt-agent/gpt-5.4",
+                    "variant": "high"
+                },
+                {
+                    "model": "minimax-cn-coding-plan/MiniMax-M3"
+                }
+            ]
+        },
+        "sisyphus-junior": {
+            "model": "kimi-for-coding/k2p6",
+            "fallback_models": [
+                {
+                    "model": "minimax-cn-coding-plan/MiniMax-M2.7"
+                },
+                {
+                    "model": "gpt-agent/gpt-5.5",
+                    "variant": "medium"
+                }
+            ]
+        },
+        "hephaestus": {
+            "model": "gpt-agent/gpt-5.5",
+            "variant": "medium",
+            "fallback_models": [
+                {
+                    "model": "kimi-for-coding/k2p7"
+                },
+                {
+                    "model": "kimi-custom/kimi-for-coding"
+                },
+                {
+                    "model": "minimax-cn-coding-plan/MiniMax-M3"
+                }
+            ]
+        }
+    },
+    "categories": {
+        "visual-engineering": {
+            "model": "gpt-agent/gpt-5.4",
+            "fallback_models": [
+                {
+                    "model": "gpt-agent/glm-5.1"
+                },
+                {
+                    "model": "gpt-agent/gemini-3.1-pro"
+                }
+            ]
+        },
+        "ultrabrain": {
+            "model": "gpt-agent/gpt-5.5",
+            "variant": "xhigh",
+            "fallback_models": [
+                {
+                    "model": "gpt-agent/glm-5.2"
+                }
+            ]
+        },
+        "deep": {
+            "model": "gpt-agent/gpt-5.4",
+            "variant": "high",
+            "fallback_models": [
+                {
+                    "model": "gpt-agent/gpt-5.5",
+                    "variant": "medium",
+                },
+                {
+                    "model": "gpt-agent/glm-5.1"
+                }
+            ]
+        },
+        "artistry": {
+            "model": "kimi-for-coding/k2p6",
+            "fallback_models": [
+                {
+                    "model": "kimi-custom/kimi-for-coding"
+                },
+                {
+                    "model": "gpt-agent/glm-5.2"
+                }
+            ]
+        },
+        "quick": {
+            "model": "minimax-cn-coding-plan/MiniMax-M2.7",
+            "fallback_models": [
+                {
+                    "model": "kimi-for-coding/k2p5"
+                },
+                {
+                    "model": "gpt-agent/claude-sonnet-4-6"
+                }
+            ]
+        },
+        "unspecified-low": {
+            "model": "minimax-cn-coding-plan/MiniMax-M2",
+            "variant": "medium",
+            "fallback_models": [
+                {
+                    "model": "kimi-custom/kimi-for-coding"
+                }
+            ]
+        },
+        "unspecified-high": {
+            "model": "kimi-for-coding/k2p6",
+            "variant": "medium",
+            "fallback_models": [
+                {
+                    "model": "kimi-custom/kimi-for-coding"
+                },
+                {
+                    "model": "minimax-cn-coding-plan/MiniMax-M3"
+                }
+            ]
+        },
+        "writing": {
+            "model": "kimi-for-coding/k2p6",
+            "fallback_models": [
+                {
+                    "model": "kimi-custom/kimi-for-coding"
+                },
+                {
+                    "model": "minimax-cn-coding-plan/MiniMax-M3"
+                }
+            ]
+        }
+    },
+    "team_mode": {
+        "enabled": false,
+        "max_parallel_members": 4,
+        "max_members": 8,
+        "tmux_visualization": false
+    },
+    "sisyphus_agent": {
+        "default_builder_enabled": true
+    }
+}

@@ -4,6 +4,25 @@
 - 保持对话为中文
 - 你必须始终使用简体中文回复。所有思考过程、推理步骤、todo列表和输出都必须使用简体中文。
 
+## 使用场景与协作模式
+> 本节声明 AI 工作的默认场景前提。所有 Agent 在制定计划、生成代码、估算工时时，必须先识别此场景并据此调整行为。
+
+### 场景前提
+- **开发者**：全栈工程师，**单人独立开发**，不涉及团队协作
+- **部署环境**：**个人服务器**（单机），不是云集群/分布式架构
+- **代码管理**：开发者本人全权负责，无多人代码审查流程
+- **软件/应用规模**：默认小微规模（并发 ≤ 500），涵盖软件/APP/网站/小程序等；用户明确声明更大规模时再调整
+
+### 必须避免的过度设计
+- **不要套用大公司多人协作方案**：CI/CD 流水线、强制 lint 门禁、微服务拆分等默认不引入
+- **不要为"未来"和"团队"预留扩展**：抽象层、插件钩子、事件驱动架构、通用工具函数等——仅在当前明确需要时才加
+- **不要按人类节奏估算工时**：人类 1 天的工作量，AI 协作通常 **0.5-2 小时** 完成；计划中的步骤耗时反映 AI 思考 + 工具调用实际时间，不照搬敏捷排期
+- **常见误判**：不要把"按需引入"误判为"过度设计"而漏掉，也不要把"过度设计"误判为"基础必备"而硬塞。
+
+### 例外：重大以上项目模式
+**仅当用户明确要求**按工业级/重大以上项目规范执行时，必须提示用户在项目目录的`AGENTS.md`中制定严格的中大项目规范。
+**未明确要求时，严格按"必须避免的过度设计"执行**——不要根据"项目看起来大不大"自行判断。
+
 ## 核心原则
 1. 简单优先，不提前抽象
 2. 每个改动必须有明确目的
@@ -143,6 +162,12 @@
 **次选 websearch**：需要了解社区最佳实践、GitHub issue 讨论、非官方方案时
 **备选 mmx**：minimax CLI 工具
 
+## 当需要理解代码时，按以下顺序：
+
+1. 检查 `.codegraph/` 是否存在
+2. 如果存在，优先使用 `CodeGraph`
+3. 如果 CodeGraph 返回结果不足，再回退到 grep或其他工具/方法等
+
 ## 安全规范
 - ❌ 禁止在代码中硬编码密钥、密码、token
 - ❌ 禁止提交 .env 文件到 Git
@@ -170,6 +195,17 @@
 3. 复杂任务先 Plan Mode 分析
 4. 小步快跑，不追求一次到位
 5. 完成后简单验证
+
+## UI 开发工作流
+
+当需要做软件界面时，分两步走：
+
+- 能使用 **playwright-cli** 解决问题时,绝不使用`playwright`
+
+1. **UI 生图** — 用 `ai-ui-generator` skill 生成 UI 截图（描述需求 → Prompt DSL → 出图 → 人工筛选）
+2. **UI 转代码** — 用 `ai-ui-generator` skill 的"多模态还原"功能，把截图还原成前端代码（html/Vue/小程序等）
+3. **已有UI截图** — 用 `ai-ui-generator` skill 的"多模态还原"功能，把截图还原成前端代码（html/Vue/小程序等）
+
 
 ## 决策升级机制
 
@@ -240,3 +276,14 @@
 - L3 小改：改一个函数/一行配置（≤10行）
 - L4 增量：修复bug、加小功能（≤50行）
 - L5 重构：较大改动（分阶段授权）
+
+<!-- CODEGRAPH_START -->
+## CodeGraph
+
+In repositories indexed by CodeGraph (a `.codegraph/` directory exists at the repo root), reach for it BEFORE grep/find or reading files when you need to understand or locate code:
+
+- **MCP tool** (when available): `codegraph_explore` answers most code questions in one call — the relevant symbols' verbatim source plus the call paths between them, including dynamic-dispatch hops grep can't follow. Name a file or symbol in the query to read its current line-numbered source. If it's listed but deferred, load it by name via tool search.
+- **Shell** (always works): `codegraph explore "<symbol names or question>"` prints the same output.
+
+If there is no `.codegraph/` directory, skip CodeGraph entirely — indexing is the user's decision.
+<!-- CODEGRAPH_END -->

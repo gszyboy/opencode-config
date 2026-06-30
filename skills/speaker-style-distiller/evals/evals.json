@@ -1,0 +1,23 @@
+{
+  "skill_name": "speaker-style-distiller",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "蒸馏马斯克的演讲风格，我要做一场科技发布会",
+      "expected_output": "生成 style-card-musk.md，包含马斯克发布会风格的开场钩子、节奏、金句、叙事方式等 12 维特征，并保存到 speech-style-rewriter/style-cards/",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "帮我提取罗振宇跨年演讲的说话方式，生成一张风格卡",
+      "expected_output": "生成 style-card-luozhenyu.md，提炼罗振宇长篇知识叙事风格，包含故事化表达、金句收尾、时间线结构等",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "我手上有一篇董宇辉的演讲稿，你帮我分析他的风格特点",
+      "expected_output": "读取用户提供的演讲稿，分析董宇辉风格并输出风格卡，包含诗意叙事、排比、情感升华等维度",
+      "files": []
+    }
+  ]
+}

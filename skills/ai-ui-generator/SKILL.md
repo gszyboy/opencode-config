@@ -5,7 +5,7 @@ version: 1.0.0
 description: |
   AI Native UI 设计 Skill。当用户需要生成高保真 UI 设计、将产品需求转化为
   UI Prompt、创建可工程化的前端界面、或需要多平台(H5/小程序/App/PC Web/Admin)
-  UI 设计时触发。包括:UI 结构分析、UI Prompt 生成、多模态还原 Prompt、
+  UI 设计时触发。包括:UI 结构分析、UI Prompt 生成、多模态还原 Prompt、从UI截图提取精确视觉信息、
   前端工程约束等。结构化 DSL 输出,可直接喂给 openai-image / gpt-image-2
   类出图工具。
 triggers:

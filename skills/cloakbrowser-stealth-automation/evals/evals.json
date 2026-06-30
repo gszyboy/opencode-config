@@ -1,0 +1,23 @@
+{
+  "skill_name": "cloakbrowser-stealth-automation",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "用安全浏览器打开 https://example.com 并打印页面标题",
+      "expected_output": "使用 bash 调用 /usr/bin/python3.10 运行 CloakBrowser 脚本，成功输出 Example Domain",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "这个网站有 Cloudflare 验证，帮我抓取一下页面内容",
+      "expected_output": "使用 CloakBrowser（humanize=True）访问目标 URL，绕过 Cloudflare 后提取页面文本",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "微信 Windows 客户端怎么自动给文件传输助手发消息",
+      "expected_output": "引用 wechat-automation-api 项目，给出 Flask HTTP API 调用示例",
+      "files": []
+    }
+  ]
+}

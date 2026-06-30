@@ -1,0 +1,23 @@
+{
+  "skill_name": "social-platform-automation",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "在抖音搜索 AI，返回前几条视频的相关信息",
+      "expected_output": "使用 /usr/bin/python3.10 + Playwright/CloakBrowser 访问 https://so.douyin.com/search/AI，提取 video_id、评论、点赞等数据",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "抓取这篇微信公众号文章 https://mp.weixin.qq.com/s/xxx 的文字和图片",
+      "expected_output": "使用 CloakBrowser 直接访问 mp.weixin.qq.com 链接，提取标题、作者、正文和图片 URL",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "帮我找小红书上关于张掖的笔记",
+      "expected_output": "使用 Yahoo/Bing 搜索引擎索引作为中间层搜索 site:xiaohongshu.com 张掖，给出可能的内容链接和摘要",
+      "files": []
+    }
+  ]
+}
