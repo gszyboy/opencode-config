@@ -98,6 +98,7 @@
       },
       "fixer": {
         "model": "opencode-go/deepseek-v4-flash",
+		"temperature": 0.2,
         "variant": "high",
         "skills": [],
         "mcps": []
@@ -113,7 +114,7 @@
         "model": [
           "kimi-for-coding/k2p7",
           "minimax-cn-coding-plan/MiniMax-M3",
-          "opencode-go/glm-5.1"
+          "opencode-go/deepseek-v4-pro"
         ],
         "skills": [
           "*"
@@ -126,7 +127,8 @@
       "oracle": {
         "model": [
           "apikey-fun/gpt-5.5",
-          "gpt-agent/gpt-5.5"
+          "gpt-agent/gpt-5.5","opencode-go/glm-5.2",
+		  "kimi-for-coding/k2p7"
         ],
         "variant": "high",
         "skills": [
@@ -137,14 +139,15 @@
       "council": {
         "model": [
           "apikey-fun/gpt-5.4",
-          "gpt-agent/gpt-5.4"
+          "gpt-agent/gpt-5.4","opencode-go/glm-5.1",
+		  "kimi-for-coding/k2p7"
         ],
         "variant": "high",
-        "skills": [],
+        "skills": ["simplify"],
         "mcps": []
       },
       "librarian": {
-        "model": "minimax-cn-coding-plan/MiniMax-M3",
+        "model": ["minimax-cn-coding-plan/MiniMax-M3","opencode-go/minimax-m3"],
         "skills": [],
         "mcps": [
           "websearch",
@@ -153,32 +156,37 @@
         ]
       },
       "explorer": {
-        "model": "minimax-cn-coding-plan/MiniMax-M3",
+        "model": ["minimax-cn-coding-plan/MiniMax-M3","opencode-go/minimax-m3"],
         "skills": [],
         "mcps": []
       },
       "designer": {
-        "model": ["kimi-for-coding/k2p5","opencode-go/kimi-k2.6"],
-        "variant": "medium",
+        "model": ["kimi-for-coding/k2p6","opencode-go/kimi-k2.6"],
+        "variant": "high",
         "skills": [],
         "mcps": []
       },
       "fixer": {
         "model": [
           "opencode-go/deepseek-v4-flash",
-          "minimax-cn-coding-plan/MiniMax-M2.7",
-          "kimi-for-coding/k2p5"
+          "kimi-for-coding/k2p6"
         ],
+		"temperature": 0.2,
         "variant": "high",
         "skills": [],
         "mcps": []
       },
       "observer": {
-        "model": "opencode-go/mimo-v2.5",
+        "model": ["opencode-go/mimo-v2.5","minimax-cn-coding-plan/MiniMax-M3"],
         "skills": [],
         "mcps": []
       }
     }
+  },
+  "multiplexer": {
+    "type": "tmux",
+    "layout": "main-vertical",
+    "main_pane_size": 60
   },
   "companion": {
     "enabled": false,
