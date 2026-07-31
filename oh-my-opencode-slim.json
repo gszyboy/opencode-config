@@ -1,200 +1,374 @@
 {
-  "$schema": "https://unpkg.com/oh-my-opencode-slim@latest/oh-my-opencode-slim.schema.json",
-  "preset": "my",
-  "presets": {
-    "openai": {
-      "orchestrator": {
-        "model": "openai/gpt-5.5",
-        "variant": "medium",
-        "skills": [
-          "*"
-        ],
-        "mcps": [
-          "*",
-          "!context7"
-        ]
-      },
-      "oracle": {
-        "model": "openai/gpt-5.5",
-        "variant": "high",
-        "skills": [
-          "simplify"
-        ],
-        "mcps": []
-      },
-      "librarian": {
-        "model": "openai/gpt-5.4-mini",
-        "variant": "low",
-        "skills": [],
-        "mcps": [
-          "websearch",
-          "context7",
-          "gh_grep"
-        ]
-      },
-      "explorer": {
-        "model": "openai/gpt-5.4-mini",
-        "variant": "low",
-        "skills": [],
-        "mcps": []
-      },
-      "designer": {
-        "model": "openai/gpt-5.4-mini",
-        "variant": "medium",
-        "skills": [],
-        "mcps": []
-      },
-      "fixer": {
-        "model": "openai/gpt-5.5",
-        "variant": "low",
-        "skills": [],
-        "mcps": []
-      }
+    "$schema": "https://unpkg.com/oh-my-opencode-slim@latest/oh-my-opencode-slim.schema.json",
+    "preset": "openai",
+    "presets": {
+        "openai": {
+            "orchestrator": {
+                "model": [
+                    "openai/gpt-5.6-sol",
+                    "kimi-for-coding/k3"
+                ],
+                "variant": "max",
+                "skills": [
+                    "*"
+                ],
+                "mcps": [
+                    "*",
+                    "!context7",
+                    "!websearch",
+                    "!MiniMax"
+                ]
+            },
+            "oracle": {
+                "model": [
+                    "openai/gpt-5.5",
+                    "gpt-agent/gpt-5.5",
+                    "kimi-for-coding/kimi-for-coding"
+                ],
+                "variant": "xhigh",
+                "skills": [
+                    "simplify"
+                ],
+                "mcps": []
+            },
+            "librarian": {
+                "model": [
+                    "minimax-cn-coding-plan/MiniMax-M3",
+                    "opencode-go/minimax-m3"
+                ],
+                "skills": [],
+                "mcps": [
+                    "websearch",
+                    "context7",
+                    "gh_grep",
+                    "MiniMax"
+                ]
+            },
+            "explorer": {
+                "model": [
+                    "minimax-cn-coding-plan/MiniMax-M3",
+                    "opencode-go/kimi-k2.7-code"
+                ],
+                "variant": "max",
+                "skills": [],
+                "mcps": [
+                    "codegraph"
+                ]
+            },
+            "designer": {
+                "model": [
+                    "kimi-for-coding/k3",
+                    "opencode-go/kimi-k3"
+                ],
+                "variant": "high",
+                "skills": [],
+                "mcps": []
+            },
+            "fixer": {
+                "model": [
+                    "deepseek/deepseek-v4-flash",
+                    "opencode-go/deepseek-v4-flash"
+                ],
+                "temperature": 0.2,
+                "variant": "xhigh",
+                "skills": [],
+                "mcps": []
+            },
+            "observer": {
+                "model": [
+                    "minimax-cn-coding-plan/MiniMax-M3",
+                    "opencode-go/mimo-v2.5"
+                ],
+                "skills": [],
+                "mcps": []
+            },
+            "compaction": {
+                "model": [
+                    "minimax-cn-coding-plan/MiniMax-M3",
+                    "opencode-go/deepseek-v4-pro"
+                ],
+                "skills": [],
+                "mcps": []
+            }
+        },
+        "claude": {
+            "orchestrator": {
+                "model": [
+                    "anthropic/claude-sonnet-5",
+                    "kimi-for-coding/k3",
+                ],
+                "skills": [
+                    "*"
+                ],
+                "mcps": [
+                    "*",
+                    "!context7"
+                ]
+            },
+            "oracle": {
+                "model": [
+                    "openai/gpt-5.6-sol",
+                    "kimi-for-coding/kimi-for-coding"
+                ],
+                "variant": "xhigh",
+                "skills": [
+                    "simplify"
+                ],
+                "mcps": []
+            },
+            "librarian": {
+                "model": [
+                    "minimax-cn-coding-plan/MiniMax-M3",
+                    "opencode-go/minimax-m3"
+                ],
+                "skills": [],
+                "mcps": [
+                    "websearch",
+                    "context7",
+                    "gh_grep",
+                    "MiniMax"
+                ]
+            },
+            "explorer": {
+                "model": [
+                    "minimax-cn-coding-plan/MiniMax-M3",
+                    "kimi-for-coding/kimi-for-coding",
+                    "opencode-go/minimax-m3"
+                ],
+                "skills": [],
+                "mcps": [
+                    "codegraph"
+                ]
+            },
+            "designer": {
+                "model": [
+                    "kimi-for-coding/k3",
+                    "kimi-for-coding/kimi-for-coding"
+                ],
+                "variant": "high",
+                "skills": [],
+                "mcps": []
+            },
+            "fixer": {
+                "model": [
+                    "deepseek/deepseek-v4-flash",
+                    "kimi-for-coding/kimi-for-coding"
+                ],
+                "temperature": 0.2,
+                "variant": "high",
+                "skills": [],
+                "mcps": []
+            },
+            "observer": {
+                "model": [
+                    "minimax-cn-coding-plan/MiniMax-M3"
+                ],
+                "skills": [],
+                "mcps": []
+            },
+            "compaction": {
+                "model": [
+                    "minimax-cn-coding-plan/MiniMax-M3",
+                    "opencode-go/deepseek-v4-pro"
+                ],
+                "skills": [],
+                "mcps": []
+            }
+        },
+        "kimi": {
+            "orchestrator": {
+                "model": [
+                    "kimi-for-coding/k3",
+                    "openai/gpt-5.6-sol"
+                ],
+                "variant": "high",
+                "skills": [
+                    "*"
+                ],
+                "mcps": [
+                    "*",
+                    "!context7",
+                    "!gh_app",
+                    "!gh_grep",
+                    "!websearch"
+                ]
+            },
+            "oracle": {
+                "model": [
+                    "openai/gpt-5.6-sol",
+                    "kimi-for-coding/kimi-for-coding"
+                ],
+                "variant": "xhigh",
+                "skills": [
+                    "simplify"
+                ],
+                "mcps": []
+            },
+            "librarian": {
+                "model": [
+                    "minimax-cn-coding-plan/MiniMax-M3",
+                    "opencode-go/minimax-m3"
+                ],
+                "skills": [],
+                "mcps": [
+                    "websearch",
+                    "context7",
+                    "gh_grep",
+                    "MiniMax"
+                ]
+            },
+            "explorer": {
+                "model": [
+                    "minimax-cn-coding-plan/MiniMax-M3",
+                    "openai/gpt-5.4",
+                    "opencode-go/minimax-m3"
+                ],
+                "variant": "xhigh",
+                "skills": [],
+                "mcps": [
+                    "codegraph"
+                ]
+            },
+            "designer": {
+                "model": [
+                    "kimi-for-coding/k3-256k",
+                    "opencode-go/kimi-k2.6"
+                ],
+                "variant": "high",
+                "skills": [],
+                "mcps": []
+            },
+            "fixer": {
+                "model": [
+                    "deepseek/deepseek-v4-flash",
+                    "minimax-cn-coding-plan/MiniMax-M2.7",
+                    "kimi-for-coding/kimi-for-coding"
+                ],
+                "temperature": 0.2,
+                "variant": "xhigh",
+                "skills": [],
+                "mcps": []
+            },
+            "observer": {
+                "model": [
+                    "minimax-cn-coding-plan/MiniMax-M3"
+                ],
+                "skills": [],
+                "mcps": []
+            },
+            "compaction": {
+                "model": [
+                    "minimax-cn-coding-plan/MiniMax-M3",
+                    "opencode-go/deepseek-v4-pro"
+                ],
+                "skills": [],
+                "mcps": []
+            }
+        },
+        "minimax": {
+            "orchestrator": {
+                "model": [
+                    "minimax-cn-coding-plan/MiniMax-M3",
+                    "opencode-go/deepseek-v4-pro"
+                ],
+                "skills": [
+                    "*"
+                ],
+                "mcps": [
+                    "*",
+                    "!context7"
+                ]
+            },
+            "oracle": {
+                "model": [
+                    "kimi-for-coding/k3",
+                    "openai/gpt-5.6-sol",
+                    "gpt-agent/gpt-5.5",
+                    "opencode-go/glm-5.2"
+                ],
+                "variant": "xhigh",
+                "skills": [
+                    "simplify"
+                ],
+                "mcps": []
+            },
+            "librarian": {
+                "model": [
+                    "minimax-cn-coding-plan/MiniMax-M3",
+                    "opencode-go/minimax-m3"
+                ],
+                "skills": [],
+                "mcps": [
+                    "websearch",
+                    "context7",
+                    "gh_grep",
+                    "MiniMax"
+                ]
+            },
+            "explorer": {
+                "model": [
+                    "minimax-cn-coding-plan/MiniMax-M3",
+                    "kimi-for-coding/kimi-for-coding",
+                    "opencode-go/minimax-m3"
+                ],
+                "skills": [],
+                "mcps": [
+                    "codegraph"
+                ]
+            },
+            "designer": {
+                "model": [
+                    "kimi-for-coding/k3",
+                    "opencode-go/kimi-k3",
+                    "kimi-for-coding/kimi-for-coding"
+                ],
+                "variant": "high",
+                "skills": [],
+                "mcps": []
+            },
+            "fixer": {
+                "model": [
+                    "opencode-go/deepseek-v4-flash",
+                    "kimi-for-coding/kimi-for-coding"
+                ],
+                "temperature": 0.2,
+                "variant": "high",
+                "skills": [],
+                "mcps": []
+            },
+            "observer": {
+                "model": [
+                    "opencode-go/mimo-v2.5",
+                    "minimax-cn-coding-plan/MiniMax-M3"
+                ],
+                "skills": [],
+                "mcps": []
+            }
+        }
     },
-    "opencode-go": {
-      "orchestrator": {
-        "model": "opencode-go/glm-5.1",
-        "skills": [
-          "*"
-        ],
-        "mcps": [
-          "*",
-          "!context7"
-        ]
-      },
-      "oracle": {
-        "model": "opencode-go/deepseek-v4-pro",
-        "variant": "max",
-        "skills": [
-          "simplify"
-        ],
-        "mcps": []
-      },
-      "council": {
-        "model": "opencode-go/deepseek-v4-pro",
-        "variant": "high",
-        "skills": [],
-        "mcps": []
-      },
-      "librarian": {
-        "model": "opencode-go/minimax-m2.7",
-        "skills": [],
-        "mcps": [
-          "websearch",
-          "context7",
-          "gh_grep"
-        ]
-      },
-      "explorer": {
-        "model": "opencode-go/minimax-m2.7",
-        "skills": [],
-        "mcps": []
-      },
-      "designer": {
-        "model": "opencode-go/kimi-k2.6",
-        "variant": "medium",
-        "skills": [],
-        "mcps": []
-      },
-      "fixer": {
-        "model": "opencode-go/deepseek-v4-flash",
-		"temperature": 0.2,
-        "variant": "high",
-        "skills": [],
-        "mcps": []
-      },
-      "observer": {
-        "model": "opencode-go/kimi-k2.6",
-        "skills": [],
-        "mcps": []
-      }
+    "multiplexer": {
+        "type": "tmux",
+        "layout": "main-vertical",
+        "main_pane_size": 60
     },
-    "my": {
-      "orchestrator": {
-        "model": [
-          "kimi-for-coding/k2p7",
-          "minimax-cn-coding-plan/MiniMax-M3",
-          "opencode-go/deepseek-v4-pro"
-        ],
-        "skills": [
-          "*"
-        ],
-        "mcps": [
-          "*",
-          "!context7"
-        ]
-      },
-      "oracle": {
-        "model": [
-          "apikey-fun/gpt-5.5",
-          "gpt-agent/gpt-5.5","opencode-go/glm-5.2",
-		  "kimi-for-coding/k2p7"
-        ],
-        "variant": "high",
-        "skills": [
-          "simplify"
-        ],
-        "mcps": []
-      },
-      "council": {
-        "model": [
-          "apikey-fun/gpt-5.4",
-          "gpt-agent/gpt-5.4","opencode-go/glm-5.1",
-		  "kimi-for-coding/k2p7"
-        ],
-        "variant": "high",
-        "skills": ["simplify"],
-        "mcps": []
-      },
-      "librarian": {
-        "model": ["minimax-cn-coding-plan/MiniMax-M3","opencode-go/minimax-m3"],
-        "skills": [],
-        "mcps": [
-          "websearch",
-          "context7",
-          "gh_grep"
-        ]
-      },
-      "explorer": {
-        "model": ["minimax-cn-coding-plan/MiniMax-M3","opencode-go/minimax-m3"],
-        "skills": [],
-        "mcps": []
-      },
-      "designer": {
-        "model": ["kimi-for-coding/k2p6","opencode-go/kimi-k2.6"],
-        "variant": "high",
-        "skills": [],
-        "mcps": []
-      },
-      "fixer": {
-        "model": [
-          "opencode-go/deepseek-v4-flash",
-          "kimi-for-coding/k2p6"
-        ],
-		"temperature": 0.2,
-        "variant": "high",
-        "skills": [],
-        "mcps": []
-      },
-      "observer": {
-        "model": ["opencode-go/mimo-v2.5","minimax-cn-coding-plan/MiniMax-M3"],
-        "skills": [],
-        "mcps": []
-      }
-    }
-  },
-  "multiplexer": {
-    "type": "tmux",
-    "layout": "main-vertical",
-    "main_pane_size": 60
-  },
-  "companion": {
-    "enabled": false,
-    "position": "bottom-right",
-    "size": "medium",
-    "gifPack": "default",
-    "loopStyle": "classic",
-    "speed": 1,
-    "debug": false
-  }
+    "companion": {
+        "enabled": false,
+        "position": "bottom-right",
+        "size": "medium",
+        "gifPack": "default",
+        "loopStyle": "classic",
+        "speed": 1,
+        "debug": false
+    },
+    "agents": {
+        "fast-generic": {
+            "model": "minimax-cn-coding-plan/MiniMax-M3",
+            "variant": "low",
+            "prompt": "You are a fast generic execution agent for routine mechanical command work. Run requested shell commands, inspect results, and report concise outcomes. For git commits or pushes, inspect git status, git diff, and recent log first; stage only intended files; avoid secrets; preserve repository commit-message style; never amend, rebase, reset --hard, clean, force-push, delete branches, or perform destructive history operations unless the user explicitly requested that exact operation. Do not edit code or make architecture/design decisions.",
+            "orchestratorPrompt": "Delegate to @fast-generic for routine mechanical command work: git status/diff/log reconnaissance, normal commit preparation, creating commits, pushing commits, and no-edit command validation such as lint, typecheck, static verification, tests, builds, or package-manager equivalents. Ask it to inspect diffs before committing, stage only intended files, avoid secrets, preserve repository commit-message style, and report final commit hashes or push results. Do not use it for code edits, design work, architecture, debugging strategy, docs research, or destructive git history operations such as amend, rebase, reset --hard, clean, force-push, or deleting branches unless the user explicitly requested that exact operation.",
+            "skills": [],
+            "mcps": []
+        }
+    },
+    "disabled_agents": []
 }
