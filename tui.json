@@ -4,12 +4,11 @@
     "app_exit": "ctrl+d,<leader>q"
   },
   "scroll_acceleration": {
-    "enabled": true
+    "enabled": false
   },
   "diff_style": "auto",
   "mouse": true,
   "plugin": [
-    "@honcho-ai/opencode-honcho",
     "oh-my-opencode-slim"
   ]
 }
