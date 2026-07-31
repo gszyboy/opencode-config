@@ -95,7 +95,7 @@
             "orchestrator": {
                 "model": [
                     "anthropic/claude-sonnet-5",
-                    "kimi-for-coding/k3",
+                    "kimi-for-coding/k3"
                 ],
                 "skills": [
                     "*"
