@@ -5,3 +5,9 @@ bun.lock
 __pycache__/
 *.pyc
 .omo/
+.env
+.oh-my-opencode-slim/
+dcp - 副本.jsonc
+opencode.json.2026.7.5.json
+skills/pua/SKILL.md.del
+skills/frontend-slides/
